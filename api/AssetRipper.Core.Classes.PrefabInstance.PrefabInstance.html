@@ -1,0 +1,2482 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PrefabInstance
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PrefabInstance
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance" class="text-break">Class PrefabInstance
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="AssetRipper.Core.UnityAssetBase.html">UnityAssetBase</a></div>
+    <div class="level2"><a class="xref" href="AssetRipper.Core.UnityObjectBase.html">UnityObjectBase</a></div>
+    <div class="level3"><a class="xref" href="AssetRipper.Core.Classes.Object.Object.html">Object</a></div>
+    <div class="level4"><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html">EditorExtension</a></div>
+    <div class="level5"><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html">NamedObject</a></div>
+    <div class="level6"><span class="xref">PrefabInstance</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.Classes.INamedObject.html">INamedObject</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IHasName.html">IHasName</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.IPrefabInstance.html">IPrefabInstance</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Name">NamedObject.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_NameName">NamedObject.NameName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_m_Name">NamedObject.m_Name</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasExtensionPtr_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasExtensionPtr(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObjectInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObjectInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabParentObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabParentObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstanceInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstanceInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstance_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstance(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInternal_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInternal(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabAsset_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabAsset(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ReadObject_AssetRipper_Core_IO_Asset_AssetReader_">EditorExtension.ReadObject(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_WriteObject_AssetRipper_Core_IO_Asset_AssetWriter_">EditorExtension.WriteObject(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExportYAMLRootObject_AssetRipper_Core_Project_IExportContainer_">EditorExtension.ExportYAMLRootObject(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependenciesObject_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependenciesObject(DependencyContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.CorrespondingSourceObjectInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.PrefabInstanceInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstance">EditorExtension.PrefabInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExtensionPtrName">EditorExtension.ExtensionPtrName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectName">EditorExtension.CorrespondingSourceObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabParentObjectName">EditorExtension.PrefabParentObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceName">EditorExtension.PrefabInstanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInternalName">EditorExtension.PrefabInternalName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabAssetName">EditorExtension.PrefabAssetName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlags">Object.ObjectHideFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ExportYAML_AssetRipper_Core_Project_IExportContainer_">Object.ExportYAML(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_HasHideFlag_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Object.HasHideFlag(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlagsName">Object.ObjectHideFlagsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_InstanceIDName">Object.InstanceIDName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_LocalIdentfierInFileName">Object.LocalIdentfierInFileName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetInfo">UnityObjectBase.AssetInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_SerializedFile">UnityObjectBase.SerializedFile</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ClassID">UnityObjectBase.ClassID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_PathID">UnityObjectBase.PathID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_GUID">UnityObjectBase.GUID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportPath">UnityObjectBase.ExportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetsKeyword">UnityObjectBase.AssetsKeyword</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetExtension">UnityObjectBase.AssetExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportYAMLDocument_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ExportYAMLDocument(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertLegacy_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ConvertLegacy(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertToEditor">UnityObjectBase.ConvertToEditor()</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_AssetUnityVersion">UnityAssetBase.AssetUnityVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_EndianType">UnityAssetBase.EndianType</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_TransferInstructionFlags">UnityAssetBase.TransferInstructionFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadEditor_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadEditor(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadRelease_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadRelease(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteEditor_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteEditor(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteRelease_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteRelease(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLEditor_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLEditor(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLRelease_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLRelease(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeReleaseTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeReleaseTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeEditorTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeEditorTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.html">AssetRipper.Core.Classes.PrefabInstance</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCore.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PrefabInstance : NamedObject, INamedObject, IHasName, IEditorExtension, IPrefabInstance, IUnityObjectBase, IUnityAssetBase, IAsset, IAssetReadable, IAssetWritable, IYAMLExportable, IDependent, ITypeTreeSerializable, IConvertToEditor</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance__ctor_AssetRipper_Core_Layout_LayoutInfo_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.%23ctor(AssetRipper.Core.Layout.LayoutInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L18">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance__ctor_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance__ctor_AssetRipper_Core_Layout_LayoutInfo_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.#ctor(AssetRipper.Core.Layout.LayoutInfo)">PrefabInstance(LayoutInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrefabInstance(LayoutInfo layout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Layout.LayoutInfo.html">LayoutInfo</a></td>
+        <td><span class="parametername">layout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.%23ctor(AssetRipper.Core.Parser.Asset.AssetInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L24">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance__ctor_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.#ctor(AssetRipper.Core.Parser.Asset.AssetInfo)">PrefabInstance(AssetInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrefabInstance(AssetInfo assetInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.AssetInfo.html">AssetInfo</a></td>
+        <td><span class="parametername">assetInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_FatherName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.FatherName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L382">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_FatherName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.FatherName">FatherName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FatherName = &quot;m_Father&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsDataTemplateName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsDataTemplateName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L386">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsDataTemplateName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsDataTemplateName">IsDataTemplateName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string IsDataTemplateName = &quot;m_IsDataTemplate&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsExplodedName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsExplodedName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L387">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsExplodedName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsExplodedName">IsExplodedName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string IsExplodedName = &quot;m_IsExploded&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabAssetName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabAssetName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L384">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabAssetName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabAssetName">IsPrefabAssetName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string IsPrefabAssetName = &quot;m_IsPrefabAsset&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabParentName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabParentName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L385">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabParentName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabParentName">IsPrefabParentName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string IsPrefabParentName = &quot;m_IsPrefabParent&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_LastMergeIdentifier.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.LastMergeIdentifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L359">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_LastMergeIdentifier" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.LastMergeIdentifier">LastMergeIdentifier</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityGUID LastMergeIdentifier</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.UnityGUID.html">UnityGUID</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_LastMergeIdentifierName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.LastMergeIdentifierName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L376">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_LastMergeIdentifierName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.LastMergeIdentifierName">LastMergeIdentifierName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LastMergeIdentifierName = &quot;m_LastMergeIdentifier&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_LastTemplateIdentifier.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.LastTemplateIdentifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L360">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_LastTemplateIdentifier" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.LastTemplateIdentifier">LastTemplateIdentifier</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UnityGUID LastTemplateIdentifier</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.UnityGUID.html">UnityGUID</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_LastTemplateIdentifierName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.LastTemplateIdentifierName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L377">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_LastTemplateIdentifierName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.LastTemplateIdentifierName">LastTemplateIdentifierName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LastTemplateIdentifierName = &quot;m_LastTemplateIdentifier&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Modification.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Modification%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L361">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Modification" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Modification">Modification</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PrefabModification Modification</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.PrefabModification.html">PrefabModification</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ModificationName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ModificationName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L379">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ModificationName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ModificationName">ModificationName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ModificationName = &quot;m_Modification&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ObjectsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ObjectsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L378">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ObjectsName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ObjectsName">ObjectsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ObjectsName = &quot;m_Objects&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ParentPrefabName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ParentPrefabName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L381">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ParentPrefabName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ParentPrefabName">ParentPrefabName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ParentPrefabName = &quot;m_ParentPrefab&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_PrefabKeyword.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.PrefabKeyword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L357">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_PrefabKeyword" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.PrefabKeyword">PrefabKeyword</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PrefabKeyword = &quot;prefab&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_RootGameObject.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.RootGameObject%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L363">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_RootGameObject" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.RootGameObject">RootGameObject</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;GameObject&gt; RootGameObject</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.GameObject.GameObject.html">GameObject</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_RootGameObjectName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.RootGameObjectName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L383">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_RootGameObjectName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.RootGameObjectName">RootGameObjectName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RootGameObjectName = &quot;m_RootGameObject&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefab.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L362">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefab" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefab">SourcePrefab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;PrefabInstance&gt; SourcePrefab</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.html">PrefabInstance</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefabName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefabName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L380">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefabName" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefabName">SourcePrefabName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SourcePrefabName = &quot;m_SourcePrefab&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ExportExtension.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ExportExtension%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L325">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ExportExtension_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ExportExtension*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ExportExtension" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ExportExtension">ExportExtension</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ExportExtension { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportExtension">UnityObjectBase.ExportExtension</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Father.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Father%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L339">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Father_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Father*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Father" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Father">Father</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;PrefabInstance&gt; Father { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.html">PrefabInstance</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsDataTemplate.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsDataTemplate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L350">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsDataTemplate_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsDataTemplate*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsDataTemplate" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsDataTemplate">IsDataTemplate</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDataTemplate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsExploded.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsExploded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L355">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsExploded_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsExploded*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsExploded" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsExploded">IsExploded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExploded { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabAsset.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabAsset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L344">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabAsset_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabAsset*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabAsset" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabAsset">IsPrefabAsset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPrefabAsset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabParent.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabParent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L345">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabParent_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabParent*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabParent" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabParent">IsPrefabParent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPrefabParent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Objects.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Objects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L327">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Objects_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Objects*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Objects" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Objects">Objects</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;EditorExtension&gt;[] Objects { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html">EditorExtension</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ParentPrefab.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ParentPrefab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L328">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ParentPrefab_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ParentPrefab*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ParentPrefab" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ParentPrefab">ParentPrefab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;PrefabInstance&gt; ParentPrefab { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.html">PrefabInstance</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Prefab.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Prefab%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L334">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Prefab_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Prefab*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Prefab" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Prefab">Prefab</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;PrefabInstance&gt; Prefab { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.html">PrefabInstance</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_RootGameObjectPtr.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.RootGameObjectPtr%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L365">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_RootGameObjectPtr_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.RootGameObjectPtr*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_RootGameObjectPtr" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.RootGameObjectPtr">RootGameObjectPtr</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;IGameObject&gt; RootGameObjectPtr { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.GameObject.IGameObject.html">IGameObject</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefabPtr.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefabPtr%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L370">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefabPtr_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefabPtr*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefabPtr" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefabPtr">SourcePrefabPtr</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;IPrefabInstance&gt; SourcePrefabPtr { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.IPrefabInstance.html">IPrefabInstance</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L172">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ExportYAMLRoot_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ExportYAMLRoot*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)">ExportYAMLRoot(IExportContainer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override YAMLMappingNode ExportYAMLRoot(IExportContainer container)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Project.IExportContainer.html">IExportContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.YAML.YAMLMappingNode.html">YAMLMappingNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_">NamedObject.ExportYAMLRoot(IExportContainer)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L129">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_FetchDependencies_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.FetchDependencies*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)">FetchDependencies(DependencyContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;PPtr&lt;IUnityObjectBase&gt;&gt; FetchDependencies(DependencyContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.DependencyContext.html">DependencyContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependencies(DependencyContext)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasFather_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasFather(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L277">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasFather_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasFather*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasFather_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasFather(AssetRipper.Core.Parser.Files.UnityVersion)">HasFather(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 3.5.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasFather(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsDataTemplate_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsDataTemplate(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L301">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsDataTemplate_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsDataTemplate*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsDataTemplate_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsDataTemplate(AssetRipper.Core.Parser.Files.UnityVersion)">HasIsDataTemplate(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 3.5.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasIsDataTemplate(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsExploded_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsExploded(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L305">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsExploded_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsExploded*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsExploded_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsExploded(AssetRipper.Core.Parser.Files.UnityVersion)">HasIsExploded(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 3.5.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasIsExploded(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabAsset_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabAsset(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L293">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabAsset_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabAsset*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabAsset_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabAsset(AssetRipper.Core.Parser.Files.UnityVersion)">HasIsPrefabAsset(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasIsPrefabAsset(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabAssetInvariant_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabAssetInvariant(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L289">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabAssetInvariant_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabAssetInvariant*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabAssetInvariant_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabAssetInvariant(AssetRipper.Core.Parser.Files.UnityVersion)">HasIsPrefabAssetInvariant(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 2018.3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasIsPrefabAssetInvariant(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabParent_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabParent(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L297">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabParent_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabParent*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasIsPrefabParent_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasIsPrefabParent(AssetRipper.Core.Parser.Files.UnityVersion)">HasIsPrefabParent(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.5.0 to 2018.2 exclusive</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasIsPrefabParent(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasLastMergeIdentifier_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasLastMergeIdentifier(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L253">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasLastMergeIdentifier_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasLastMergeIdentifier*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasLastMergeIdentifier_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasLastMergeIdentifier(AssetRipper.Core.Parser.Files.UnityVersion)">HasLastMergeIdentifier(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 3.5.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasLastMergeIdentifier(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasLastTemplateIdentifier_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasLastTemplateIdentifier(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L257">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasLastTemplateIdentifier_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasLastTemplateIdentifier*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasLastTemplateIdentifier_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasLastTemplateIdentifier(AssetRipper.Core.Parser.Files.UnityVersion)">HasLastTemplateIdentifier(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 2.6.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasLastTemplateIdentifier(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasModification_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasModification(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L265">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasModification_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasModification*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasModification_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasModification(AssetRipper.Core.Parser.Files.UnityVersion)">HasModification(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.5.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasModification(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasObjects_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasObjects(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L261">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasObjects_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasObjects*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasObjects_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasObjects(AssetRipper.Core.Parser.Files.UnityVersion)">HasObjects(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 3.5.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasObjects(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasParentPrefab_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasParentPrefab(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L273">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasParentPrefab_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasParentPrefab*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasParentPrefab_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasParentPrefab(AssetRipper.Core.Parser.Files.UnityVersion)">HasParentPrefab(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.5.0 to 2018.2 exclusive</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasParentPrefab(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasRootGameObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasRootGameObject(AssetRipper.Core.Parser.Files.UnityVersion%2CAssetRipper.Core.IO.Asset.TransferInstructionFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L281">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasRootGameObject_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasRootGameObject*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasRootGameObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasRootGameObject(AssetRipper.Core.Parser.Files.UnityVersion,AssetRipper.Core.IO.Asset.TransferInstructionFlags)">HasRootGameObject(UnityVersion, TransferInstructionFlags)</h4>
+  <div class="markdown level1 summary"><p>(3.5.0 to 2018.3 exclusive) or (2018.3 and greater and Editor Scene)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRootGameObject(UnityVersion version, TransferInstructionFlags flags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.TransferInstructionFlags.html">TransferInstructionFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasSourcePrefab_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasSourcePrefab(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L269">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasSourcePrefab_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasSourcePrefab*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_HasSourcePrefab_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.HasSourcePrefab(AssetRipper.Core.Parser.Files.UnityVersion)">HasSourcePrefab(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSourcePrefab(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsInheritedFromNamedObject_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsInheritedFromNamedObject(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L317">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsInheritedFromNamedObject_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsInheritedFromNamedObject*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsInheritedFromNamedObject_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsInheritedFromNamedObject(AssetRipper.Core.Parser.Files.UnityVersion)">IsInheritedFromNamedObject(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 3.5.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInheritedFromNamedObject(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsInheritedFromObject_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsInheritedFromObject(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L313">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsInheritedFromObject_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsInheritedFromObject*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsInheritedFromObject_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsInheritedFromObject(AssetRipper.Core.Parser.Files.UnityVersion)">IsInheritedFromObject(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.5.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsInheritedFromObject(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsModificationFormat_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsModificationFormat(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L309">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsModificationFormat_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsModificationFormat*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsModificationFormat_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsModificationFormat(AssetRipper.Core.Parser.Files.UnityVersion)">IsModificationFormat(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.5.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsModificationFormat(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabAssetInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabAssetInvariantName(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L233">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabAssetInvariantName_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabAssetInvariantName*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsPrefabAssetInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsPrefabAssetInvariantName(AssetRipper.Core.Parser.Files.UnityVersion)">IsPrefabAssetInvariantName(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string IsPrefabAssetInvariantName(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsRootGameObjectFirst_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsRootGameObjectFirst(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L321">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsRootGameObjectFirst_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsRootGameObjectFirst*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_IsRootGameObjectFirst_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.IsRootGameObjectFirst(AssetRipper.Core.Parser.Files.UnityVersion)">IsRootGameObjectFirst(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.3 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsRootGameObjectFirst(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L43">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Read_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Read_AssetRipper_Core_IO_Asset_AssetReader_">NamedObject.Read(AssetReader)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefabInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefabInvariantName(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L217">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefabInvariantName_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefabInvariantName*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_SourcePrefabInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.SourcePrefabInvariantName(AssetRipper.Core.Parser.Files.UnityVersion)">SourcePrefabInvariantName(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SourcePrefabInvariantName(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L30">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ToSerializedVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ToSerializedVersion*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)">ToSerializedVersion(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ToSerializedVersion(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ToString.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L163">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ToString_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ToString*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_ToString" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_ToString">NamedObject.ToString()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Write_AssetRipper_Core_IO_Asset_AssetWriter_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Write(AssetRipper.Core.IO.Asset.AssetWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L86">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Write_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Write*"></a>
+  <h4 id="AssetRipper_Core_Classes_PrefabInstance_PrefabInstance_Write_AssetRipper_Core_IO_Asset_AssetWriter_" data-uid="AssetRipper.Core.Classes.PrefabInstance.PrefabInstance.Write(AssetRipper.Core.IO.Asset.AssetWriter)">Write(AssetWriter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Write(AssetWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetWriter.html">AssetWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Write_AssetRipper_Core_IO_Asset_AssetWriter_">NamedObject.Write(AssetWriter)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.INamedObject.html">INamedObject</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IHasName.html">IHasName</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.PrefabInstance.IPrefabInstance.html">IPrefabInstance</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PrefabInstance_PrefabInstance.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PrefabInstance.PrefabInstance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PrefabInstance/PrefabInstance.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,975 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct AnimationCurveTpl&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct AnimationCurveTpl&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1" class="text-break">Struct AnimationCurveTpl&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.html">AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCommon.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct AnimationCurveTpl&lt;T&gt; : IAsset, IAssetReadable, IAssetWritable, IYAMLExportable where T : struct, IAsset, IYAMLExportable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor__0__0_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.%23ctor(%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L23">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor__0__0_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor(`0,`0)">AnimationCurveTpl(T, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurveTpl(T defaultValue, T defaultWeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">defaultValue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">defaultWeight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor__0__0__0_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.%23ctor(%600%2C%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L30">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor__0__0__0_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor(`0,`0,`0)">AnimationCurveTpl(T, T, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurveTpl(T value1, T value2, T defaultWeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">defaultWeight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor__0__0__0__0__0__0__0_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.%23ctor(%600%2C%600%2C%600%2C%600%2C%600%2C%600%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L37">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor__0__0__0__0__0__0__0_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor(`0,`0,`0,`0,`0,`0,`0)">AnimationCurveTpl(T, T, T, T, T, T, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurveTpl(T value1, T inSlope1, T outSlope1, T value2, T inSlope2, T outSlope2, T defaultWeight)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">inSlope1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">outSlope1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">inSlope2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">outSlope2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">defaultWeight</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0__.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.%23ctor(AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L44">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0__" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor(AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl{`0})">AnimationCurveTpl(KeyframeTpl&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurveTpl(KeyframeTpl&lt;T&gt; keyframe)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl-1.html">KeyframeTpl</a>&lt;T&gt;</td>
+        <td><span class="parametername">keyframe</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0__AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0__.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.%23ctor(AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl%7B%600%7D%2CAssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L50">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0__AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0__" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor(AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl{`0},AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl{`0})">AnimationCurveTpl(KeyframeTpl&lt;T&gt;, KeyframeTpl&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurveTpl(KeyframeTpl&lt;T&gt; keyframe1, KeyframeTpl&lt;T&gt; keyframe2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl-1.html">KeyframeTpl</a>&lt;T&gt;</td>
+        <td><span class="parametername">keyframe1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl-1.html">KeyframeTpl</a>&lt;T&gt;</td>
+        <td><span class="parametername">keyframe2</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_System_Boolean_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.%23ctor(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L15">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_System_Boolean_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor(System.Boolean)">AnimationCurveTpl(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurveTpl(bool init)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">init</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_System_Collections_Generic_IReadOnlyList_AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0___.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.%23ctor(System.Collections.Generic.IReadOnlyList%7BAssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L57">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_System_Collections_Generic_IReadOnlyList_AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0___" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor(System.Collections.Generic.IReadOnlyList{AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl{`0}})">AnimationCurveTpl(IReadOnlyList&lt;KeyframeTpl&lt;T&gt;&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurveTpl(IReadOnlyList&lt;KeyframeTpl&lt;T&gt;&gt; keyframes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl-1.html">KeyframeTpl</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">keyframes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_System_Collections_Generic_IReadOnlyList_AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0___AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_CurveLoopTypes_AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_CurveLoopTypes_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.%23ctor(System.Collections.Generic.IReadOnlyList%7BAssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl%7B%600%7D%7D%2CAssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.CurveLoopTypes%2CAssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.CurveLoopTypes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L66">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1__ctor_System_Collections_Generic_IReadOnlyList_AssetRipper_Core_Classes_Misc_KeyframeTpl_KeyframeTpl__0___AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_CurveLoopTypes_AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_CurveLoopTypes_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.#ctor(System.Collections.Generic.IReadOnlyList{AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl{`0}},AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.CurveLoopTypes,AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.CurveLoopTypes)">AnimationCurveTpl(IReadOnlyList&lt;KeyframeTpl&lt;T&gt;&gt;, CurveLoopTypes, CurveLoopTypes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AnimationCurveTpl(IReadOnlyList&lt;KeyframeTpl&lt;T&gt;&gt; keyframes, CurveLoopTypes preInfinity, CurveLoopTypes postInfinity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl-1.html">KeyframeTpl</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">keyframes</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.CurveLoopTypes.html">CurveLoopTypes</a></td>
+        <td><span class="parametername">preInfinity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.CurveLoopTypes.html">CurveLoopTypes</a></td>
+        <td><span class="parametername">postInfinity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_CurveName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.CurveName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L146">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_CurveName" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.CurveName">CurveName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string CurveName = &quot;m_Curve&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PostInfinityName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.PostInfinityName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L148">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PostInfinityName" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.PostInfinityName">PostInfinityName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PostInfinityName = &quot;m_PostInfinity&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PreInfinityName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.PreInfinityName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L147">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PreInfinityName" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.PreInfinityName">PreInfinityName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PreInfinityName = &quot;m_PreInfinity&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_RotationOrderName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.RotationOrderName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L149">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_RotationOrderName" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.RotationOrderName">RotationOrderName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RotationOrderName = &quot;m_RotationOrder&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Curve.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.Curve%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L141">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Curve_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.Curve*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Curve" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.Curve">Curve</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyframeTpl&lt;T&gt;[] Curve { readonly get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.KeyframeTpl.KeyframeTpl-1.html">KeyframeTpl</a>&lt;T&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PostInfinity.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.PostInfinity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L143">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PostInfinity_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.PostInfinity*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PostInfinity" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.PostInfinity">PostInfinity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CurveLoopTypes PostInfinity { readonly get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.CurveLoopTypes.html">CurveLoopTypes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PreInfinity.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.PreInfinity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L142">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PreInfinity_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.PreInfinity*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_PreInfinity" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.PreInfinity">PreInfinity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CurveLoopTypes PreInfinity { readonly get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.CurveLoopTypes.html">CurveLoopTypes</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_RotationOrder.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.RotationOrder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L144">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_RotationOrder_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.RotationOrder*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_RotationOrder" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.RotationOrder">RotationOrder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RotationOrder RotationOrder { readonly get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.RotationOrder.html">RotationOrder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_ExportYAML_AssetRipper_Core_Project_IExportContainer_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.ExportYAML(AssetRipper.Core.Project.IExportContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L104">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_ExportYAML_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.ExportYAML*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_ExportYAML_AssetRipper_Core_Project_IExportContainer_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.ExportYAML(AssetRipper.Core.Project.IExportContainer)">ExportYAML(IExportContainer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public YAMLNode ExportYAML(IExportContainer container)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Project.IExportContainer.html">IExportContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.YAML.YAMLNode.html">YAMLNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_HasRotationOrder_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.HasRotationOrder(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L139">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_HasRotationOrder_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.HasRotationOrder*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_HasRotationOrder_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.HasRotationOrder(AssetRipper.Core.Parser.Files.UnityVersion)">HasRotationOrder(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.3.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRotationOrder(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L78">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Read_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L123">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_ToSerializedVersion_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.ToSerializedVersion*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)">ToSerializedVersion(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ToSerializedVersion(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Write_AssetRipper_Core_IO_Asset_AssetWriter_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601.Write(AssetRipper.Core.IO.Asset.AssetWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L91">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Write_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.Write*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1_Write_AssetRipper_Core_IO_Asset_AssetWriter_" data-uid="AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl`1.Write(AssetRipper.Core.IO.Asset.AssetWriter)">Write(AssetWriter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Write(AssetWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetWriter.html">AssetWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_Serializable_AnimationCurveTpl_AnimationCurveTpl_1.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.Serializable.AnimationCurveTpl.AnimationCurveTpl%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/Serializable/AnimationCurveTpl/AnimationCurveTpl.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

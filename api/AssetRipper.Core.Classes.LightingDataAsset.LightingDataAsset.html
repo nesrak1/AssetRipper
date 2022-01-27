@@ -1,0 +1,1824 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LightingDataAsset
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LightingDataAsset
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset" class="text-break">Class LightingDataAsset
+  </h1>
+  <div class="markdown level0 summary"><p>5.0.0 - first introduction as LightmapSnapshot
+5.3.0 - renamed to LightingDataAsset</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="AssetRipper.Core.UnityAssetBase.html">UnityAssetBase</a></div>
+    <div class="level2"><a class="xref" href="AssetRipper.Core.UnityObjectBase.html">UnityObjectBase</a></div>
+    <div class="level3"><a class="xref" href="AssetRipper.Core.Classes.Object.Object.html">Object</a></div>
+    <div class="level4"><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html">EditorExtension</a></div>
+    <div class="level5"><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html">NamedObject</a></div>
+    <div class="level6"><span class="xref">LightingDataAsset</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.Classes.INamedObject.html">INamedObject</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IHasName.html">IHasName</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Write_AssetRipper_Core_IO_Asset_AssetWriter_">NamedObject.Write(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_ToString">NamedObject.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Name">NamedObject.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_NameName">NamedObject.NameName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_m_Name">NamedObject.m_Name</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasExtensionPtr_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasExtensionPtr(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObjectInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObjectInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabParentObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabParentObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstanceInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstanceInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstance_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstance(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInternal_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInternal(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabAsset_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabAsset(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ReadObject_AssetRipper_Core_IO_Asset_AssetReader_">EditorExtension.ReadObject(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_WriteObject_AssetRipper_Core_IO_Asset_AssetWriter_">EditorExtension.WriteObject(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExportYAMLRootObject_AssetRipper_Core_Project_IExportContainer_">EditorExtension.ExportYAMLRootObject(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependenciesObject_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependenciesObject(DependencyContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.CorrespondingSourceObjectInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.PrefabInstanceInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstance">EditorExtension.PrefabInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExtensionPtrName">EditorExtension.ExtensionPtrName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectName">EditorExtension.CorrespondingSourceObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabParentObjectName">EditorExtension.PrefabParentObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceName">EditorExtension.PrefabInstanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInternalName">EditorExtension.PrefabInternalName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabAssetName">EditorExtension.PrefabAssetName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlags">Object.ObjectHideFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ExportYAML_AssetRipper_Core_Project_IExportContainer_">Object.ExportYAML(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_HasHideFlag_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Object.HasHideFlag(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlagsName">Object.ObjectHideFlagsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_InstanceIDName">Object.InstanceIDName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_LocalIdentfierInFileName">Object.LocalIdentfierInFileName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetInfo">UnityObjectBase.AssetInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_SerializedFile">UnityObjectBase.SerializedFile</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ClassID">UnityObjectBase.ClassID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_PathID">UnityObjectBase.PathID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_GUID">UnityObjectBase.GUID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportPath">UnityObjectBase.ExportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportExtension">UnityObjectBase.ExportExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetsKeyword">UnityObjectBase.AssetsKeyword</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetExtension">UnityObjectBase.AssetExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportYAMLDocument_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ExportYAMLDocument(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertLegacy_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ConvertLegacy(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertToEditor">UnityObjectBase.ConvertToEditor()</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_AssetUnityVersion">UnityAssetBase.AssetUnityVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_EndianType">UnityAssetBase.EndianType</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_TransferInstructionFlags">UnityAssetBase.TransferInstructionFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadEditor_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadEditor(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadRelease_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadRelease(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteEditor_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteEditor(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteRelease_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteRelease(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLEditor_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLEditor(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLRelease_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLRelease(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeReleaseTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeReleaseTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeEditorTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeEditorTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.LightingDataAsset.html">AssetRipper.Core.Classes.LightingDataAsset</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCore.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LightingDataAsset : NamedObject, INamedObject, IHasName, IEditorExtension, IUnityObjectBase, IUnityAssetBase, IAsset, IAssetReadable, IAssetWritable, IYAMLExportable, IDependent, ITypeTreeSerializable, IConvertToEditor</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.%23ctor(AssetRipper.Core.Parser.Asset.AssetInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L24">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset__ctor_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.#ctor(AssetRipper.Core.Parser.Asset.AssetInfo)">LightingDataAsset(AssetInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LightingDataAsset(AssetInfo assetInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.AssetInfo.html">AssetInfo</a></td>
+        <td><span class="parametername">assetInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_AOTexturesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.AOTexturesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L199">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_AOTexturesName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.AOTexturesName">AOTexturesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AOTexturesName = &quot;m_AOTextures&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedAmbientProbeInLinear.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedAmbientProbeInLinear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L218">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedAmbientProbeInLinear" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedAmbientProbeInLinear">BakedAmbientProbeInLinear</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SphericalHarmonicsL2 BakedAmbientProbeInLinear</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.RenderSettings.SphericalHarmonicsL2.html">SphericalHarmonicsL2</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedAmbientProbeInLinearName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedAmbientProbeInLinearName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L203">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedAmbientProbeInLinearName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedAmbientProbeInLinearName">BakedAmbientProbeInLinearName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BakedAmbientProbeInLinearName = &quot;m_BakedAmbientProbeInLinear&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemapCacheFilesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemapCacheFilesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L210">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemapCacheFilesName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemapCacheFilesName">BakedReflectionProbeCubemapCacheFilesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BakedReflectionProbeCubemapCacheFilesName = &quot;m_BakedReflectionProbeCubemapCacheFiles&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemapsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemapsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L211">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemapsName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemapsName">BakedReflectionProbeCubemapsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BakedReflectionProbeCubemapsName = &quot;m_BakedReflectionProbeCubemaps&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L212">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbesName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbesName">BakedReflectionProbesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BakedReflectionProbesName = &quot;m_BakedReflectionProbes&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenDataName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenDataName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L213">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenDataName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenDataName">EnlightenDataName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string EnlightenDataName = &quot;m_EnlightenData&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenDataVersionName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenDataVersionName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L214">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenDataVersionName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenDataVersionName">EnlightenDataVersionName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string EnlightenDataVersionName = &quot;m_EnlightenDataVersion&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMapping.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMapping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L219">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMapping" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMapping">EnlightenSceneMapping</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EnlightenSceneMapping EnlightenSceneMapping</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.LightmapSettings.EnlightenSceneMapping.html">EnlightenSceneMapping</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMappingName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMappingName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L206">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMappingName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMappingName">EnlightenSceneMappingName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string EnlightenSceneMappingName = &quot;m_EnlightenSceneMapping&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMappingRendererIDsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMappingRendererIDsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L207">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMappingRendererIDsName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMappingRendererIDsName">EnlightenSceneMappingRendererIDsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string EnlightenSceneMappingRendererIDsName = &quot;m_EnlightenSceneMappingRendererIDs&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightBakingOutputsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightBakingOutputsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L209">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightBakingOutputsName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightBakingOutputsName">LightBakingOutputsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LightBakingOutputsName = &quot;m_LightBakingOutputs&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererDataIDsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererDataIDsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L205">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererDataIDsName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererDataIDsName">LightmappedRendererDataIDsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LightmappedRendererDataIDsName = &quot;m_LightmappedRendererDataIDs&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererDataName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererDataName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L204">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererDataName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererDataName">LightmappedRendererDataName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LightmappedRendererDataName = &quot;m_LightmappedRendererData&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsCacheFilesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsCacheFilesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L200">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsCacheFilesName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsCacheFilesName">LightmapsCacheFilesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LightmapsCacheFilesName = &quot;m_LightmapsCacheFiles&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsModeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsModeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L202">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsModeName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsModeName">LightmapsModeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LightmapsModeName = &quot;m_LightmapsMode&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L198">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsName">LightmapsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LightmapsName = &quot;m_Lightmaps&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightProbes.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightProbes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L217">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightProbes" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightProbes">LightProbes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;LightProbes&gt; LightProbes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.LightProbes.LightProbes.html">LightProbes</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightProbesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightProbesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L201">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightProbesName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightProbesName">LightProbesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LightProbesName = &quot;m_LightProbes&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L208">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightsName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightsName">LightsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LightsName = &quot;m_Lights&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Scene.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Scene%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L216">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Scene" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Scene">Scene</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;SceneAsset&gt; Scene</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.SceneAsset.html">SceneAsset</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_SceneName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.SceneName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L197">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_SceneName" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.SceneName">SceneName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SceneName = &quot;m_Scene&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_AOTextures.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.AOTextures%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L183">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_AOTextures_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.AOTextures*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_AOTextures" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.AOTextures">AOTextures</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Texture2D&gt;[] AOTextures { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Texture2D.Texture2D.html">Texture2D</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemapCacheFiles.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemapCacheFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L191">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemapCacheFiles_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemapCacheFiles*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemapCacheFiles" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemapCacheFiles">BakedReflectionProbeCubemapCacheFiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] BakedReflectionProbeCubemapCacheFiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemaps.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemaps%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L192">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemaps_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemaps*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbeCubemaps" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbeCubemaps">BakedReflectionProbeCubemaps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Texture&gt;[] BakedReflectionProbeCubemaps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Texture.html">Texture</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbes.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L193">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbes_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbes*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_BakedReflectionProbes" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.BakedReflectionProbes">BakedReflectionProbes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneObjectIdentifier[] BakedReflectionProbes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.OcclusionCullingData.SceneObjectIdentifier.html">SceneObjectIdentifier</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenData.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L194">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenData_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenData*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenData" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenData">EnlightenData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] EnlightenData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenDataVersion.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenDataVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L195">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenDataVersion_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenDataVersion*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenDataVersion" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenDataVersion">EnlightenDataVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int EnlightenDataVersion { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMappingRendererIDs.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMappingRendererIDs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L188">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMappingRendererIDs_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMappingRendererIDs*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_EnlightenSceneMappingRendererIDs" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.EnlightenSceneMappingRendererIDs">EnlightenSceneMappingRendererIDs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneObjectIdentifier[] EnlightenSceneMappingRendererIDs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.OcclusionCullingData.SceneObjectIdentifier.html">SceneObjectIdentifier</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightBakingOutputs.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightBakingOutputs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L190">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightBakingOutputs_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightBakingOutputs*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightBakingOutputs" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightBakingOutputs">LightBakingOutputs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LightBakingOutput[] LightBakingOutputs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Light.LightBakingOutput.html">LightBakingOutput</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererData.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L186">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererData_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererData*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererData" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererData">LightmappedRendererData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RendererData[] LightmappedRendererData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.LightingDataAsset.RendererData.html">RendererData</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererDataIDs.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererDataIDs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L187">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererDataIDs_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererDataIDs*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmappedRendererDataIDs" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmappedRendererDataIDs">LightmappedRendererDataIDs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneObjectIdentifier[] LightmappedRendererDataIDs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.OcclusionCullingData.SceneObjectIdentifier.html">SceneObjectIdentifier</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Lightmaps.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Lightmaps%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L182">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Lightmaps_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Lightmaps*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Lightmaps" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Lightmaps">Lightmaps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LightmapData[] Lightmaps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.LightmapSettings.LightmapData.html">LightmapData</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsCacheFiles.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsCacheFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L184">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsCacheFiles_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsCacheFiles*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsCacheFiles" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsCacheFiles">LightmapsCacheFiles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] LightmapsCacheFiles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsMode.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L185">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsMode_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsMode*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_LightmapsMode" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.LightmapsMode">LightmapsMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LightmapsMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Lights.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Lights%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L189">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Lights_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Lights*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Lights" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Lights">Lights</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SceneObjectIdentifier[] Lights { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.OcclusionCullingData.SceneObjectIdentifier.html">SceneObjectIdentifier</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L135">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_ExportYAMLRoot_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.ExportYAMLRoot*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)">ExportYAMLRoot(IExportContainer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override YAMLMappingNode ExportYAMLRoot(IExportContainer container)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Project.IExportContainer.html">IExportContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.YAML.YAMLMappingNode.html">YAMLMappingNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_">NamedObject.ExportYAMLRoot(IExportContainer)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L108">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_FetchDependencies_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.FetchDependencies*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)">FetchDependencies(DependencyContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;PPtr&lt;IUnityObjectBase&gt;&gt; FetchDependencies(DependencyContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.DependencyContext.html">DependencyContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependencies(DependencyContext)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasAOTextures_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasAOTextures(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L47">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasAOTextures_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasAOTextures*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasAOTextures_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasAOTextures(AssetRipper.Core.Parser.Files.UnityVersion)">HasAOTextures(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2019.1 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasAOTextures(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasBakedReflectionProbeCubemapCacheFiles_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasBakedReflectionProbeCubemapCacheFiles(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L55">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasBakedReflectionProbeCubemapCacheFiles_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasBakedReflectionProbeCubemapCacheFiles*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasBakedReflectionProbeCubemapCacheFiles_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasBakedReflectionProbeCubemapCacheFiles(AssetRipper.Core.Parser.Files.UnityVersion)">HasBakedReflectionProbeCubemapCacheFiles(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasBakedReflectionProbeCubemapCacheFiles(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasLightmapsCacheFiles_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasLightmapsCacheFiles(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L51">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasLightmapsCacheFiles_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasLightmapsCacheFiles*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_HasLightmapsCacheFiles_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.HasLightmapsCacheFiles(AssetRipper.Core.Parser.Files.UnityVersion)">HasLightmapsCacheFiles(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasLightmapsCacheFiles(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L57">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Read_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Read_AssetRipper_Core_IO_Asset_AssetReader_">NamedObject.Read(AssetReader)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L26">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_ToSerializedVersion_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.ToSerializedVersion*"></a>
+  <h4 id="AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)">ToSerializedVersion(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ToSerializedVersion(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.INamedObject.html">INamedObject</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IHasName.html">IHasName</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_LightingDataAsset_LightingDataAsset.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.LightingDataAsset.LightingDataAsset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/LightingDataAsset/LightingDataAsset.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

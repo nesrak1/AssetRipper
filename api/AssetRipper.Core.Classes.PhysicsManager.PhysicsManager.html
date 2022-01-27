@@ -1,0 +1,3484 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PhysicsManager
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PhysicsManager
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager" class="text-break">Class PhysicsManager
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="AssetRipper.Core.UnityAssetBase.html">UnityAssetBase</a></div>
+    <div class="level2"><a class="xref" href="AssetRipper.Core.UnityObjectBase.html">UnityObjectBase</a></div>
+    <div class="level3"><a class="xref" href="AssetRipper.Core.Classes.Object.Object.html">Object</a></div>
+    <div class="level4"><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html">EditorExtension</a></div>
+    <div class="level5"><a class="xref" href="AssetRipper.Core.Classes.GameManager.html">GameManager</a></div>
+    <div class="level6"><a class="xref" href="AssetRipper.Core.Classes.GlobalGameManager.html">GlobalGameManager</a></div>
+    <div class="level7"><span class="xref">PhysicsManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IGameManager.html">IGameManager</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IGlobalGameManager.html">IGlobalGameManager</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.GlobalGameManager.html#AssetRipper_Core_Classes_GlobalGameManager_ExportPath">GlobalGameManager.ExportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.GameManager.html#AssetRipper_Core_Classes_GameManager_HasEditorExtension_AssetRipper_Core_Parser_Files_UnityVersion_">GameManager.HasEditorExtension(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.GameManager.html#AssetRipper_Core_Classes_GameManager_Write_AssetRipper_Core_IO_Asset_AssetWriter_">GameManager.Write(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasExtensionPtr_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasExtensionPtr(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObjectInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObjectInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabParentObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabParentObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstanceInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstanceInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstance_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstance(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInternal_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInternal(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabAsset_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabAsset(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ReadObject_AssetRipper_Core_IO_Asset_AssetReader_">EditorExtension.ReadObject(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_WriteObject_AssetRipper_Core_IO_Asset_AssetWriter_">EditorExtension.WriteObject(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExportYAMLRootObject_AssetRipper_Core_Project_IExportContainer_">EditorExtension.ExportYAMLRootObject(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependenciesObject_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependenciesObject(DependencyContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.CorrespondingSourceObjectInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.PrefabInstanceInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstance">EditorExtension.PrefabInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExtensionPtrName">EditorExtension.ExtensionPtrName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectName">EditorExtension.CorrespondingSourceObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabParentObjectName">EditorExtension.PrefabParentObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceName">EditorExtension.PrefabInstanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInternalName">EditorExtension.PrefabInternalName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabAssetName">EditorExtension.PrefabAssetName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlags">Object.ObjectHideFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ExportYAML_AssetRipper_Core_Project_IExportContainer_">Object.ExportYAML(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_HasHideFlag_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Object.HasHideFlag(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlagsName">Object.ObjectHideFlagsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_InstanceIDName">Object.InstanceIDName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_LocalIdentfierInFileName">Object.LocalIdentfierInFileName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetInfo">UnityObjectBase.AssetInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_SerializedFile">UnityObjectBase.SerializedFile</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ClassID">UnityObjectBase.ClassID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_PathID">UnityObjectBase.PathID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_GUID">UnityObjectBase.GUID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportExtension">UnityObjectBase.ExportExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetsKeyword">UnityObjectBase.AssetsKeyword</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetExtension">UnityObjectBase.AssetExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportYAMLDocument_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ExportYAMLDocument(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertLegacy_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ConvertLegacy(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertToEditor">UnityObjectBase.ConvertToEditor()</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_AssetUnityVersion">UnityAssetBase.AssetUnityVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_EndianType">UnityAssetBase.EndianType</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_TransferInstructionFlags">UnityAssetBase.TransferInstructionFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadEditor_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadEditor(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadRelease_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadRelease(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteEditor_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteEditor(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteRelease_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteRelease(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLEditor_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLEditor(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLRelease_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLRelease(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeReleaseTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeReleaseTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeEditorTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeEditorTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.PhysicsManager.html">AssetRipper.Core.Classes.PhysicsManager</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCore.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PhysicsManager : GlobalGameManager, IEditorExtension, IGameManager, IGlobalGameManager, IUnityObjectBase, IUnityAssetBase, IAsset, IAssetReadable, IAssetWritable, IYAMLExportable, IDependent, ITypeTreeSerializable, IConvertToEditor</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.%23ctor(AssetRipper.Core.Parser.Asset.AssetInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L23">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager__ctor_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.#ctor(AssetRipper.Core.Parser.Asset.AssetInfo)">PhysicsManager(AssetInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PhysicsManager(AssetInfo assetInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.AssetInfo.html">AssetInfo</a></td>
+        <td><span class="parametername">assetInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSimulationName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSimulationName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L467">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSimulationName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSimulationName">AutoSimulationName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AutoSimulationName = &quot;m_AutoSimulation&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSyncTransformsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSyncTransformsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L468">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSyncTransformsName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSyncTransformsName">AutoSyncTransformsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AutoSyncTransformsName = &quot;m_AutoSyncTransforms&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BounceThresholdName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BounceThresholdName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L455">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BounceThresholdName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BounceThresholdName">BounceThresholdName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BounceThresholdName = &quot;m_BounceThreshold&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BroadphaseTypeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BroadphaseTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L473">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BroadphaseTypeName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BroadphaseTypeName">BroadphaseTypeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BroadphaseTypeName = &quot;m_BroadphaseType&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothGravity.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothGravity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L485">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothGravity" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothGravity">ClothGravity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3f ClothGravity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Math.Vectors.Vector3f.html">Vector3f</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothGravityName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothGravityName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L471">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothGravityName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothGravityName">ClothGravityName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ClothGravityName = &quot;m_ClothGravity&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionDistanceName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionDistanceName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L463">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionDistanceName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionDistanceName">ClothInterCollisionDistanceName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ClothInterCollisionDistanceName = &quot;m_ClothInterCollisionDistance&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionSettingsToggleName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionSettingsToggleName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L470">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionSettingsToggleName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionSettingsToggleName">ClothInterCollisionSettingsToggleName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ClothInterCollisionSettingsToggleName = &quot;m_ClothInterCollisionSettingsToggle&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionStiffnessName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionStiffnessName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L464">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionStiffnessName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionStiffnessName">ClothInterCollisionStiffnessName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ClothInterCollisionStiffnessName = &quot;m_ClothInterCollisionStiffness&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactPairsModeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactPairsModeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L472">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactPairsModeName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactPairsModeName">ContactPairsModeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ContactPairsModeName = &quot;m_ContactPairsMode&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactsGenerationName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactsGenerationName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L465">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactsGenerationName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactsGenerationName">ContactsGenerationName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ContactsGenerationName = &quot;m_ContactsGeneration&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultContactOffsetName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultContactOffsetName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L457">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultContactOffsetName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultContactOffsetName">DefaultContactOffsetName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultContactOffsetName = &quot;m_DefaultContactOffset&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaterial.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaterial%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L484">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaterial" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaterial">DefaultMaterial</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;PhysicMaterial&gt; DefaultMaterial</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.PhysicMaterial.PhysicMaterial.html">PhysicMaterial</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaterialName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaterialName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L454">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaterialName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaterialName">DefaultMaterialName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultMaterialName = &quot;m_DefaultMaterial&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxAngluarSpeedName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxAngluarSpeedName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L480">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxAngluarSpeedName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxAngluarSpeedName">DefaultMaxAngluarSpeedName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultMaxAngluarSpeedName = &quot;m_DefaultMaxAngluarSpeed&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxAngularSpeedName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxAngularSpeedName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L481">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxAngularSpeedName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxAngularSpeedName">DefaultMaxAngularSpeedName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultMaxAngularSpeedName = &quot;m_DefaultMaxAngularSpeed&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverIterationsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverIterationsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L458">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverIterationsName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverIterationsName">DefaultSolverIterationsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultSolverIterationsName = &quot;m_DefaultSolverIterations&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverVelocityIterationsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverVelocityIterationsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L459">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverVelocityIterationsName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverVelocityIterationsName">DefaultSolverVelocityIterationsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultSolverVelocityIterationsName = &quot;m_DefaultSolverVelocityIterations&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableAdaptiveForceName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableAdaptiveForceName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L462">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableAdaptiveForceName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableAdaptiveForceName">EnableAdaptiveForceName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string EnableAdaptiveForceName = &quot;m_EnableAdaptiveForce&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableEnhancedDeterminismName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableEnhancedDeterminismName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L477">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableEnhancedDeterminismName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableEnhancedDeterminismName">EnableEnhancedDeterminismName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string EnableEnhancedDeterminismName = &quot;m_EnableEnhancedDeterminism&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableUnifiedHeightmapsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableUnifiedHeightmapsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L478">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableUnifiedHeightmapsName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableUnifiedHeightmapsName">EnableUnifiedHeightmapsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string EnableUnifiedHeightmapsName = &quot;m_EnableUnifiedHeightmaps&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_FrictionTypeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.FrictionTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L476">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_FrictionTypeName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.FrictionTypeName">FrictionTypeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FrictionTypeName = &quot;m_FrictionType&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_Gravity.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.Gravity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L483">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_Gravity" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.Gravity">Gravity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3f Gravity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Math.Vectors.Vector3f.html">Vector3f</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_GravityName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.GravityName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L453">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_GravityName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.GravityName">GravityName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string GravityName = &quot;m_Gravity&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_LayerCollisionMatrixName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.LayerCollisionMatrixName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L466">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_LayerCollisionMatrixName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.LayerCollisionMatrixName">LayerCollisionMatrixName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LayerCollisionMatrixName = &quot;m_LayerCollisionMatrix&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitBackfacesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitBackfacesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L460">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitBackfacesName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitBackfacesName">QueriesHitBackfacesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string QueriesHitBackfacesName = &quot;m_QueriesHitBackfaces&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitTriggersName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitTriggersName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L461">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitTriggersName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitTriggersName">QueriesHitTriggersName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string QueriesHitTriggersName = &quot;m_QueriesHitTriggers&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ReuseCollisionCallbacksName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ReuseCollisionCallbacksName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L469">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ReuseCollisionCallbacksName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ReuseCollisionCallbacksName">ReuseCollisionCallbacksName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ReuseCollisionCallbacksName = &quot;m_ReuseCollisionCallbacks&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepThresholdName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepThresholdName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L456">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepThresholdName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepThresholdName">SleepThresholdName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SleepThresholdName = &quot;m_SleepThreshold&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SolverTypeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SolverTypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L479">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SolverTypeName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SolverTypeName">SolverTypeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SolverTypeName = &quot;m_SolverType&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldBounds.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldBounds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L486">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldBounds" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldBounds">WorldBounds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB WorldBounds</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.Serializable.Boundaries.AABB.html">AABB</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldBoundsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldBoundsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L474">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldBoundsName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldBoundsName">WorldBoundsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string WorldBoundsName = &quot;m_WorldBounds&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldSubdivisionsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldSubdivisionsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L475">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldSubdivisionsName" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldSubdivisionsName">WorldSubdivisionsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string WorldSubdivisionsName = &quot;m_WorldSubdivisions&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSimulation.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSimulation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L437">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSimulation_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSimulation*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSimulation" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSimulation">AutoSimulation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoSimulation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSyncTransforms.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSyncTransforms%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L438">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSyncTransforms_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSyncTransforms*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_AutoSyncTransforms" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.AutoSyncTransforms">AutoSyncTransforms</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AutoSyncTransforms { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BounceThreshold.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BounceThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L410">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BounceThreshold_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BounceThreshold*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BounceThreshold" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BounceThreshold">BounceThreshold</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BounceThreshold { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BroadphaseType.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BroadphaseType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L442">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BroadphaseType_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BroadphaseType*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_BroadphaseType" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.BroadphaseType">BroadphaseType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BroadphaseType BroadphaseType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.PhysicsManager.BroadphaseType.html">BroadphaseType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionDistance.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionDistance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L433">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionDistance_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionDistance*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionDistance" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionDistance">ClothInterCollisionDistance</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ClothInterCollisionDistance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionSettingsToggle.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionSettingsToggle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L440">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionSettingsToggle_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionSettingsToggle*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionSettingsToggle" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionSettingsToggle">ClothInterCollisionSettingsToggle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ClothInterCollisionSettingsToggle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionStiffness.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionStiffness%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L434">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionStiffness_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionStiffness*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ClothInterCollisionStiffness" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ClothInterCollisionStiffness">ClothInterCollisionStiffness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ClothInterCollisionStiffness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactPairsMode.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactPairsMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L441">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactPairsMode_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactPairsMode*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactPairsMode" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactPairsMode">ContactPairsMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContactPairsMode ContactPairsMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.PhysicsManager.ContactPairsMode.html">ContactPairsMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactsGeneration.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactsGeneration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L435">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactsGeneration_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactsGeneration*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ContactsGeneration" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ContactsGeneration">ContactsGeneration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContactsGeneration ContactsGeneration { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.PhysicsManager.ContactsGeneration.html">ContactsGeneration</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultContactOffset.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultContactOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L417">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultContactOffset_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultContactOffset*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultContactOffset" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultContactOffset">DefaultContactOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DefaultContactOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxAngularSpeed.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxAngularSpeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L451">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxAngularSpeed_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxAngularSpeed*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxAngularSpeed" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxAngularSpeed">DefaultMaxAngularSpeed</h4>
+  <div class="markdown level1 summary"><p>DefaultMaxAngluarSpeed previously</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DefaultMaxAngularSpeed { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxDepenetrationVelocity.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxDepenetrationVelocity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L411">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxDepenetrationVelocity_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxDepenetrationVelocity*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultMaxDepenetrationVelocity" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultMaxDepenetrationVelocity">DefaultMaxDepenetrationVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DefaultMaxDepenetrationVelocity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverIterations.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverIterations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L421">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverIterations_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverIterations*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverIterations" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverIterations">DefaultSolverIterations</h4>
+  <div class="markdown level1 summary"><p>SolverIterationCount previosuly</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DefaultSolverIterations { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverVelocityIterations.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverVelocityIterations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L425">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverVelocityIterations_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverVelocityIterations*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_DefaultSolverVelocityIterations" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.DefaultSolverVelocityIterations">DefaultSolverVelocityIterations</h4>
+  <div class="markdown level1 summary"><p>SolverVelocityIterations previously</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DefaultSolverVelocityIterations { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableAdaptiveForce.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableAdaptiveForce%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L431">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableAdaptiveForce_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableAdaptiveForce*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableAdaptiveForce" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableAdaptiveForce">EnableAdaptiveForce</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableAdaptiveForce { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableEnhancedDeterminism.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableEnhancedDeterminism%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L445">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableEnhancedDeterminism_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableEnhancedDeterminism*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableEnhancedDeterminism" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableEnhancedDeterminism">EnableEnhancedDeterminism</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableEnhancedDeterminism { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnablePCM.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnablePCM%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L432">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnablePCM_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnablePCM*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnablePCM" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnablePCM">EnablePCM</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnablePCM { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableUnifiedHeightmaps.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableUnifiedHeightmaps%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L446">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableUnifiedHeightmaps_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableUnifiedHeightmaps*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_EnableUnifiedHeightmaps" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.EnableUnifiedHeightmaps">EnableUnifiedHeightmaps</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableUnifiedHeightmaps { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_FrictionType.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.FrictionType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L444">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_FrictionType_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.FrictionType*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_FrictionType" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.FrictionType">FrictionType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FrictionType FrictionType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.PhysicsManager.FrictionType.html">FrictionType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_LayerCollisionMatrix.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.LayerCollisionMatrix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L436">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_LayerCollisionMatrix_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.LayerCollisionMatrix*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_LayerCollisionMatrix" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.LayerCollisionMatrix">LayerCollisionMatrix</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint[] LayerCollisionMatrix { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_MaxAngularVelocity.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.MaxAngularVelocity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L415">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_MaxAngularVelocity_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.MaxAngularVelocity*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_MaxAngularVelocity" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.MaxAngularVelocity">MaxAngularVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaxAngularVelocity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_MinPenetrationForPenalty.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.MinPenetrationForPenalty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L416">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_MinPenetrationForPenalty_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.MinPenetrationForPenalty*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_MinPenetrationForPenalty" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.MinPenetrationForPenalty">MinPenetrationForPenalty</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MinPenetrationForPenalty { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitBackfaces.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitBackfaces%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L426">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitBackfaces_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitBackfaces*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitBackfaces" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitBackfaces">QueriesHitBackfaces</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool QueriesHitBackfaces { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitTriggers.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitTriggers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L430">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitTriggers_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitTriggers*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_QueriesHitTriggers" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.QueriesHitTriggers">QueriesHitTriggers</h4>
+  <div class="markdown level1 summary"><p>RaycastsHitTriggers previosly</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool QueriesHitTriggers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ReuseCollisionCallbacks.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ReuseCollisionCallbacks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L439">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ReuseCollisionCallbacks_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ReuseCollisionCallbacks*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ReuseCollisionCallbacks" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ReuseCollisionCallbacks">ReuseCollisionCallbacks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReuseCollisionCallbacks { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepAngularVelocity.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepAngularVelocity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L414">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepAngularVelocity_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepAngularVelocity*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepAngularVelocity" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepAngularVelocity">SleepAngularVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SleepAngularVelocity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepThreshold.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L412">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepThreshold_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepThreshold*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepThreshold" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepThreshold">SleepThreshold</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SleepThreshold { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepVelocity.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepVelocity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L413">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepVelocity_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepVelocity*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SleepVelocity" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SleepVelocity">SleepVelocity</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SleepVelocity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SolverType.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SolverType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L447">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SolverType_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SolverType*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_SolverType" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.SolverType">SolverType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SolverType SolverType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.PhysicsManager.SolverType.html">SolverType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldSubdivisions.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldSubdivisions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L443">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldSubdivisions_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldSubdivisions*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_WorldSubdivisions" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.WorldSubdivisions">WorldSubdivisions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int WorldSubdivisions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L292">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ExportYAMLRoot_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ExportYAMLRoot*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)">ExportYAMLRoot(IExportContainer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override YAMLMappingNode ExportYAMLRoot(IExportContainer container)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Project.IExportContainer.html">IExportContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.YAML.YAMLMappingNode.html">YAMLMappingNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.GameManager.html#AssetRipper_Core_Classes_GameManager_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_">GameManager.ExportYAMLRoot(IExportContainer)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L282">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_FetchDependencies_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.FetchDependencies*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)">FetchDependencies(DependencyContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;PPtr&lt;IUnityObjectBase&gt;&gt; FetchDependencies(DependencyContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.DependencyContext.html">DependencyContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependencies(DependencyContext)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasAutoSimulation_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasAutoSimulation(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L122">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasAutoSimulation_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasAutoSimulation*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasAutoSimulation_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasAutoSimulation(AssetRipper.Core.Parser.Files.UnityVersion)">HasAutoSimulation(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2017.1.0b2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasAutoSimulation(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasAutoSyncTransforms_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasAutoSyncTransforms(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L126">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasAutoSyncTransforms_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasAutoSyncTransforms*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasAutoSyncTransforms_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasAutoSyncTransforms(AssetRipper.Core.Parser.Files.UnityVersion)">HasAutoSyncTransforms(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2017.2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasAutoSyncTransforms(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothGravity_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothGravity(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L134">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothGravity_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothGravity*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothGravity_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothGravity(AssetRipper.Core.Parser.Files.UnityVersion)">HasClothGravity(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2019.1 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasClothGravity(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothInterCollisionDistance_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothInterCollisionDistance(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L114">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothInterCollisionDistance_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothInterCollisionDistance*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothInterCollisionDistance_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothInterCollisionDistance(AssetRipper.Core.Parser.Files.UnityVersion)">HasClothInterCollisionDistance(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2017.3 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasClothInterCollisionDistance(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothInterCollisionSettingsToggle_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothInterCollisionSettingsToggle(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L130">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothInterCollisionSettingsToggle_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothInterCollisionSettingsToggle*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasClothInterCollisionSettingsToggle_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasClothInterCollisionSettingsToggle(AssetRipper.Core.Parser.Files.UnityVersion)">HasClothInterCollisionSettingsToggle(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2017.3 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasClothInterCollisionSettingsToggle(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasContactPairsMode_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasContactPairsMode(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L138">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasContactPairsMode_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasContactPairsMode*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasContactPairsMode_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasContactPairsMode(AssetRipper.Core.Parser.Files.UnityVersion)">HasContactPairsMode(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2017.3 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasContactPairsMode(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultContactOffset_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultContactOffset(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L90">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultContactOffset_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultContactOffset*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultContactOffset_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultContactOffset(AssetRipper.Core.Parser.Files.UnityVersion)">HasDefaultContactOffset(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Greater than 5.0.0b1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasDefaultContactOffset(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultMaxAngularSpeed_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultMaxAngularSpeed(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L150">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultMaxAngularSpeed_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultMaxAngularSpeed*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultMaxAngularSpeed_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultMaxAngularSpeed(AssetRipper.Core.Parser.Files.UnityVersion)">HasDefaultMaxAngularSpeed(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2019.1 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasDefaultMaxAngularSpeed(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultMaxDepenetrationVelocity_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultMaxDepenetrationVelocity(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L78">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultMaxDepenetrationVelocity_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultMaxDepenetrationVelocity*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultMaxDepenetrationVelocity_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultMaxDepenetrationVelocity(AssetRipper.Core.Parser.Files.UnityVersion)">HasDefaultMaxDepenetrationVelocity(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2020 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasDefaultMaxDepenetrationVelocity(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultSolverVelocityIterations_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultSolverVelocityIterations(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L94">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultSolverVelocityIterations_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultSolverVelocityIterations*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasDefaultSolverVelocityIterations_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasDefaultSolverVelocityIterations(AssetRipper.Core.Parser.Files.UnityVersion)">HasDefaultSolverVelocityIterations(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.4.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasDefaultSolverVelocityIterations(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasEnableAdaptiveForce_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasEnableAdaptiveForce(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L106">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasEnableAdaptiveForce_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasEnableAdaptiveForce*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasEnableAdaptiveForce_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasEnableAdaptiveForce(AssetRipper.Core.Parser.Files.UnityVersion)">HasEnableAdaptiveForce(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasEnableAdaptiveForce(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasEnablePCM_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasEnablePCM(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L110">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasEnablePCM_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasEnablePCM*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasEnablePCM_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasEnablePCM(AssetRipper.Core.Parser.Files.UnityVersion)">HasEnablePCM(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.0.0 to 2017.2</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasEnablePCM(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasFrictionType_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasFrictionType(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L142">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasFrictionType_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasFrictionType*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasFrictionType_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasFrictionType(AssetRipper.Core.Parser.Files.UnityVersion)">HasFrictionType(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.3 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasFrictionType(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasImprovedPatchFriction_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasImprovedPatchFriction(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L21">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasImprovedPatchFriction_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasImprovedPatchFriction*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasImprovedPatchFriction_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasImprovedPatchFriction(AssetRipper.Core.Parser.Files.UnityVersion)">HasImprovedPatchFriction(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2021.2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasImprovedPatchFriction(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasLayerCollisionMatrix_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasLayerCollisionMatrix(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L118">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasLayerCollisionMatrix_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasLayerCollisionMatrix*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasLayerCollisionMatrix_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasLayerCollisionMatrix(AssetRipper.Core.Parser.Files.UnityVersion)">HasLayerCollisionMatrix(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasLayerCollisionMatrix(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasQueriesHitBackfaces_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasQueriesHitBackfaces(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L98">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasQueriesHitBackfaces_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasQueriesHitBackfaces*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasQueriesHitBackfaces_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasQueriesHitBackfaces(AssetRipper.Core.Parser.Files.UnityVersion)">HasQueriesHitBackfaces(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.5.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasQueriesHitBackfaces(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasQueriesHitTriggers_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasQueriesHitTriggers(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L102">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasQueriesHitTriggers_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasQueriesHitTriggers*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasQueriesHitTriggers_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasQueriesHitTriggers(AssetRipper.Core.Parser.Files.UnityVersion)">HasQueriesHitTriggers(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2.6.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasQueriesHitTriggers(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSleepAngularVelocity_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSleepAngularVelocity(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L86">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSleepAngularVelocity_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSleepAngularVelocity*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSleepAngularVelocity_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSleepAngularVelocity(AssetRipper.Core.Parser.Files.UnityVersion)">HasSleepAngularVelocity(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.0.0b1 and less</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSleepAngularVelocity(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSleepThreshold_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSleepThreshold(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L82">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSleepThreshold_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSleepThreshold*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSleepThreshold_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSleepThreshold(AssetRipper.Core.Parser.Files.UnityVersion)">HasSleepThreshold(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSleepThreshold(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSolverType_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSolverType(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L146">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSolverType_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSolverType*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_HasSolverType_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.HasSolverType(AssetRipper.Core.Parser.Files.UnityVersion)">HasSolverType(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2019.3 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSolverType(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_IsAlign2_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.IsAlign2(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L159">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_IsAlign2_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.IsAlign2*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_IsAlign2_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.IsAlign2(AssetRipper.Core.Parser.Files.UnityVersion)">IsAlign2(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2019.1 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsAlign2(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L161">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_Read_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.GameManager.html#AssetRipper_Core_Classes_GameManager_Read_AssetRipper_Core_IO_Asset_AssetReader_">GameManager.Read(AssetReader)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L25">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ToSerializedVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ToSerializedVersion*"></a>
+  <h4 id="AssetRipper_Core_Classes_PhysicsManager_PhysicsManager_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.PhysicsManager.PhysicsManager.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)">ToSerializedVersion(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ToSerializedVersion(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IGameManager.html">IGameManager</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IGlobalGameManager.html">IGlobalGameManager</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_PhysicsManager_PhysicsManager.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.PhysicsManager.PhysicsManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/PhysicsManager/PhysicsManager.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

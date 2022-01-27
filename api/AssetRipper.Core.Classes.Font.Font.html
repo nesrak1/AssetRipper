@@ -1,0 +1,2820 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Font
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Font
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.Font.Font">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_Font_Font" data-uid="AssetRipper.Core.Classes.Font.Font" class="text-break">Class Font
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="AssetRipper.Core.UnityAssetBase.html">UnityAssetBase</a></div>
+    <div class="level2"><a class="xref" href="AssetRipper.Core.UnityObjectBase.html">UnityObjectBase</a></div>
+    <div class="level3"><a class="xref" href="AssetRipper.Core.Classes.Object.Object.html">Object</a></div>
+    <div class="level4"><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html">EditorExtension</a></div>
+    <div class="level5"><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html">NamedObject</a></div>
+    <div class="level6"><span class="xref">Font</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.Classes.INamedObject.html">INamedObject</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.Font.IFont.html">IFont</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IHasName.html">IHasName</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Write_AssetRipper_Core_IO_Asset_AssetWriter_">NamedObject.Write(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_ToString">NamedObject.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Name">NamedObject.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_NameName">NamedObject.NameName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_m_Name">NamedObject.m_Name</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasExtensionPtr_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasExtensionPtr(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObjectInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObjectInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabParentObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabParentObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstanceInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstanceInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstance_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstance(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInternal_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInternal(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabAsset_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabAsset(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ReadObject_AssetRipper_Core_IO_Asset_AssetReader_">EditorExtension.ReadObject(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_WriteObject_AssetRipper_Core_IO_Asset_AssetWriter_">EditorExtension.WriteObject(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExportYAMLRootObject_AssetRipper_Core_Project_IExportContainer_">EditorExtension.ExportYAMLRootObject(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependenciesObject_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependenciesObject(DependencyContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.CorrespondingSourceObjectInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.PrefabInstanceInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstance">EditorExtension.PrefabInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExtensionPtrName">EditorExtension.ExtensionPtrName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectName">EditorExtension.CorrespondingSourceObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabParentObjectName">EditorExtension.PrefabParentObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceName">EditorExtension.PrefabInstanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInternalName">EditorExtension.PrefabInternalName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabAssetName">EditorExtension.PrefabAssetName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlags">Object.ObjectHideFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ExportYAML_AssetRipper_Core_Project_IExportContainer_">Object.ExportYAML(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_HasHideFlag_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Object.HasHideFlag(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlagsName">Object.ObjectHideFlagsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_InstanceIDName">Object.InstanceIDName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_LocalIdentfierInFileName">Object.LocalIdentfierInFileName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetInfo">UnityObjectBase.AssetInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_SerializedFile">UnityObjectBase.SerializedFile</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ClassID">UnityObjectBase.ClassID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_PathID">UnityObjectBase.PathID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_GUID">UnityObjectBase.GUID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportPath">UnityObjectBase.ExportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportExtension">UnityObjectBase.ExportExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetsKeyword">UnityObjectBase.AssetsKeyword</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetExtension">UnityObjectBase.AssetExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportYAMLDocument_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ExportYAMLDocument(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertLegacy_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ConvertLegacy(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertToEditor">UnityObjectBase.ConvertToEditor()</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_AssetUnityVersion">UnityAssetBase.AssetUnityVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_EndianType">UnityAssetBase.EndianType</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_TransferInstructionFlags">UnityAssetBase.TransferInstructionFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadEditor_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadEditor(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadRelease_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadRelease(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteEditor_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteEditor(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteRelease_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteRelease(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLEditor_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLEditor(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLRelease_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLRelease(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeReleaseTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeReleaseTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeEditorTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeEditorTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.Font.html">AssetRipper.Core.Classes.Font</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCore.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_Font_Font_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class Font : NamedObject, INamedObject, IEditorExtension, IFont, IUnityObjectBase, IUnityAssetBase, IAsset, IAssetReadable, IAssetWritable, IYAMLExportable, IDependent, ITypeTreeSerializable, IConvertToEditor, IHasName</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.%23ctor(AssetRipper.Core.Parser.Asset.AssetInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L18">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font__ctor_" data-uid="AssetRipper.Core.Classes.Font.Font.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_" data-uid="AssetRipper.Core.Classes.Font.Font.#ctor(AssetRipper.Core.Parser.Asset.AssetInfo)">Font(AssetInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Font(AssetInfo assetInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.AssetInfo.html">AssetInfo</a></td>
+        <td><span class="parametername">assetInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_AscentName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.AscentName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L399">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_AscentName" data-uid="AssetRipper.Core.Classes.Font.Font.AscentName">AscentName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AscentName = &quot;m_Ascent&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_AsciiStartOffsetName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.AsciiStartOffsetName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L390">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_AsciiStartOffsetName" data-uid="AssetRipper.Core.Classes.Font.Font.AsciiStartOffsetName">AsciiStartOffsetName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AsciiStartOffsetName = &quot;m_AsciiStartOffset&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_CharacterPaddingName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.CharacterPaddingName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L393">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_CharacterPaddingName" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterPaddingName">CharacterPaddingName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string CharacterPaddingName = &quot;m_CharacterPadding&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_CharacterRectsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.CharacterRectsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L395">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_CharacterRectsName" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterRectsName">CharacterRectsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string CharacterRectsName = &quot;m_CharacterRects&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_CharacterSpacingName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.CharacterSpacingName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L392">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_CharacterSpacingName" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterSpacingName">CharacterSpacingName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string CharacterSpacingName = &quot;m_CharacterSpacing&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_ConvertCaseName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.ConvertCaseName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L394">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_ConvertCaseName" data-uid="AssetRipper.Core.Classes.Font.Font.ConvertCaseName">ConvertCaseName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ConvertCaseName = &quot;m_ConvertCase&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_DefaultMaterial.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.DefaultMaterial%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L408">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_DefaultMaterial" data-uid="AssetRipper.Core.Classes.Font.Font.DefaultMaterial">DefaultMaterial</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Material&gt; DefaultMaterial</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Material.Material.html">Material</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_DefaultMaterialName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.DefaultMaterialName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L387">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_DefaultMaterialName" data-uid="AssetRipper.Core.Classes.Font.Font.DefaultMaterialName">DefaultMaterialName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultMaterialName = &quot;m_DefaultMaterial&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_DefaultStyleName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.DefaultStyleName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L401">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_DefaultStyleName" data-uid="AssetRipper.Core.Classes.Font.Font.DefaultStyleName">DefaultStyleName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DefaultStyleName = &quot;m_DefaultStyle&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_DescentName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.DescentName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L400">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_DescentName" data-uid="AssetRipper.Core.Classes.Font.Font.DescentName">DescentName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DescentName = &quot;m_Descent&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FallbackFontsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FallbackFontsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L403">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FallbackFontsName" data-uid="AssetRipper.Core.Classes.Font.Font.FallbackFontsName">FallbackFontsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FallbackFontsName = &quot;m_FallbackFonts&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontDataName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontDataName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L398">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontDataName" data-uid="AssetRipper.Core.Classes.Font.Font.FontDataName">FontDataName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FontDataName = &quot;m_FontData&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L385">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontName" data-uid="AssetRipper.Core.Classes.Font.Font.FontName">FontName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FontName = &quot;Font&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontNamesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontNamesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L402">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontNamesName" data-uid="AssetRipper.Core.Classes.Font.Font.FontNamesName">FontNamesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FontNamesName = &quot;m_FontNames&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontRenderingModeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontRenderingModeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L404">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontRenderingModeName" data-uid="AssetRipper.Core.Classes.Font.Font.FontRenderingModeName">FontRenderingModeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FontRenderingModeName = &quot;m_FontRenderingMode&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontSizeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontSizeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L388">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontSizeName" data-uid="AssetRipper.Core.Classes.Font.Font.FontSizeName">FontSizeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string FontSizeName = &quot;m_FontSize&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_KerningValuesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.KerningValuesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L396">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_KerningValuesName" data-uid="AssetRipper.Core.Classes.Font.Font.KerningValuesName">KerningValuesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string KerningValuesName = &quot;m_KerningValues&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_LineSpacingName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.LineSpacingName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L386">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_LineSpacingName" data-uid="AssetRipper.Core.Classes.Font.Font.LineSpacingName">LineSpacingName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LineSpacingName = &quot;m_LineSpacing&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_PixelScaleName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.PixelScaleName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L397">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_PixelScaleName" data-uid="AssetRipper.Core.Classes.Font.Font.PixelScaleName">PixelScaleName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PixelScaleName = &quot;m_PixelScale&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_ShouldRoundAdvanceValueName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.ShouldRoundAdvanceValueName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L406">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_ShouldRoundAdvanceValueName" data-uid="AssetRipper.Core.Classes.Font.Font.ShouldRoundAdvanceValueName">ShouldRoundAdvanceValueName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ShouldRoundAdvanceValueName = &quot;m_ShouldRoundAdvanceValue&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_Texture.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.Texture%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L409">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_Texture" data-uid="AssetRipper.Core.Classes.Font.Font.Texture">Texture</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Texture&gt; Texture</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Texture.html">Texture</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_TextureName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.TextureName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L389">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_TextureName" data-uid="AssetRipper.Core.Classes.Font.Font.TextureName">TextureName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TextureName = &quot;m_Texture&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_TrackingName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.TrackingName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L391">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_TrackingName" data-uid="AssetRipper.Core.Classes.Font.Font.TrackingName">TrackingName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TrackingName = &quot;m_Tracking&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_UseLegacyBoundsCalculationName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.UseLegacyBoundsCalculationName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L405">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_UseLegacyBoundsCalculationName" data-uid="AssetRipper.Core.Classes.Font.Font.UseLegacyBoundsCalculationName">UseLegacyBoundsCalculationName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UseLegacyBoundsCalculationName = &quot;m_UseLegacyBoundsCalculation&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_Ascent.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.Ascent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L376">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_Ascent_" data-uid="AssetRipper.Core.Classes.Font.Font.Ascent*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_Ascent" data-uid="AssetRipper.Core.Classes.Font.Font.Ascent">Ascent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Ascent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_AsciiStartOffset.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.AsciiStartOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L359">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_AsciiStartOffset_" data-uid="AssetRipper.Core.Classes.Font.Font.AsciiStartOffset*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_AsciiStartOffset" data-uid="AssetRipper.Core.Classes.Font.Font.AsciiStartOffset">AsciiStartOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int AsciiStartOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_CharacterPadding.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.CharacterPadding%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L366">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_CharacterPadding_" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterPadding*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_CharacterPadding" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterPadding">CharacterPadding</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CharacterPadding { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_CharacterRects.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.CharacterRects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L370">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_CharacterRects_" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterRects*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_CharacterRects" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterRects">CharacterRects</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CharacterInfo[] CharacterRects { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Font.CharacterInfo.html">CharacterInfo</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_CharacterSpacing.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.CharacterSpacing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L365">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_CharacterSpacing_" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterSpacing*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_CharacterSpacing" data-uid="AssetRipper.Core.Classes.Font.Font.CharacterSpacing">CharacterSpacing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CharacterSpacing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_ConvertCase.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.ConvertCase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L369">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_ConvertCase_" data-uid="AssetRipper.Core.Classes.Font.Font.ConvertCase*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_ConvertCase" data-uid="AssetRipper.Core.Classes.Font.Font.ConvertCase">ConvertCase</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ConvertCase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_DefaultStyle.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.DefaultStyle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L378">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_DefaultStyle_" data-uid="AssetRipper.Core.Classes.Font.Font.DefaultStyle*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_DefaultStyle" data-uid="AssetRipper.Core.Classes.Font.Font.DefaultStyle">DefaultStyle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontStyle DefaultStyle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Font.FontStyle.html">FontStyle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_Descent.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.Descent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L377">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_Descent_" data-uid="AssetRipper.Core.Classes.Font.Font.Descent*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_Descent" data-uid="AssetRipper.Core.Classes.Font.Font.Descent">Descent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Descent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FallbackFonts.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FallbackFonts%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L380">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_FallbackFonts_" data-uid="AssetRipper.Core.Classes.Font.Font.FallbackFonts*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FallbackFonts" data-uid="AssetRipper.Core.Classes.Font.Font.FallbackFonts">FallbackFonts</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Font&gt;[] FallbackFonts { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Font.Font.html">Font</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontCountX.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontCountX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L360">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_FontCountX_" data-uid="AssetRipper.Core.Classes.Font.Font.FontCountX*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontCountX" data-uid="AssetRipper.Core.Classes.Font.Font.FontCountX">FontCountX</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FontCountX { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontCountY.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontCountY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L361">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_FontCountY_" data-uid="AssetRipper.Core.Classes.Font.Font.FontCountY*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontCountY" data-uid="AssetRipper.Core.Classes.Font.Font.FontCountY">FontCountY</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FontCountY { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontData.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L374">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_FontData_" data-uid="AssetRipper.Core.Classes.Font.Font.FontData*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontData" data-uid="AssetRipper.Core.Classes.Font.Font.FontData">FontData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] FontData { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontNames.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontNames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L379">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_FontNames_" data-uid="AssetRipper.Core.Classes.Font.Font.FontNames*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontNames" data-uid="AssetRipper.Core.Classes.Font.Font.FontNames">FontNames</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] FontNames { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontRenderingMode.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontRenderingMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L381">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_FontRenderingMode_" data-uid="AssetRipper.Core.Classes.Font.Font.FontRenderingMode*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontRenderingMode" data-uid="AssetRipper.Core.Classes.Font.Font.FontRenderingMode">FontRenderingMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontRenderingMode FontRenderingMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Font.FontRenderingMode.html">FontRenderingMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FontSize.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FontSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L375">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_FontSize_" data-uid="AssetRipper.Core.Classes.Font.Font.FontSize*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FontSize" data-uid="AssetRipper.Core.Classes.Font.Font.FontSize">FontSize</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float FontSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_GridFont.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.GridFont%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L371">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_GridFont_" data-uid="AssetRipper.Core.Classes.Font.Font.GridFont*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_GridFont" data-uid="AssetRipper.Core.Classes.Font.Font.GridFont">GridFont</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GridFont { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_IsValidData.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.IsValidData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L357">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_IsValidData_" data-uid="AssetRipper.Core.Classes.Font.Font.IsValidData*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_IsValidData" data-uid="AssetRipper.Core.Classes.Font.Font.IsValidData">IsValidData</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValidData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_Kerning.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.Kerning%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L362">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_Kerning_" data-uid="AssetRipper.Core.Classes.Font.Font.Kerning*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_Kerning" data-uid="AssetRipper.Core.Classes.Font.Font.Kerning">Kerning</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Kerning { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_KerningValues.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.KerningValues%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L373">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_KerningValues_" data-uid="AssetRipper.Core.Classes.Font.Font.KerningValues*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_KerningValues" data-uid="AssetRipper.Core.Classes.Font.Font.KerningValues">KerningValues</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;Tuple&lt;ushort, ushort&gt;, float&gt; KerningValues { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.Tuple</span>&lt;<span class="xref">System.UInt16</span>, <span class="xref">System.UInt16</span>&gt;, <span class="xref">System.Single</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_LineSpacing.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.LineSpacing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L364">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_LineSpacing_" data-uid="AssetRipper.Core.Classes.Font.Font.LineSpacing*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_LineSpacing" data-uid="AssetRipper.Core.Classes.Font.Font.LineSpacing">LineSpacing</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LineSpacing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_PerCharacterKerning.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.PerCharacterKerning%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L368">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_PerCharacterKerning_" data-uid="AssetRipper.Core.Classes.Font.Font.PerCharacterKerning*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_PerCharacterKerning" data-uid="AssetRipper.Core.Classes.Font.Font.PerCharacterKerning">PerCharacterKerning</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tuple&lt;int, float&gt;[] PerCharacterKerning { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Tuple</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Single</span>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_PerCharacterKerningByte.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.PerCharacterKerningByte%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L367">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_PerCharacterKerningByte_" data-uid="AssetRipper.Core.Classes.Font.Font.PerCharacterKerningByte*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_PerCharacterKerningByte" data-uid="AssetRipper.Core.Classes.Font.Font.PerCharacterKerningByte">PerCharacterKerningByte</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Tuple&lt;byte, float&gt;[] PerCharacterKerningByte { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Tuple</span>&lt;<span class="xref">System.Byte</span>, <span class="xref">System.Single</span>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_PixelScale.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.PixelScale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L372">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_PixelScale_" data-uid="AssetRipper.Core.Classes.Font.Font.PixelScale*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_PixelScale" data-uid="AssetRipper.Core.Classes.Font.Font.PixelScale">PixelScale</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float PixelScale { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_ShouldRoundAdvanceValue.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.ShouldRoundAdvanceValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L383">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_ShouldRoundAdvanceValue_" data-uid="AssetRipper.Core.Classes.Font.Font.ShouldRoundAdvanceValue*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_ShouldRoundAdvanceValue" data-uid="AssetRipper.Core.Classes.Font.Font.ShouldRoundAdvanceValue">ShouldRoundAdvanceValue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShouldRoundAdvanceValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_Tracking.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.Tracking%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L363">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_Tracking_" data-uid="AssetRipper.Core.Classes.Font.Font.Tracking*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_Tracking" data-uid="AssetRipper.Core.Classes.Font.Font.Tracking">Tracking</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Tracking { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_UseLegacyBoundsCalculation.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.UseLegacyBoundsCalculation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L382">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_UseLegacyBoundsCalculation_" data-uid="AssetRipper.Core.Classes.Font.Font.UseLegacyBoundsCalculation*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_UseLegacyBoundsCalculation" data-uid="AssetRipper.Core.Classes.Font.Font.UseLegacyBoundsCalculation">UseLegacyBoundsCalculation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseLegacyBoundsCalculation { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L300">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_ExportYAMLRoot_" data-uid="AssetRipper.Core.Classes.Font.Font.ExportYAMLRoot*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_" data-uid="AssetRipper.Core.Classes.Font.Font.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)">ExportYAMLRoot(IExportContainer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override YAMLMappingNode ExportYAMLRoot(IExportContainer container)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Project.IExportContainer.html">IExportContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.YAML.YAMLMappingNode.html">YAMLMappingNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_">NamedObject.ExportYAMLRoot(IExportContainer)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L289">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_FetchDependencies_" data-uid="AssetRipper.Core.Classes.Font.Font.FetchDependencies*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_" data-uid="AssetRipper.Core.Classes.Font.Font.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)">FetchDependencies(DependencyContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;PPtr&lt;IUnityObjectBase&gt;&gt; FetchDependencies(DependencyContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.DependencyContext.html">DependencyContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependencies(DependencyContext)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasCharacterSpacing_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasCharacterSpacing(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L53">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasCharacterSpacing_" data-uid="AssetRipper.Core.Classes.Font.Font.HasCharacterSpacing*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasCharacterSpacing_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasCharacterSpacing(AssetRipper.Core.Parser.Files.UnityVersion)">HasCharacterSpacing(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>4.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasCharacterSpacing(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasDefaultStyle_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasDefaultStyle(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L85">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasDefaultStyle_" data-uid="AssetRipper.Core.Classes.Font.Font.HasDefaultStyle*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasDefaultStyle_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasDefaultStyle(AssetRipper.Core.Parser.Files.UnityVersion)">HasDefaultStyle(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasDefaultStyle(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasDescent_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasDescent(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L81">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasDescent_" data-uid="AssetRipper.Core.Classes.Font.Font.HasDescent*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasDescent_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasDescent(AssetRipper.Core.Parser.Files.UnityVersion)">HasDescent(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.4.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasDescent(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasFallbackFonts_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasFallbackFonts(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L89">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasFallbackFonts_" data-uid="AssetRipper.Core.Classes.Font.Font.HasFallbackFonts*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasFallbackFonts_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasFallbackFonts(AssetRipper.Core.Parser.Files.UnityVersion)">HasFallbackFonts(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>4.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasFallbackFonts(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasFontCount_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasFontCount(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L41">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasFontCount_" data-uid="AssetRipper.Core.Classes.Font.Font.HasFontCount*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasFontCount_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasFontCount(AssetRipper.Core.Parser.Files.UnityVersion)">HasFontCount(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 4.0.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasFontCount(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasFontData_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasFontData(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L77">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasFontData_" data-uid="AssetRipper.Core.Classes.Font.Font.HasFontData*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasFontData_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasFontData(AssetRipper.Core.Parser.Files.UnityVersion)">HasFontData(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasFontData(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasGridFont_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasGridFont(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L61">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasGridFont_" data-uid="AssetRipper.Core.Classes.Font.Font.HasGridFont*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasGridFont_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasGridFont(AssetRipper.Core.Parser.Files.UnityVersion)">HasGridFont(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 4.0.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasGridFont(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasKerning_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasKerning(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L45">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasKerning_" data-uid="AssetRipper.Core.Classes.Font.Font.HasKerning*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasKerning_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasKerning(AssetRipper.Core.Parser.Files.UnityVersion)">HasKerning(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 5.3.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasKerning(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasPerCharacterKerning_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasPerCharacterKerning(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L57">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasPerCharacterKerning_" data-uid="AssetRipper.Core.Classes.Font.Font.HasPerCharacterKerning*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasPerCharacterKerning_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasPerCharacterKerning(AssetRipper.Core.Parser.Files.UnityVersion)">HasPerCharacterKerning(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 4.0.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasPerCharacterKerning(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasPixelScale_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasPixelScale(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L73">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasPixelScale_" data-uid="AssetRipper.Core.Classes.Font.Font.HasPixelScale*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasPixelScale_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasPixelScale(AssetRipper.Core.Parser.Files.UnityVersion)">HasPixelScale(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>4.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasPixelScale(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasShouldRoundAdvanceValue_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasShouldRoundAdvanceValue(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L116">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasShouldRoundAdvanceValue_" data-uid="AssetRipper.Core.Classes.Font.Font.HasShouldRoundAdvanceValue*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasShouldRoundAdvanceValue_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasShouldRoundAdvanceValue(AssetRipper.Core.Parser.Files.UnityVersion)">HasShouldRoundAdvanceValue(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.1 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasShouldRoundAdvanceValue(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasTracking_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasTracking(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L49">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasTracking_" data-uid="AssetRipper.Core.Classes.Font.Font.HasTracking*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasTracking_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasTracking(AssetRipper.Core.Parser.Files.UnityVersion)">HasTracking(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.3.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasTracking(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_HasUseLegacyBoundsCalculation_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.HasUseLegacyBoundsCalculation(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L93">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_HasUseLegacyBoundsCalculation_" data-uid="AssetRipper.Core.Classes.Font.Font.HasUseLegacyBoundsCalculation*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_HasUseLegacyBoundsCalculation_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.HasUseLegacyBoundsCalculation(AssetRipper.Core.Parser.Files.UnityVersion)">HasUseLegacyBoundsCalculation(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.6.x-2017.x and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasUseLegacyBoundsCalculation(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_IsByteKerningValues_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.IsByteKerningValues(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L69">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_IsByteKerningValues_" data-uid="AssetRipper.Core.Classes.Font.Font.IsByteKerningValues*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_IsByteKerningValues_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.IsByteKerningValues(AssetRipper.Core.Parser.Files.UnityVersion)">IsByteKerningValues(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 1.6.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsByteKerningValues(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_IsBytePerCharacterKerning_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.IsBytePerCharacterKerning(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L65">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_IsBytePerCharacterKerning_" data-uid="AssetRipper.Core.Classes.Font.Font.IsBytePerCharacterKerning*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_IsBytePerCharacterKerning_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.IsBytePerCharacterKerning(AssetRipper.Core.Parser.Files.UnityVersion)">IsBytePerCharacterKerning(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2.1.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsBytePerCharacterKerning(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L135">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_Read_" data-uid="AssetRipper.Core.Classes.Font.Font.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.Font.Font.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.NamedObject.html#AssetRipper_Core_Classes_NamedObject_Read_AssetRipper_Core_IO_Asset_AssetReader_">NamedObject.Read(AssetReader)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L20">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Font_Font_ToSerializedVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.ToSerializedVersion*"></a>
+  <h4 id="AssetRipper_Core_Classes_Font_Font_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.Font.Font.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)">ToSerializedVersion(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ToSerializedVersion(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.INamedObject.html">INamedObject</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Font.IFont.html">IFont</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IHasName.html">IHasName</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Font_Font.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Font.Font%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/Font/Font.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

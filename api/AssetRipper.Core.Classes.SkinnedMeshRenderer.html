@@ -1,0 +1,2149 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SkinnedMeshRenderer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SkinnedMeshRenderer
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_SkinnedMeshRenderer" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer" class="text-break">Class SkinnedMeshRenderer
+  </h1>
+  <div class="markdown level0 summary"><p>SkinnedMeshFilter previously</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="AssetRipper.Core.UnityAssetBase.html">UnityAssetBase</a></div>
+    <div class="level2"><a class="xref" href="AssetRipper.Core.UnityObjectBase.html">UnityObjectBase</a></div>
+    <div class="level3"><a class="xref" href="AssetRipper.Core.Classes.Object.Object.html">Object</a></div>
+    <div class="level4"><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html">EditorExtension</a></div>
+    <div class="level5"><a class="xref" href="AssetRipper.Core.Classes.Component.html">Component</a></div>
+    <div class="level6"><a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html">Renderer</a></div>
+    <div class="level7"><span class="xref">SkinnedMeshRenderer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IComponent.html">IComponent</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.Renderer.IRenderer.html">IRenderer</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasEnabled_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasEnabled(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasCastShadows_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasCastShadows(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasDynamicOccludee_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasDynamicOccludee(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasStaticShadowCaster_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasStaticShadowCaster(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasMotionVector_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasMotionVector(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasRenderingLayerMask_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasRenderingLayerMask(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasRendererPriority_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasRendererPriority(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightmapIndex_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasLightmapIndex(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightmapIndexDynamic_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasLightmapIndexDynamic(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightmapTilingOffset_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasLightmapTilingOffset(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightmapTilingOffsetDynamic_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasLightmapTilingOffsetDynamic(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSubsetIndices_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasSubsetIndices(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasStaticBatchInfo_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasStaticBatchInfo(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasStaticBatchRoot_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasStaticBatchRoot(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasUseLight_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasUseLight(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasUseReflectionProbes_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasUseReflectionProbes(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasReflectUsage_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasReflectUsage(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasRayTracingMode_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasRayTracingMode(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasRayTraceProcedural_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasRayTraceProcedural(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasProbeAnchor_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasProbeAnchor(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightOverride_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasLightOverride(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasScaleInLightmap_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasScaleInLightmap(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasReceiveGI_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasReceiveGI(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasPreserveUVs_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasPreserveUVs(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasIgnoreNormalsForChartDetection_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasIgnoreNormalsForChartDetection(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasImportantGI_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasImportantGI(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSelectedWireframeHidden_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasSelectedWireframeHidden(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasStitchLightmapSeams_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasStitchLightmapSeams(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSelectedEditorRenderState_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasSelectedEditorRenderState(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasMinimumChartSize_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasMinimumChartSize(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasAutoUVMaxDistance_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasAutoUVMaxDistance(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasGIBackfaceCull_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasGIBackfaceCull(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSortingLayerID_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasSortingLayerID(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSortingLayer_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasSortingLayer(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSortingOrder_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasSortingOrder(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_FindMaterialPropertyNameByCRC28_System_UInt32_">Renderer.FindMaterialPropertyNameByCRC28(UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReadBase_AssetRipper_Core_IO_Asset_AssetReader_">Renderer.ReadBase(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_GetStaticBatchInfo_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.GetStaticBatchInfo(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_Enabled">Renderer.Enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_CastShadows">Renderer.CastShadows</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReceiveShadows">Renderer.ReceiveShadows</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_DynamicOccludee">Renderer.DynamicOccludee</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticShadowCaster">Renderer.StaticShadowCaster</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_MotionVectors">Renderer.MotionVectors</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_UseLightProbes">Renderer.UseLightProbes</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightProbeUsage">Renderer.LightProbeUsage</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_UseReflectionProbes">Renderer.UseReflectionProbes</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReflectionProbeUsage">Renderer.ReflectionProbeUsage</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RayTracingMode">Renderer.RayTracingMode</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RayTraceProcedural">Renderer.RayTraceProcedural</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RenderingLayerMask">Renderer.RenderingLayerMask</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RendererPriority">Renderer.RendererPriority</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapIndex">Renderer.LightmapIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapIndexDynamic">Renderer.LightmapIndexDynamic</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_Materials">Renderer.Materials</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SubsetIndices">Renderer.SubsetIndices</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingLayerID">Renderer.SortingLayerID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingLayer">Renderer.SortingLayer</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingOrder">Renderer.SortingOrder</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_EnabledName">Renderer.EnabledName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_CastShadowsName">Renderer.CastShadowsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReceiveShadowsName">Renderer.ReceiveShadowsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_DynamicOccludeeName">Renderer.DynamicOccludeeName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticShadowCasterName">Renderer.StaticShadowCasterName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_MotionVectorsName">Renderer.MotionVectorsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_UseLightProbesName">Renderer.UseLightProbesName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightProbeUsageName">Renderer.LightProbeUsageName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReflectionProbeUsageName">Renderer.ReflectionProbeUsageName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RayTracingModeName">Renderer.RayTracingModeName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RayTraceProceduralName">Renderer.RayTraceProceduralName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RenderingLayerMaskName">Renderer.RenderingLayerMaskName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RendererPriorityName">Renderer.RendererPriorityName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_MaterialsName">Renderer.MaterialsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticBatchInfoName">Renderer.StaticBatchInfoName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticBatchRootName">Renderer.StaticBatchRootName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ProbeAnchorName">Renderer.ProbeAnchorName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightProbeVolumeOverrideName">Renderer.LightProbeVolumeOverrideName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ScaleInLightmapName">Renderer.ScaleInLightmapName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReceiveGIName">Renderer.ReceiveGIName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_PreserveUVsName">Renderer.PreserveUVsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_IgnoreNormalsForChartDetectionName">Renderer.IgnoreNormalsForChartDetectionName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ImportantGIName">Renderer.ImportantGIName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SelectedWireframeHiddenName">Renderer.SelectedWireframeHiddenName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StitchLightmapSeamsName">Renderer.StitchLightmapSeamsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SelectedEditorRenderStateName">Renderer.SelectedEditorRenderStateName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_MinimumChartSizeName">Renderer.MinimumChartSizeName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_AutoUVMaxDistanceName">Renderer.AutoUVMaxDistanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_AutoUVMaxAngleName">Renderer.AutoUVMaxAngleName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapParametersName">Renderer.LightmapParametersName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingLayerIDName">Renderer.SortingLayerIDName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingLayerName">Renderer.SortingLayerName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingOrderName">Renderer.SortingOrderName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapTilingOffset">Renderer.LightmapTilingOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapTilingOffsetDynamic">Renderer.LightmapTilingOffsetDynamic</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticBatchInfo">Renderer.StaticBatchInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticBatchRoot">Renderer.StaticBatchRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ProbeAnchor">Renderer.ProbeAnchor</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightProbeVolumeOverride">Renderer.LightProbeVolumeOverride</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_Write_AssetRipper_Core_IO_Asset_AssetWriter_">Component.Write(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_ExportExtension">Component.ExportExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_GameObject">Component.GameObject</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_GameObjectPtr">Component.GameObjectPtr</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_GameObjectName">Component.GameObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasExtensionPtr_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasExtensionPtr(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObjectInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObjectInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabParentObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabParentObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstanceInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstanceInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstance_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstance(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInternal_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInternal(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabAsset_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabAsset(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ReadObject_AssetRipper_Core_IO_Asset_AssetReader_">EditorExtension.ReadObject(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_WriteObject_AssetRipper_Core_IO_Asset_AssetWriter_">EditorExtension.WriteObject(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExportYAMLRootObject_AssetRipper_Core_Project_IExportContainer_">EditorExtension.ExportYAMLRootObject(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependenciesObject_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependenciesObject(DependencyContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.CorrespondingSourceObjectInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.PrefabInstanceInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstance">EditorExtension.PrefabInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExtensionPtrName">EditorExtension.ExtensionPtrName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectName">EditorExtension.CorrespondingSourceObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabParentObjectName">EditorExtension.PrefabParentObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceName">EditorExtension.PrefabInstanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInternalName">EditorExtension.PrefabInternalName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabAssetName">EditorExtension.PrefabAssetName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlags">Object.ObjectHideFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ExportYAML_AssetRipper_Core_Project_IExportContainer_">Object.ExportYAML(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_HasHideFlag_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Object.HasHideFlag(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlagsName">Object.ObjectHideFlagsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_InstanceIDName">Object.InstanceIDName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_LocalIdentfierInFileName">Object.LocalIdentfierInFileName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetInfo">UnityObjectBase.AssetInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_SerializedFile">UnityObjectBase.SerializedFile</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ClassID">UnityObjectBase.ClassID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_PathID">UnityObjectBase.PathID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_GUID">UnityObjectBase.GUID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportPath">UnityObjectBase.ExportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetsKeyword">UnityObjectBase.AssetsKeyword</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetExtension">UnityObjectBase.AssetExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportYAMLDocument_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ExportYAMLDocument(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertLegacy_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ConvertLegacy(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertToEditor">UnityObjectBase.ConvertToEditor()</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_AssetUnityVersion">UnityAssetBase.AssetUnityVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_EndianType">UnityAssetBase.EndianType</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_TransferInstructionFlags">UnityAssetBase.TransferInstructionFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadEditor_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadEditor(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadRelease_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadRelease(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteEditor_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteEditor(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteRelease_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteRelease(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLEditor_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLEditor(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLRelease_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLRelease(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeReleaseTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeReleaseTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeEditorTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeEditorTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.html">AssetRipper.Core.Classes</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCore.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SkinnedMeshRenderer : Renderer, IComponent, IEditorExtension, IRenderer, IUnityObjectBase, IUnityAssetBase, IAsset, IAssetReadable, IAssetWritable, IYAMLExportable, IDependent, ITypeTreeSerializable, IConvertToEditor</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.%23ctor(AssetRipper.Core.Parser.Asset.AssetInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L21">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer__ctor_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.#ctor(AssetRipper.Core.Parser.Asset.AssetInfo)">SkinnedMeshRenderer(AssetInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SkinnedMeshRenderer(AssetInfo assetInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.AssetInfo.html">AssetInfo</a></td>
+        <td><span class="parametername">assetInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_AABB.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.AABB%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L252">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_AABB" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.AABB">AABB</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AABB AABB</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.Serializable.Boundaries.AABB.html">AABB</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_AABBName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.AABBName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L241">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_AABBName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.AABBName">AABBName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AABBName = &quot;m_AABB&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_Animation.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.Animation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L249">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_Animation" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.Animation">Animation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Animation&gt; Animation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Animation.Animation.html">Animation</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_BlendShapeWeightsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.BlendShapeWeightsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L239">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_BlendShapeWeightsName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.BlendShapeWeightsName">BlendShapeWeightsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BlendShapeWeightsName = &quot;m_BlendShapeWeights&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_BonesName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.BonesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L238">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_BonesName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.BonesName">BonesName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BonesName = &quot;m_Bones&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_CurrentPose.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.CurrentPose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L250">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_CurrentPose" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.CurrentPose">CurrentPose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4x4f CurrentPose</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Math.Matrix4x4f.html">Matrix4x4f</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_DirtyAABBName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.DirtyAABBName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L242">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_DirtyAABBName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.DirtyAABBName">DirtyAABBName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DirtyAABBName = &quot;m_DirtyAABB&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_DisableAnimationWhenOffscreen.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.DisableAnimationWhenOffscreen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L244">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_DisableAnimationWhenOffscreen" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.DisableAnimationWhenOffscreen">DisableAnimationWhenOffscreen</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Animation&gt; DisableAnimationWhenOffscreen</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Animation.Animation.html">Animation</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_DisableAnimationWhenOffscreenName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.DisableAnimationWhenOffscreenName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L236">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_DisableAnimationWhenOffscreenName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.DisableAnimationWhenOffscreenName">DisableAnimationWhenOffscreenName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DisableAnimationWhenOffscreenName = &quot;m_DisableAnimationWhenOffscreen&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_Mesh.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.Mesh%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L248">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_Mesh" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.Mesh">Mesh</h4>
+  <div class="markdown level1 summary"><p>LodMesh previously</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Mesh&gt; Mesh</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Mesh.Mesh.html">Mesh</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_MeshName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.MeshName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L237">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_MeshName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.MeshName">MeshName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MeshName = &quot;m_Mesh&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_QualityName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.QualityName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L233">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_QualityName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.QualityName">QualityName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string QualityName = &quot;m_Quality&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_RootBone.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.RootBone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L251">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_RootBone" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.RootBone">RootBone</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Transform&gt; RootBone</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Transform.html">Transform</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_RootBoneName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.RootBoneName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L240">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_RootBoneName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.RootBoneName">RootBoneName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RootBoneName = &quot;m_RootBone&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_SkinnedMotionVectorsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.SkinnedMotionVectorsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L235">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_SkinnedMotionVectorsName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.SkinnedMotionVectorsName">SkinnedMotionVectorsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SkinnedMotionVectorsName = &quot;m_skinnedMotionVectors&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_UpdateWhenOffscreenName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.UpdateWhenOffscreenName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L234">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_UpdateWhenOffscreenName" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.UpdateWhenOffscreenName">UpdateWhenOffscreenName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UpdateWhenOffscreenName = &quot;m_UpdateWhenOffscreen&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_BindPose.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.BindPose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L229">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_BindPose_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.BindPose*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_BindPose" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.BindPose">BindPose</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4x4f[] BindPose { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Math.Matrix4x4f.html">Matrix4x4f</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_BlendShapeWeights.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.BlendShapeWeights%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L230">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_BlendShapeWeights_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.BlendShapeWeights*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_BlendShapeWeights" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.BlendShapeWeights">BlendShapeWeights</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float[] BlendShapeWeights { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_Bones.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.Bones%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L228">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_Bones_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.Bones*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_Bones" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.Bones">Bones</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Transform&gt;[] Bones { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Transform.html">Transform</a>&gt;[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_DirtyAABB.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.DirtyAABB%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L231">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_DirtyAABB_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.DirtyAABB*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_DirtyAABB" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.DirtyAABB">DirtyAABB</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DirtyAABB { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_Quality.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.Quality%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L224">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_Quality_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.Quality*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_Quality" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.Quality">Quality</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Quality { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_SkinnedMotionVectors.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.SkinnedMotionVectors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L227">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_SkinnedMotionVectors_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.SkinnedMotionVectors*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_SkinnedMotionVectors" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.SkinnedMotionVectors">SkinnedMotionVectors</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SkinnedMotionVectors { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_SkinNormals.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.SkinNormals%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L226">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_SkinNormals_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.SkinNormals*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_SkinNormals" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.SkinNormals">SkinNormals</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SkinNormals { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_UpdateWhenOffscreen.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.UpdateWhenOffscreen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L225">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_UpdateWhenOffscreen_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.UpdateWhenOffscreen*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_UpdateWhenOffscreen" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.UpdateWhenOffscreen">UpdateWhenOffscreen</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UpdateWhenOffscreen { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L208">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_ExportYAMLRoot_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.ExportYAMLRoot*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.ExportYAMLRoot(AssetRipper.Core.Project.IExportContainer)">ExportYAMLRoot(IExportContainer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override YAMLMappingNode ExportYAMLRoot(IExportContainer container)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Project.IExportContainer.html">IExportContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.YAML.YAMLMappingNode.html">YAMLMappingNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_">Renderer.ExportYAMLRoot(IExportContainer)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L189">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_FetchDependencies_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.FetchDependencies*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)">FetchDependencies(DependencyContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;PPtr&lt;IUnityObjectBase&gt;&gt; FetchDependencies(DependencyContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.DependencyContext.html">DependencyContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_">Renderer.FetchDependencies(DependencyContext)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasAABB_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasAABB(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L75">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasAABB_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasAABB*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasAABB_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasAABB(AssetRipper.Core.Parser.Files.UnityVersion)">HasAABB(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.4.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasAABB(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasAnimation_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasAnimation(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L55">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasAnimation_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasAnimation*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasAnimation_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasAnimation(AssetRipper.Core.Parser.Files.UnityVersion)">HasAnimation(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>1.5.0 to 2.1.0 exclusive</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasAnimation(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasBindPose_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasBindPose(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L59">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasBindPose_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasBindPose*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasBindPose_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasBindPose(AssetRipper.Core.Parser.Files.UnityVersion)">HasBindPose(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less 3.0.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasBindPose(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasCurrentPose_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasCurrentPose(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L63">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasCurrentPose_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasCurrentPose*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasCurrentPose_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasCurrentPose(AssetRipper.Core.Parser.Files.UnityVersion)">HasCurrentPose(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 2.1.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasCurrentPose(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasOffscreen_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasOffscreen(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L51">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasOffscreen_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasOffscreen*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasOffscreen_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasOffscreen(AssetRipper.Core.Parser.Files.UnityVersion)">HasOffscreen(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2.1.0 to 2.6.0 exclusive</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasOffscreen(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasRenderer_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasRenderer(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L35">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasRenderer_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasRenderer*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasRenderer_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasRenderer(AssetRipper.Core.Parser.Files.UnityVersion)">HasRenderer(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRenderer(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasRootBone_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasRootBone(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L71">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasRootBone_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasRootBone*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasRootBone_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasRootBone(AssetRipper.Core.Parser.Files.UnityVersion)">HasRootBone(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>3.5.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRootBone(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasSkinMotionVector_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasSkinMotionVector(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L47">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasSkinMotionVector_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasSkinMotionVector*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasSkinMotionVector_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasSkinMotionVector(AssetRipper.Core.Parser.Files.UnityVersion)">HasSkinMotionVector(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.4.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSkinMotionVector(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasSkinNormals_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasSkinNormals(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L43">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasSkinNormals_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasSkinNormals*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasSkinNormals_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasSkinNormals(AssetRipper.Core.Parser.Files.UnityVersion)">HasSkinNormals(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>1.5.0 to 3.2.0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSkinNormals(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasUpdateWhenOffscreen_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasUpdateWhenOffscreen(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L39">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasUpdateWhenOffscreen_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasUpdateWhenOffscreen*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasUpdateWhenOffscreen_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasUpdateWhenOffscreen(AssetRipper.Core.Parser.Files.UnityVersion)">HasUpdateWhenOffscreen(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>1.5.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasUpdateWhenOffscreen(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_HasWeights_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.HasWeights(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L67">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasWeights_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasWeights*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_HasWeights_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.HasWeights(AssetRipper.Core.Parser.Files.UnityVersion)">HasWeights(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>4.3.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasWeights(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L98">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_Read_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_Read_AssetRipper_Core_IO_Asset_AssetReader_">Renderer.Read(AssetReader)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L23">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_SkinnedMeshRenderer_ToSerializedVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.ToSerializedVersion*"></a>
+  <h4 id="AssetRipper_Core_Classes_SkinnedMeshRenderer_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.SkinnedMeshRenderer.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)">ToSerializedVersion(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ToSerializedVersion(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IComponent.html">IComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.IRenderer.html">IRenderer</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_SkinnedMeshRenderer.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.SkinnedMeshRenderer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/SkinnedMeshRenderer.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

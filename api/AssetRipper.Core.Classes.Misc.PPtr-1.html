@@ -1,0 +1,816 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct PPtr&lt;T&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct PPtr&lt;T&gt;
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_Misc_PPtr_1" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1" class="text-break">Struct PPtr&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.Misc.IPPtr-1.html">IPPtr</a>&lt;T&gt;</div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.Misc.IPPtr.html">IPPtr</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.Misc.html">AssetRipper.Core.Classes.Misc</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCommon.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_Misc_PPtr_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct PPtr&lt;T&gt; : IAsset, IAssetReadable, IAssetWritable, IYAMLExportable, IPPtr&lt;T&gt;, IPPtr where T : IUnityObjectBase</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1__ctor_AssetRipper_Core_Classes_Misc_IPPtr_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.%23ctor(AssetRipper.Core.Classes.Misc.IPPtr)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L181">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1__ctor_AssetRipper_Core_Classes_Misc_IPPtr_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.#ctor(AssetRipper.Core.Classes.Misc.IPPtr)">PPtr(IPPtr)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr(IPPtr other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.IPPtr.html">IPPtr</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1__ctor_System_Int32_System_Int64_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.%23ctor(System.Int32%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L175">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1__ctor_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1__ctor_System_Int32_System_Int64_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.#ctor(System.Int32,System.Int64)">PPtr(Int32, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr(int fileIndex, long pathID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">fileIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">pathID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_FileIndex.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.FileIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L257">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_FileIndex_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.FileIndex*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_FileIndex" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.FileIndex">FileIndex</h4>
+  <div class="markdown level1 summary"><p>0 means current file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int FileIndex { readonly get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_IsNull.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.IsNull%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L255">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_IsNull_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.IsNull*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_IsNull" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.IsNull">IsNull</h4>
+  <div class="markdown level1 summary"><p>PathID == 0</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsNull { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_IsVirtual.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.IsVirtual%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L251">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_IsVirtual_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.IsVirtual*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_IsVirtual" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.IsVirtual">IsVirtual</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool IsVirtual { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_PathID.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.PathID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L259">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_PathID_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.PathID*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_PathID" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.PathID">PathID</h4>
+  <div class="markdown level1 summary"><p>It is acts more like a hash in some cases</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long PathID { readonly get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_CastTo__1.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.CastTo%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L193">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_CastTo_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.CastTo*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_CastTo__1" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.CastTo``1">CastTo&lt;T1&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;T1&gt; CastTo&lt;T1&gt;()
+    where T1 : IUnityObjectBase</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;T1&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_Equals_System_Object_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L227">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_Equals_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.Equals*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_Equals_System_Object_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_ExportYAML_AssetRipper_Core_Project_IExportContainer_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.ExportYAML(AssetRipper.Core.Project.IExportContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L217">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_ExportYAML_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.ExportYAML*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_ExportYAML_AssetRipper_Core_Project_IExportContainer_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.ExportYAML(AssetRipper.Core.Project.IExportContainer)">ExportYAML(IExportContainer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public YAMLNode ExportYAML(IExportContainer container)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Project.IExportContainer.html">IExportContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.YAML.YAMLNode.html">YAMLNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_GetHashCode.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L240">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_GetHashCode_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.GetHashCode*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_GetHashCode" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L198">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_Read_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_ToString.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L222">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_ToString_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.ToString*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_ToString" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_Write_AssetRipper_Core_IO_Asset_AssetWriter_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.Write(AssetRipper.Core.IO.Asset.AssetWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L204">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_Write_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.Write*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_Write_AssetRipper_Core_IO_Asset_AssetWriter_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.Write(AssetRipper.Core.IO.Asset.AssetWriter)">Write(AssetWriter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Write(AssetWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetWriter.html">AssetWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_op_Equality_AssetRipper_Core_Classes_Misc_PPtr__0__AssetRipper_Core_Classes_Misc_PPtr__0__.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.op_Equality(AssetRipper.Core.Classes.Misc.PPtr%7B%600%7D%2CAssetRipper.Core.Classes.Misc.PPtr%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L183">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_op_Equality_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.op_Equality*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_op_Equality_AssetRipper_Core_Classes_Misc_PPtr__0__AssetRipper_Core_Classes_Misc_PPtr__0__" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.op_Equality(AssetRipper.Core.Classes.Misc.PPtr{`0},AssetRipper.Core.Classes.Misc.PPtr{`0})">Equality(PPtr&lt;T&gt;, PPtr&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(PPtr&lt;T&gt; left, PPtr&lt;T&gt; right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;T&gt;</td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;T&gt;</td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1_op_Inequality_AssetRipper_Core_Classes_Misc_PPtr__0__AssetRipper_Core_Classes_Misc_PPtr__0__.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601.op_Inequality(AssetRipper.Core.Classes.Misc.PPtr%7B%600%7D%2CAssetRipper.Core.Classes.Misc.PPtr%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L188">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_Misc_PPtr_1_op_Inequality_" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.op_Inequality*"></a>
+  <h4 id="AssetRipper_Core_Classes_Misc_PPtr_1_op_Inequality_AssetRipper_Core_Classes_Misc_PPtr__0__AssetRipper_Core_Classes_Misc_PPtr__0__" data-uid="AssetRipper.Core.Classes.Misc.PPtr`1.op_Inequality(AssetRipper.Core.Classes.Misc.PPtr{`0},AssetRipper.Core.Classes.Misc.PPtr{`0})">Inequality(PPtr&lt;T&gt;, PPtr&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(PPtr&lt;T&gt; left, PPtr&lt;T&gt; right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;T&gt;</td>
+        <td><span class="parametername">left</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;T&gt;</td>
+        <td><span class="parametername">right</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.IPPtr-1.html">IPPtr&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.IPPtr.html">IPPtr</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_ExportYAML__1_AssetRipper_Core_Classes_Misc_IPPtr___0__AssetRipper_Core_Project_IExportContainer_">PPtr.ExportYAML&lt;T&gt;(IPPtr&lt;T&gt;, IExportContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_SetValues_AssetRipper_Core_Classes_Misc_IPPtr_AssetRipper_Core_Classes_Misc_IPPtr_">PPtr.SetValues(IPPtr, IPPtr)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_FindAsset__1_AssetRipper_Core_Classes_Misc_IPPtr___0__AssetRipper_Core_Parser_Asset_IAssetContainer_">PPtr.FindAsset&lt;T&gt;(IPPtr&lt;T&gt;, IAssetContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_TryGetAsset__1_AssetRipper_Core_Classes_Misc_IPPtr___0__AssetRipper_Core_Parser_Asset_IAssetContainer_">PPtr.TryGetAsset&lt;T&gt;(IPPtr&lt;T&gt;, IAssetContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_GetAsset__1_AssetRipper_Core_Classes_Misc_IPPtr___0__AssetRipper_Core_Parser_Asset_IAssetContainer_">PPtr.GetAsset&lt;T&gt;(IPPtr&lt;T&gt;, IAssetContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_IsAsset__1_AssetRipper_Core_Classes_Misc_IPPtr___0__AssetRipper_Core_Interfaces_IUnityObjectBase_">PPtr.IsAsset&lt;T&gt;(IPPtr&lt;T&gt;, IUnityObjectBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_IsAsset__1_AssetRipper_Core_Classes_Misc_IPPtr___0__AssetRipper_Core_Parser_Asset_IAssetContainer_AssetRipper_Core_Interfaces_IUnityObjectBase_">PPtr.IsAsset&lt;T&gt;(IPPtr&lt;T&gt;, IAssetContainer, IUnityObjectBase)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_IsValid__1_AssetRipper_Core_Classes_Misc_IPPtr___0__AssetRipper_Core_Project_IExportContainer_">PPtr.IsValid&lt;T&gt;(IPPtr&lt;T&gt;, IExportContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_ToLogString__1_AssetRipper_Core_Classes_Misc_IPPtr___0__AssetRipper_Core_Parser_Asset_IAssetContainer_">PPtr.ToLogString&lt;T&gt;(IPPtr&lt;T&gt;, IAssetContainer)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_IsVirtual_AssetRipper_Core_Classes_Misc_IPPtr_">PPtr.IsVirtual(IPPtr)</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr.html#AssetRipper_Core_Classes_Misc_PPtr_IsNull_AssetRipper_Core_Classes_Misc_IPPtr_">PPtr.IsNull(IPPtr)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_Misc_PPtr_1.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.Misc.PPtr%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCommon/Classes/Misc/PPtr.cs/#L173" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

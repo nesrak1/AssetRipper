@@ -1,0 +1,1008 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MeshRenderer
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MeshRenderer
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.MeshRenderer">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_MeshRenderer" data-uid="AssetRipper.Core.Classes.MeshRenderer" class="text-break">Class MeshRenderer
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="AssetRipper.Core.UnityAssetBase.html">UnityAssetBase</a></div>
+    <div class="level2"><a class="xref" href="AssetRipper.Core.UnityObjectBase.html">UnityObjectBase</a></div>
+    <div class="level3"><a class="xref" href="AssetRipper.Core.Classes.Object.Object.html">Object</a></div>
+    <div class="level4"><a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html">EditorExtension</a></div>
+    <div class="level5"><a class="xref" href="AssetRipper.Core.Classes.Component.html">Component</a></div>
+    <div class="level6"><a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html">Renderer</a></div>
+    <div class="level7"><span class="xref">MeshRenderer</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IComponent.html">IComponent</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Classes.Renderer.IRenderer.html">IRenderer</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasEnabled_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasEnabled(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasCastShadows_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasCastShadows(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasDynamicOccludee_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasDynamicOccludee(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasStaticShadowCaster_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasStaticShadowCaster(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasMotionVector_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasMotionVector(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasRenderingLayerMask_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasRenderingLayerMask(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasRendererPriority_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasRendererPriority(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightmapIndex_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasLightmapIndex(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightmapIndexDynamic_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasLightmapIndexDynamic(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightmapTilingOffset_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasLightmapTilingOffset(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightmapTilingOffsetDynamic_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasLightmapTilingOffsetDynamic(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSubsetIndices_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasSubsetIndices(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasStaticBatchInfo_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasStaticBatchInfo(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasStaticBatchRoot_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasStaticBatchRoot(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasUseLight_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasUseLight(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasUseReflectionProbes_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasUseReflectionProbes(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasReflectUsage_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasReflectUsage(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasRayTracingMode_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasRayTracingMode(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasRayTraceProcedural_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasRayTraceProcedural(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasProbeAnchor_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasProbeAnchor(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasLightOverride_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasLightOverride(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasScaleInLightmap_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasScaleInLightmap(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasReceiveGI_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasReceiveGI(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasPreserveUVs_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasPreserveUVs(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasIgnoreNormalsForChartDetection_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasIgnoreNormalsForChartDetection(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasImportantGI_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasImportantGI(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSelectedWireframeHidden_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasSelectedWireframeHidden(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasStitchLightmapSeams_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasStitchLightmapSeams(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSelectedEditorRenderState_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasSelectedEditorRenderState(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasMinimumChartSize_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasMinimumChartSize(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasAutoUVMaxDistance_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasAutoUVMaxDistance(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasGIBackfaceCull_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasGIBackfaceCull(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSortingLayerID_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Renderer.HasSortingLayerID(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSortingLayer_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasSortingLayer(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_HasSortingOrder_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.HasSortingOrder(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_FindMaterialPropertyNameByCRC28_System_UInt32_">Renderer.FindMaterialPropertyNameByCRC28(UInt32)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReadBase_AssetRipper_Core_IO_Asset_AssetReader_">Renderer.ReadBase(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ExportYAMLRoot_AssetRipper_Core_Project_IExportContainer_">Renderer.ExportYAMLRoot(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_GetStaticBatchInfo_AssetRipper_Core_Parser_Files_UnityVersion_">Renderer.GetStaticBatchInfo(UnityVersion)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_Enabled">Renderer.Enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_CastShadows">Renderer.CastShadows</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReceiveShadows">Renderer.ReceiveShadows</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_DynamicOccludee">Renderer.DynamicOccludee</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticShadowCaster">Renderer.StaticShadowCaster</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_MotionVectors">Renderer.MotionVectors</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_UseLightProbes">Renderer.UseLightProbes</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightProbeUsage">Renderer.LightProbeUsage</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_UseReflectionProbes">Renderer.UseReflectionProbes</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReflectionProbeUsage">Renderer.ReflectionProbeUsage</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RayTracingMode">Renderer.RayTracingMode</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RayTraceProcedural">Renderer.RayTraceProcedural</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RenderingLayerMask">Renderer.RenderingLayerMask</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RendererPriority">Renderer.RendererPriority</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapIndex">Renderer.LightmapIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapIndexDynamic">Renderer.LightmapIndexDynamic</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_Materials">Renderer.Materials</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SubsetIndices">Renderer.SubsetIndices</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingLayerID">Renderer.SortingLayerID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingLayer">Renderer.SortingLayer</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingOrder">Renderer.SortingOrder</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_EnabledName">Renderer.EnabledName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_CastShadowsName">Renderer.CastShadowsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReceiveShadowsName">Renderer.ReceiveShadowsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_DynamicOccludeeName">Renderer.DynamicOccludeeName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticShadowCasterName">Renderer.StaticShadowCasterName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_MotionVectorsName">Renderer.MotionVectorsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_UseLightProbesName">Renderer.UseLightProbesName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightProbeUsageName">Renderer.LightProbeUsageName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReflectionProbeUsageName">Renderer.ReflectionProbeUsageName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RayTracingModeName">Renderer.RayTracingModeName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RayTraceProceduralName">Renderer.RayTraceProceduralName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RenderingLayerMaskName">Renderer.RenderingLayerMaskName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_RendererPriorityName">Renderer.RendererPriorityName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_MaterialsName">Renderer.MaterialsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticBatchInfoName">Renderer.StaticBatchInfoName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticBatchRootName">Renderer.StaticBatchRootName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ProbeAnchorName">Renderer.ProbeAnchorName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightProbeVolumeOverrideName">Renderer.LightProbeVolumeOverrideName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ScaleInLightmapName">Renderer.ScaleInLightmapName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ReceiveGIName">Renderer.ReceiveGIName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_PreserveUVsName">Renderer.PreserveUVsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_IgnoreNormalsForChartDetectionName">Renderer.IgnoreNormalsForChartDetectionName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ImportantGIName">Renderer.ImportantGIName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SelectedWireframeHiddenName">Renderer.SelectedWireframeHiddenName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StitchLightmapSeamsName">Renderer.StitchLightmapSeamsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SelectedEditorRenderStateName">Renderer.SelectedEditorRenderStateName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_MinimumChartSizeName">Renderer.MinimumChartSizeName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_AutoUVMaxDistanceName">Renderer.AutoUVMaxDistanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_AutoUVMaxAngleName">Renderer.AutoUVMaxAngleName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapParametersName">Renderer.LightmapParametersName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingLayerIDName">Renderer.SortingLayerIDName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingLayerName">Renderer.SortingLayerName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_SortingOrderName">Renderer.SortingOrderName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapTilingOffset">Renderer.LightmapTilingOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightmapTilingOffsetDynamic">Renderer.LightmapTilingOffsetDynamic</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticBatchInfo">Renderer.StaticBatchInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_StaticBatchRoot">Renderer.StaticBatchRoot</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_ProbeAnchor">Renderer.ProbeAnchor</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_LightProbeVolumeOverride">Renderer.LightProbeVolumeOverride</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_Write_AssetRipper_Core_IO_Asset_AssetWriter_">Component.Write(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_ExportExtension">Component.ExportExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_GameObject">Component.GameObject</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_GameObjectPtr">Component.GameObjectPtr</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Component.html#AssetRipper_Core_Classes_Component_GameObjectName">Component.GameObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasExtensionPtr_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasExtensionPtr(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObjectInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObjectInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasCorrespondingSourceObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasCorrespondingSourceObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabParentObject_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabParentObject(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstanceInvariant_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstanceInvariant(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInstance_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInstance(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabInternal_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabInternal(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_HasPrefabAsset_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.HasPrefabAsset(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ReadObject_AssetRipper_Core_IO_Asset_AssetReader_">EditorExtension.ReadObject(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_WriteObject_AssetRipper_Core_IO_Asset_AssetWriter_">EditorExtension.WriteObject(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExportYAMLRootObject_AssetRipper_Core_Project_IExportContainer_">EditorExtension.ExportYAMLRootObject(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_FetchDependenciesObject_AssetRipper_Core_Parser_Asset_DependencyContext_">EditorExtension.FetchDependenciesObject(DependencyContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.CorrespondingSourceObjectInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceInvariantName_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">EditorExtension.PrefabInstanceInvariantName(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstance">EditorExtension.PrefabInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_ExtensionPtrName">EditorExtension.ExtensionPtrName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_CorrespondingSourceObjectName">EditorExtension.CorrespondingSourceObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabParentObjectName">EditorExtension.PrefabParentObjectName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInstanceName">EditorExtension.PrefabInstanceName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabInternalName">EditorExtension.PrefabInternalName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.EditorExtension.html#AssetRipper_Core_Classes_EditorExtension_PrefabAssetName">EditorExtension.PrefabAssetName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlags">Object.ObjectHideFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ExportYAML_AssetRipper_Core_Project_IExportContainer_">Object.ExportYAML(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_HasHideFlag_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_">Object.HasHideFlag(UnityVersion, TransferInstructionFlags)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_ObjectHideFlagsName">Object.ObjectHideFlagsName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_InstanceIDName">Object.InstanceIDName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Object.Object.html#AssetRipper_Core_Classes_Object_Object_LocalIdentfierInFileName">Object.LocalIdentfierInFileName</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetInfo">UnityObjectBase.AssetInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_SerializedFile">UnityObjectBase.SerializedFile</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ClassID">UnityObjectBase.ClassID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_PathID">UnityObjectBase.PathID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_GUID">UnityObjectBase.GUID</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportPath">UnityObjectBase.ExportPath</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetsKeyword">UnityObjectBase.AssetsKeyword</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_AssetExtension">UnityObjectBase.AssetExtension</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ExportYAMLDocument_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ExportYAMLDocument(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertLegacy_AssetRipper_Core_Project_IExportContainer_">UnityObjectBase.ConvertLegacy(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityObjectBase.html#AssetRipper_Core_UnityObjectBase_ConvertToEditor">UnityObjectBase.ConvertToEditor()</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_AssetUnityVersion">UnityAssetBase.AssetUnityVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_EndianType">UnityAssetBase.EndianType</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_TransferInstructionFlags">UnityAssetBase.TransferInstructionFlags</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadEditor_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadEditor(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ReadRelease_AssetRipper_Core_IO_Asset_AssetReader_">UnityAssetBase.ReadRelease(AssetReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteEditor_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteEditor(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_WriteRelease_AssetRipper_Core_IO_Asset_AssetWriter_">UnityAssetBase.WriteRelease(AssetWriter)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLEditor_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLEditor(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_ExportYAMLRelease_AssetRipper_Core_Project_IExportContainer_">UnityAssetBase.ExportYAMLRelease(IExportContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeReleaseTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeReleaseTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.UnityAssetBase.html#AssetRipper_Core_UnityAssetBase_MakeEditorTypeTreeNodes_System_Int32_System_Int32_">UnityAssetBase.MakeEditorTypeTreeNodes(Int32, Int32)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.html">AssetRipper.Core.Classes</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCore.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_MeshRenderer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class MeshRenderer : Renderer, IComponent, IEditorExtension, IRenderer, IUnityObjectBase, IUnityAssetBase, IAsset, IAssetReadable, IAssetWritable, IYAMLExportable, IDependent, ITypeTreeSerializable, IConvertToEditor</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer.%23ctor(AssetRipper.Core.Parser.Asset.AssetInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L12">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_MeshRenderer__ctor_" data-uid="AssetRipper.Core.Classes.MeshRenderer.#ctor*"></a>
+  <h4 id="AssetRipper_Core_Classes_MeshRenderer__ctor_AssetRipper_Core_Parser_Asset_AssetInfo_" data-uid="AssetRipper.Core.Classes.MeshRenderer.#ctor(AssetRipper.Core.Parser.Asset.AssetInfo)">MeshRenderer(AssetInfo)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MeshRenderer(AssetInfo assetInfo)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.AssetInfo.html">AssetInfo</a></td>
+        <td><span class="parametername">assetInfo</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer_AdditionalVertexStreams.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer.AdditionalVertexStreams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L51">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_MeshRenderer_AdditionalVertexStreams" data-uid="AssetRipper.Core.Classes.MeshRenderer.AdditionalVertexStreams">AdditionalVertexStreams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Mesh&gt; AdditionalVertexStreams</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Mesh.Mesh.html">Mesh</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer_AdditionalVertexStreamsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer.AdditionalVertexStreamsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L49">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_MeshRenderer_AdditionalVertexStreamsName" data-uid="AssetRipper.Core.Classes.MeshRenderer.AdditionalVertexStreamsName">AdditionalVertexStreamsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AdditionalVertexStreamsName = &quot;m_AdditionalVertexStreams&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer_EnlightenVertexStream.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer.EnlightenVertexStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L53">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_MeshRenderer_EnlightenVertexStream" data-uid="AssetRipper.Core.Classes.MeshRenderer.EnlightenVertexStream">EnlightenVertexStream</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Mesh&gt; EnlightenVertexStream</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Mesh.Mesh.html">Mesh</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L39">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_MeshRenderer_FetchDependencies_" data-uid="AssetRipper.Core.Classes.MeshRenderer.FetchDependencies*"></a>
+  <h4 id="AssetRipper_Core_Classes_MeshRenderer_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_" data-uid="AssetRipper.Core.Classes.MeshRenderer.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)">FetchDependencies(DependencyContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IEnumerable&lt;PPtr&lt;IUnityObjectBase&gt;&gt; FetchDependencies(DependencyContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.DependencyContext.html">DependencyContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_">Renderer.FetchDependencies(DependencyContext)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer_HasEnlightenVertexStream_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer.HasEnlightenVertexStream(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L22">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_MeshRenderer_HasEnlightenVertexStream_" data-uid="AssetRipper.Core.Classes.MeshRenderer.HasEnlightenVertexStream*"></a>
+  <h4 id="AssetRipper_Core_Classes_MeshRenderer_HasEnlightenVertexStream_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.MeshRenderer.HasEnlightenVertexStream(AssetRipper.Core.Parser.Files.UnityVersion)">HasEnlightenVertexStream(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2020 and greater.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasEnlightenVertexStream(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer_HasVertex_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer.HasVertex(AssetRipper.Core.Parser.Files.UnityVersion%2CAssetRipper.Core.IO.Asset.TransferInstructionFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L17">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_MeshRenderer_HasVertex_" data-uid="AssetRipper.Core.Classes.MeshRenderer.HasVertex*"></a>
+  <h4 id="AssetRipper_Core_Classes_MeshRenderer_HasVertex_AssetRipper_Core_Parser_Files_UnityVersion_AssetRipper_Core_IO_Asset_TransferInstructionFlags_" data-uid="AssetRipper.Core.Classes.MeshRenderer.HasVertex(AssetRipper.Core.Parser.Files.UnityVersion,AssetRipper.Core.IO.Asset.TransferInstructionFlags)">HasVertex(UnityVersion, TransferInstructionFlags)</h4>
+  <div class="markdown level1 summary"><p>5.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasVertex(UnityVersion version, TransferInstructionFlags flags)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.TransferInstructionFlags.html">TransferInstructionFlags</a></td>
+        <td><span class="parametername">flags</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L24">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_MeshRenderer_Read_" data-uid="AssetRipper.Core.Classes.MeshRenderer.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_MeshRenderer_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.MeshRenderer.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.Renderer.Renderer.html#AssetRipper_Core_Classes_Renderer_Renderer_Read_AssetRipper_Core_IO_Asset_AssetReader_">Renderer.Read(AssetReader)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IComponent.html">IComponent</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.IEditorExtension.html">IEditorExtension</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Classes.Renderer.IRenderer.html">IRenderer</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IUnityAssetBase.html">IUnityAssetBase</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAsset.html">IAsset</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetWritable.html">IAssetWritable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.ITypeTreeSerializable.html">ITypeTreeSerializable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Interfaces.IConvertToEditor.html">IConvertToEditor</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_MeshRenderer.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.MeshRenderer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/MeshRenderer.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

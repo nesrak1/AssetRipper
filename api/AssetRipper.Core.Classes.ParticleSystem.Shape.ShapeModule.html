@@ -1,0 +1,2889 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ShapeModule
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ShapeModule
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule">
+  
+  
+  <h1 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule" class="text-break">Class ShapeModule
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.ParticleSystemModule.html">ParticleSystemModule</a></div>
+    <div class="level2"><span class="xref">ShapeModule</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a></div>
+    <div><a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.ParticleSystemModule.html#AssetRipper_Core_Classes_ParticleSystem_ParticleSystemModule_Enabled">ParticleSystemModule.Enabled</a>
+    </div>
+    <div>
+      <a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.ParticleSystemModule.html#AssetRipper_Core_Classes_ParticleSystem_ParticleSystemModule_EnabledName">ParticleSystemModule.EnabledName</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.Shape.html">AssetRipper.Core.Classes.ParticleSystem.Shape</a></h6>
+  <h6><strong>Assembly</strong>: AssetRipperCore.dll</h6>
+  <h5 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ShapeModule : ParticleSystemModule, IAssetReadable, IYAMLExportable, IDependent</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_AlignToDirectionName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.AlignToDirectionName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L403">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_AlignToDirectionName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.AlignToDirectionName">AlignToDirectionName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AlignToDirectionName = &quot;alignToDirection&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_AngleName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.AngleName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L386">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_AngleName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.AngleName">AngleName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string AngleName = &quot;angle&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Arc.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Arc%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L422">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Arc" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Arc">Arc</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiModeParameter Arc</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.Shape.MultiModeParameter.html">MultiModeParameter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ArcName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ArcName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L408">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ArcName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ArcName">ArcName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ArcName = &quot;arc&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_BoxThickness.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.BoxThickness%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L410">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_BoxThickness" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.BoxThickness">BoxThickness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3f BoxThickness</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Math.Vectors.Vector3f.html">Vector3f</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_BoxThicknessName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.BoxThicknessName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L388">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_BoxThicknessName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.BoxThicknessName">BoxThicknessName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string BoxThicknessName = &quot;boxThickness&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_DonutRadiusName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.DonutRadiusName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L390">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_DonutRadiusName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.DonutRadiusName">DonutRadiusName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string DonutRadiusName = &quot;donutRadius&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_LengthName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.LengthName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L387">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_LengthName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.LengthName">LengthName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string LengthName = &quot;length&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Mesh.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Mesh%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L415">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Mesh" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Mesh">Mesh</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Mesh&gt; Mesh</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Mesh.Mesh.html">Mesh</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshMaterialIndexName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshMaterialIndexName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L395">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshMaterialIndexName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshMaterialIndexName">MeshMaterialIndexName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MeshMaterialIndexName = &quot;m_MeshMaterialIndex&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L398">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshName">MeshName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MeshName = &quot;m_Mesh&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshNormalOffsetName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshNormalOffsetName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L396">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshNormalOffsetName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshNormalOffsetName">MeshNormalOffsetName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MeshNormalOffsetName = &quot;m_MeshNormalOffset&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshRenderer.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshRenderer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L416">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshRenderer" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshRenderer">MeshRenderer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;MeshRenderer&gt; MeshRenderer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.MeshRenderer.html">MeshRenderer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshRendererName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshRendererName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L399">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshRendererName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshRendererName">MeshRendererName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MeshRendererName = &quot;m_MeshRenderer&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshSpawn.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshSpawn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L414">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshSpawn" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshSpawn">MeshSpawn</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiModeParameter MeshSpawn</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.Shape.MultiModeParameter.html">MultiModeParameter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshSpawnName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshSpawnName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L397">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshSpawnName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshSpawnName">MeshSpawnName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string MeshSpawnName = &quot;m_MeshSpawn&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_PlacementModeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.PlacementModeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L394">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_PlacementModeName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.PlacementModeName">PlacementModeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PlacementModeName = &quot;placementMode&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Position.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L411">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Position" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Position">Position</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3f Position</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Math.Vectors.Vector3f.html">Vector3f</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_PositionName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.PositionName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L391">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_PositionName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.PositionName">PositionName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PositionName = &quot;m_Position&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Radius.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Radius%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L421">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Radius" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Radius">Radius</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MultiModeParameter Radius</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.Shape.MultiModeParameter.html">MultiModeParameter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RadiusName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RadiusName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L407">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RadiusName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RadiusName">RadiusName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RadiusName = &quot;radius&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RadiusThicknessName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RadiusThicknessName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L389">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RadiusThicknessName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RadiusThicknessName">RadiusThicknessName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RadiusThicknessName = &quot;radiusThickness&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomDirectionAmountName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomDirectionAmountName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L404">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomDirectionAmountName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomDirectionAmountName">RandomDirectionAmountName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RandomDirectionAmountName = &quot;randomDirectionAmount&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomPositionAmountName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomPositionAmountName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L406">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomPositionAmountName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomPositionAmountName">RandomPositionAmountName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RandomPositionAmountName = &quot;randomPositionAmount&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Rotation.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Rotation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L412">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Rotation" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Rotation">Rotation</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3f Rotation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Math.Vectors.Vector3f.html">Vector3f</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RotationName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RotationName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L392">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RotationName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RotationName">RotationName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RotationName = &quot;m_Rotation&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Scale.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Scale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L413">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Scale" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Scale">Scale</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3f Scale</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Math.Vectors.Vector3f.html">Vector3f</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ScaleName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ScaleName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L393">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ScaleName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ScaleName">ScaleName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ScaleName = &quot;m_Scale&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SkinnedMeshRenderer.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SkinnedMeshRenderer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L417">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SkinnedMeshRenderer" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SkinnedMeshRenderer">SkinnedMeshRenderer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;SkinnedMeshRenderer&gt; SkinnedMeshRenderer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.SkinnedMeshRenderer.html">SkinnedMeshRenderer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SkinnedMeshRendererName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SkinnedMeshRendererName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L400">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SkinnedMeshRendererName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SkinnedMeshRendererName">SkinnedMeshRendererName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SkinnedMeshRendererName = &quot;m_SkinnedMeshRenderer&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SphericalDirectionAmountName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SphericalDirectionAmountName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L405">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SphericalDirectionAmountName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SphericalDirectionAmountName">SphericalDirectionAmountName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SphericalDirectionAmountName = &quot;sphericalDirectionAmount&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Sprite.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Sprite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L418">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Sprite" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Sprite">Sprite</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Sprite&gt; Sprite</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Sprite.Sprite.html">Sprite</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SpriteRenderer.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SpriteRenderer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L419">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SpriteRenderer" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SpriteRenderer">SpriteRenderer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;SpriteRenderer&gt; SpriteRenderer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.SpriteRenderer.SpriteRenderer.html">SpriteRenderer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Texture.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Texture%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L420">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Texture" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Texture">Texture</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PPtr&lt;Texture2D&gt; Texture</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Classes.Texture2D.Texture2D.html">Texture2D</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TypeName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TypeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L385">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TypeName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TypeName">TypeName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string TypeName = &quot;type&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshColorsName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshColorsName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L402">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshColorsName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshColorsName">UseMeshColorsName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UseMeshColorsName = &quot;m_UseMeshColors&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshMaterialIndexName.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshMaterialIndexName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L401">View Source</a>
+  </span>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshMaterialIndexName" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshMaterialIndexName">UseMeshMaterialIndexName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string UseMeshMaterialIndexName = &quot;m_UseMeshMaterialIndex&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_AlignToDirection.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.AlignToDirection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L374">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_AlignToDirection_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.AlignToDirection*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_AlignToDirection" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.AlignToDirection">AlignToDirection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AlignToDirection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Angle.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Angle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L363">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Angle_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Angle*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Angle" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Angle">Angle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Angle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ArcSingle.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ArcSingle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L365">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ArcSingle_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ArcSingle*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ArcSingle" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ArcSingle">ArcSingle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float ArcSingle { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_DonutRadius.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.DonutRadius%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L367">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_DonutRadius_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.DonutRadius*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_DonutRadius" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.DonutRadius">DonutRadius</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float DonutRadius { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Length.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L364">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Length_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Length*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Length" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Length">Length</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Length { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshMaterialIndex.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshMaterialIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L369">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshMaterialIndex_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshMaterialIndex*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshMaterialIndex" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshMaterialIndex">MeshMaterialIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MeshMaterialIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshNormalOffset.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshNormalOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L370">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshNormalOffset_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshNormalOffset*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshNormalOffset" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshNormalOffset">MeshNormalOffset</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MeshNormalOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshScale.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshScale%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L371">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshScale_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshScale*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_MeshScale" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.MeshScale">MeshScale</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MeshScale { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_PlacementMode.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.PlacementMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L368">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_PlacementMode_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.PlacementMode*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_PlacementMode" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.PlacementMode">PlacementMode</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlacementMode PlacementMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.Shape.PlacementMode.html">PlacementMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RadiusThickness.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RadiusThickness%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L366">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RadiusThickness_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RadiusThickness*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RadiusThickness" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RadiusThickness">RadiusThickness</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RadiusThickness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomDirectionAmount.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomDirectionAmount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L381">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomDirectionAmount_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomDirectionAmount*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomDirectionAmount" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomDirectionAmount">RandomDirectionAmount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RandomDirectionAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomPositionAmount.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomPositionAmount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L383">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomPositionAmount_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomPositionAmount*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_RandomPositionAmount" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.RandomPositionAmount">RandomPositionAmount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float RandomPositionAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SphericalDirectionAmount.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SphericalDirectionAmount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L382">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SphericalDirectionAmount_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SphericalDirectionAmount*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_SphericalDirectionAmount" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.SphericalDirectionAmount">SphericalDirectionAmount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float SphericalDirectionAmount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureAlphaAffectsParticles.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureAlphaAffectsParticles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L379">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureAlphaAffectsParticles_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureAlphaAffectsParticles*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureAlphaAffectsParticles" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureAlphaAffectsParticles">TextureAlphaAffectsParticles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TextureAlphaAffectsParticles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureBilinearFiltering.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureBilinearFiltering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L380">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureBilinearFiltering_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureBilinearFiltering*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureBilinearFiltering" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureBilinearFiltering">TextureBilinearFiltering</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TextureBilinearFiltering { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureClipChannel.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureClipChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L375">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureClipChannel_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureClipChannel*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureClipChannel" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureClipChannel">TextureClipChannel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TextureClipChannel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureClipThreshold.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureClipThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L376">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureClipThreshold_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureClipThreshold*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureClipThreshold" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureClipThreshold">TextureClipThreshold</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float TextureClipThreshold { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureColorAffectsParticles.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureColorAffectsParticles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L378">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureColorAffectsParticles_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureColorAffectsParticles*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureColorAffectsParticles" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureColorAffectsParticles">TextureColorAffectsParticles</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TextureColorAffectsParticles { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureUVChannel.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureUVChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L377">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureUVChannel_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureUVChannel*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_TextureUVChannel" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.TextureUVChannel">TextureUVChannel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TextureUVChannel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Type.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L362">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Type_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Type*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Type" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParticleSystemShapeType Type { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.Shape.ParticleSystemShapeType.html">ParticleSystemShapeType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshColors.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshColors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L373">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshColors_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshColors*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshColors" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshColors">UseMeshColors</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseMeshColors { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshMaterialIndex.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshMaterialIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L372">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshMaterialIndex_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshMaterialIndex*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_UseMeshMaterialIndex" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.UseMeshMaterialIndex">UseMeshMaterialIndex</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseMeshMaterialIndex { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ExportYAML_AssetRipper_Core_Project_IExportContainer_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ExportYAML(AssetRipper.Core.Project.IExportContainer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L256">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ExportYAML_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ExportYAML*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ExportYAML_AssetRipper_Core_Project_IExportContainer_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ExportYAML(AssetRipper.Core.Project.IExportContainer)">ExportYAML(IExportContainer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override YAMLNode ExportYAML(IExportContainer container)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Project.IExportContainer.html">IExportContainer</a></td>
+        <td><span class="parametername">container</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.YAML.YAMLNode.html">YAMLNode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.ParticleSystemModule.html#AssetRipper_Core_Classes_ParticleSystem_ParticleSystemModule_ExportYAML_AssetRipper_Core_Project_IExportContainer_">ParticleSystemModule.ExportYAML(IExportContainer)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L249">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_FetchDependencies_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.FetchDependencies*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_FetchDependencies_AssetRipper_Core_Parser_Asset_DependencyContext_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.FetchDependencies(AssetRipper.Core.Parser.Asset.DependencyContext)">FetchDependencies(DependencyContext)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;PPtr&lt;IUnityObjectBase&gt;&gt; FetchDependencies(DependencyContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Asset.DependencyContext.html">DependencyContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="AssetRipper.Core.Classes.Misc.PPtr-1.html">PPtr</a>&lt;<a class="xref" href="AssetRipper.Core.Interfaces.IUnityObjectBase.html">IUnityObjectBase</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasAlignToDirection_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasAlignToDirection(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L91">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasAlignToDirection_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasAlignToDirection*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasAlignToDirection_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasAlignToDirection(AssetRipper.Core.Parser.Files.UnityVersion)">HasAlignToDirection(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.5.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasAlignToDirection(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasArc_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasArc(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L56">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasArc_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasArc*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasArc_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasArc(AssetRipper.Core.Parser.Files.UnityVersion)">HasArc(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasArc(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasBoxAxes_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasBoxAxes(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L52">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasBoxAxes_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasBoxAxes*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasBoxAxes_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasBoxAxes(AssetRipper.Core.Parser.Files.UnityVersion)">HasBoxAxes(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 2017.1.0b2</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasBoxAxes(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasBoxThickness_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasBoxThickness(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L60">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasBoxThickness_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasBoxThickness*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasBoxThickness_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasBoxThickness(AssetRipper.Core.Parser.Files.UnityVersion)">HasBoxThickness(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2017.1.0b2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasBoxThickness(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasLength_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasLength(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L48">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasLength_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasLength*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasLength_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasLength(AssetRipper.Core.Parser.Files.UnityVersion)">HasLength(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>4.0.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasLength(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshMaterialIndex_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshMaterialIndex(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L64">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshMaterialIndex_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshMaterialIndex*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshMaterialIndex_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshMaterialIndex(AssetRipper.Core.Parser.Files.UnityVersion)">HasMeshMaterialIndex(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.3.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasMeshMaterialIndex(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshRenderer_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshRenderer(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L72">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshRenderer_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshRenderer*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshRenderer_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshRenderer(AssetRipper.Core.Parser.Files.UnityVersion)">HasMeshRenderer(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.3.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasMeshRenderer(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshScale_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshScale(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L80">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshScale_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshScale*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshScale_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshScale(AssetRipper.Core.Parser.Files.UnityVersion)">HasMeshScale(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.5.0b11 to 2017.1.0b1</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasMeshScale(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshSpawn_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshSpawn(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L68">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshSpawn_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshSpawn*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasMeshSpawn_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasMeshSpawn(AssetRipper.Core.Parser.Files.UnityVersion)">HasMeshSpawn(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.3 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasMeshSpawn(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomDirection_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomDirection(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L95">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomDirection_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomDirection*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomDirection_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomDirection(AssetRipper.Core.Parser.Files.UnityVersion)">HasRandomDirection(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>Less than 5.5.0b11</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRandomDirection(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomDirectionAmount_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomDirectionAmount(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L103">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomDirectionAmount_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomDirectionAmount*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomDirectionAmount_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomDirectionAmount(AssetRipper.Core.Parser.Files.UnityVersion)">HasRandomDirectionAmount(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.5.0b11 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRandomDirectionAmount(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomPositionAmount_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomPositionAmount(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L107">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomPositionAmount_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomPositionAmount*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasRandomPositionAmount_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasRandomPositionAmount(AssetRipper.Core.Parser.Files.UnityVersion)">HasRandomPositionAmount(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2017.1.0b2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasRandomPositionAmount(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasSprite_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasSprite(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L76">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasSprite_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasSprite*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasSprite_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasSprite(AssetRipper.Core.Parser.Files.UnityVersion)">HasSprite(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.2 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasSprite(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasTexture_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasTexture(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L99">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasTexture_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasTexture*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasTexture_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasTexture(AssetRipper.Core.Parser.Files.UnityVersion)">HasTexture(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>2018.1 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasTexture(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasUseMeshMaterialIndex_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasUseMeshMaterialIndex(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L87">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasUseMeshMaterialIndex_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasUseMeshMaterialIndex*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_HasUseMeshMaterialIndex_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.HasUseMeshMaterialIndex(AssetRipper.Core.Parser.Files.UnityVersion)">HasUseMeshMaterialIndex(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.3.0 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasUseMeshMaterialIndex(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_IsMultimodeParameter_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.IsMultimodeParameter(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L44">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_IsMultimodeParameter_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.IsMultimodeParameter*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_IsMultimodeParameter_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.IsMultimodeParameter(AssetRipper.Core.Parser.Files.UnityVersion)">IsMultimodeParameter(UnityVersion)</h4>
+  <div class="markdown level1 summary"><p>5.6.0b5 and greater</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMultimodeParameter(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Read_AssetRipper_Core_IO_Asset_AssetReader_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Read(AssetRipper.Core.IO.Asset.AssetReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L118">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Read_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Read*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_Read_AssetRipper_Core_IO_Asset_AssetReader_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.Read(AssetRipper.Core.IO.Asset.AssetReader)">Read(AssetReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Read(AssetReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.IO.Asset.AssetReader.html">AssetReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="AssetRipper.Core.Classes.ParticleSystem.ParticleSystemModule.html#AssetRipper_Core_Classes_ParticleSystem_ParticleSystemModule_Read_AssetRipper_Core_IO_Asset_AssetReader_">ParticleSystemModule.Read(AssetReader)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L16">View Source</a>
+  </span>
+  <a id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ToSerializedVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ToSerializedVersion*"></a>
+  <h4 id="AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule_ToSerializedVersion_AssetRipper_Core_Parser_Files_UnityVersion_" data-uid="AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule.ToSerializedVersion(AssetRipper.Core.Parser.Files.UnityVersion)">ToSerializedVersion(UnityVersion)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int ToSerializedVersion(UnityVersion version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AssetRipper.Core.Parser.Files.UnityVersion.html">UnityVersion</a></td>
+        <td><span class="parametername">version</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IAssetReadable.html">IAssetReadable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.IO.Asset.IYAMLExportable.html">IYAMLExportable</a>
+  </div>
+  <div>
+      <a class="xref" href="AssetRipper.Core.Parser.Asset.IDependent.html">IDependent</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/new/master/apiSpec/new?filename=AssetRipper_Core_Classes_ParticleSystem_Shape_ShapeModule.md&amp;value=---%0Auid%3A%20AssetRipper.Core.Classes.ParticleSystem.Shape.ShapeModule%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/AssetRipper/AssetRipper/blob/master/AssetRipperCore/Classes/ParticleSystem/Shape/ShapeModule.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              
+              <span>Generated by <strong>DocFX</strong></span>
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
