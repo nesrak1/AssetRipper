@@ -517,15 +517,6 @@ namespace AssetRipper.Library.Exporters.Shaders
 				dataOffset = DXDataHeader.GetDataOffset(version, graphicApi);
 			}
 
-			// TODO: what version did this start?
-			if (subProgram.ProgramData[dataOffset] == 0 && 
-				subProgram.ProgramData[dataOffset + 1] == 0 &&
-				subProgram.ProgramData[dataOffset + 2] == 0 &&
-				subProgram.ProgramData[dataOffset + 3] == 0)
-			{
-				dataOffset += 0x20;
-			}
-
 			return GetRelevantData(subProgram.ProgramData, dataOffset);
 		}
 

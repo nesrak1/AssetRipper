@@ -14,12 +14,20 @@ namespace ShaderTextRestorer.Exporters.DirectX
 		/// 5.4.0 and greater
 		/// </summary>
 		public static bool HasGSInputPrimitive(UnityVersion version) => version.IsGreaterEqual(5, 4);
+		/// <summary>
+		/// 2020.3.11 and greater
+		/// </summary>
+		public static bool HasUnknown32Bytes(UnityVersion version) => version.IsGreaterEqual(2020, 3, 11);
 
 		public static int GetDataOffset(UnityVersion version, GPUPlatform graphicApi)
 		{
 			if (HasHeader(graphicApi))
 			{
-				return HasGSInputPrimitive(version) ? 6 : 5;
+				int offset = HasGSInputPrimitive(version) ? 6 : 5;
+				if (HasUnknown32Bytes(version))
+					offset += 0x20;
+
+				return offset;
 			}
 			else
 			{
