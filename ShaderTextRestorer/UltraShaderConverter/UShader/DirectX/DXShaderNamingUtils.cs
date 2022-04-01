@@ -48,6 +48,7 @@ namespace ShaderLabConvert
                 type = input.name + input.index;
             else
                 type = input.name;
+
             string name = input.name switch
             {
                 "SV_POSITION" => "position",
@@ -64,14 +65,121 @@ namespace ShaderLabConvert
                 type = output.name + output.index;
             else
                 type = output.name;
-            string name = output.name switch
+
+			if (HasSpecialInputOutputName(output.name))
+			{
+				return GetSpecialInputOutputName(output.name);
+			}
+
+			string name = output.name switch
             {
                 "SV_POSITION" => "position",
                 "POSITION" => "vertex",
                 _ => type.ToLower(),
             };
+
             return name;
-        }
+		}
+
+		public static bool HasSpecialInputOutputName(string typeName) => GetSpecialInputOutputName(typeName) != string.Empty;
+		public static string GetSpecialInputOutputName(string typeName)
+		{
+			switch (typeName)
+			{
+				case "SV_Depth":
+				{
+					return "oDepth";
+				}
+				case "SV_Coverage":
+				{
+					return "oMask";
+				}
+				case "SV_DepthGreaterEqual":
+				{
+					return "oDepthGE";
+				}
+				case "SV_DepthLessEqual":
+				{
+					return "oDepthLE";
+				}
+				case "SV_StencilRef":
+				{
+					return "oStencilRef"; // not in 3dmigoto
+				}
+			}
+
+			return string.Empty;
+		}
+
+		public static bool HasSpecialInputOutputName(USILOperandType operandType) => GetSpecialInputOutputName(operandType) != string.Empty;
+		public static string GetSpecialInputOutputName(USILOperandType operandType)
+		{
+			switch (operandType)
+			{
+				case USILOperandType.InputCoverageMask:
+				{
+					return "vCoverage";
+				}
+				case USILOperandType.InputThreadGroupID:
+				{
+					return "vThreadGroupID";
+				}
+				case USILOperandType.InputThreadID:
+				{
+					return "vThreadID";
+				}
+				case USILOperandType.InputThreadIDInGroup:
+				{
+					return "vThreadIDInGroup";
+				}
+				case USILOperandType.InputThreadIDInGroupFlattened:
+				{
+					return "vThreadIDInGroupFlattened";
+				}
+				case USILOperandType.InputPrimitiveID:
+				{
+					return "vPrim";
+				}
+				case USILOperandType.InputForkInstanceID:
+				{
+					return "vForkInstanceID";
+				}
+				case USILOperandType.InputGSInstanceID:
+				{
+					return "vGSInstanceID";
+				}
+				case USILOperandType.InputDomainPoint:
+				{
+					return "vDomain";
+				}
+				case USILOperandType.OutputControlPointID:
+				{
+					return "outputControlPointID"; // not in 3dmigoto
+				}
+				case USILOperandType.OutputDepth:
+				{
+					return "oDepth";
+				}
+				case USILOperandType.OutputCoverageMask:
+				{
+					return "oMask";
+				}
+				case USILOperandType.OutputDepthGreaterEqual:
+				{
+					return "oDepthGE";
+				}
+				case USILOperandType.OutputDepthLessEqual:
+				{
+					return "oDepthLE";
+				}
+				case USILOperandType.StencilRef:
+				{
+					return "oStencilRef"; // not in 3dmigoto
+				}
+			}
+
+			return string.Empty;
+		}
 
 		public static string GetOSGNFormatName(OSGN.Output output)
 		{

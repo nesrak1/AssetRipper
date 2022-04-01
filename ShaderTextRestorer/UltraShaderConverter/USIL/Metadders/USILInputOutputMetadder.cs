@@ -79,6 +79,18 @@ namespace ShaderLabConvert
                     operand.metadataNameAssigned = true;
                 }
             }
+            else if (DXShaderNamingUtils.HasSpecialInputOutputName(operand.operandType))
+			{
+				string name = DXShaderNamingUtils.GetSpecialInputOutputName(operand.operandType);
+
+				operand.metadataName = _shader.shaderFunctionType switch
+				{
+					UShaderFunctionType.Vertex => $"{USILConstants.VERT_OUTPUT_LOCAL_NAME}.{name}",
+					UShaderFunctionType.Fragment => $"{USILConstants.FRAG_OUTPUT_LOCAL_NAME}.{name}",
+					_ => $"unk_special.{name}",
+				};
+				operand.metadataNameAssigned = true;
+			}
         }
 
         private int[] MatchMaskToInputOutput(int[] mask, int maskTest, bool moveSwizzles)

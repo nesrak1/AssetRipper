@@ -9,6 +9,7 @@ namespace ShaderLabConvert
     public enum USILOperandType
     {
         None,
+		Null,
         Comment,
 
         TempRegister,
@@ -23,7 +24,23 @@ namespace ShaderLabConvert
         Sampler3D,
         Sampler4D,
 
-        ImmediateInt,
+		InputCoverageMask,
+		InputThreadGroupID,
+		InputThreadID,
+		InputThreadIDInGroup,
+		InputThreadIDInGroupFlattened,
+		InputPrimitiveID,
+		InputForkInstanceID,
+		InputGSInstanceID,
+		InputDomainPoint,
+		OutputControlPointID,
+		OutputDepth,
+		OutputCoverageMask,
+		OutputDepthGreaterEqual,
+		OutputDepthLessEqual,
+		StencilRef,
+
+		ImmediateInt,
         ImmediateFloat,
 		ImmediateConstantBuffer,
 		Matrix,

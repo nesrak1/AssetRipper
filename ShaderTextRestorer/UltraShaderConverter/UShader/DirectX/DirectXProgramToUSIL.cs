@@ -40,7 +40,7 @@ namespace ShaderLabConvert
                 { Opcode.not, new InstHandler(HandleNot) },
                 { Opcode.ftoi, new InstHandler(HandleFtoi) },
                 { Opcode.ftou, new InstHandler(HandleFtoi) },
-                { Opcode.min, new InstHandler(HandleMin) },
+				{ Opcode.min, new InstHandler(HandleMin) },
                 { Opcode.max, new InstHandler(HandleMax) },
                 { Opcode.sqrt, new InstHandler(HandleSqrt) },
                 { Opcode.rsq, new InstHandler(HandleRsq) },
@@ -50,6 +50,8 @@ namespace ShaderLabConvert
                 { Opcode.frc, new InstHandler(HandleFrc) },
                 { Opcode.round_ni, new InstHandler(HandleRoundNi) },
                 { Opcode.round_pi, new InstHandler(HandleRoundPi) },
+                { Opcode.round_ne, new InstHandler(HandleRoundNe) },
+                { Opcode.sincos, new InstHandler(HandleSincos) },
                 { Opcode.ishl, new InstHandler(HandleIShl) },
                 { Opcode.ishr, new InstHandler(HandleIShr) },
                 { Opcode.dp2, new InstHandler(HandleDp2) },
@@ -208,6 +210,11 @@ namespace ShaderLabConvert
 
             switch (dxOperand.operand)
             {
+				case Operand.Null:
+				{
+					usilOperand.operandType = USILOperandType.Null;
+					break;
+				}
                 case Operand.ConstantBuffer:
                 {
                     // figure out cb names in a later pass
@@ -262,8 +269,55 @@ namespace ShaderLabConvert
                     usilOperand.operandType = USILOperandType.SamplerRegister;
                     usilOperand.registerIndex = smpRegIdx;
                     break;
-                }
-                case Operand.Immediate32:
+				}
+
+				case Operand.InputCoverageMask:
+					usilOperand.operandType = USILOperandType.InputCoverageMask;
+					break;
+				case Operand.InputThreadGroupID:
+					usilOperand.operandType = USILOperandType.InputThreadGroupID;
+					break;
+				case Operand.InputThreadID:
+					usilOperand.operandType = USILOperandType.InputThreadID;
+					break;
+				case Operand.InputThreadIDInGroup:
+					usilOperand.operandType = USILOperandType.InputThreadIDInGroup;
+					break;
+				case Operand.InputThreadIDInGroupFlattened:
+					usilOperand.operandType = USILOperandType.InputThreadIDInGroupFlattened;
+					break;
+				case Operand.InputPrimitiveID:
+					usilOperand.operandType = USILOperandType.InputPrimitiveID;
+					break;
+				case Operand.InputForkInstanceID:
+					usilOperand.operandType = USILOperandType.InputForkInstanceID;
+					break;
+				case Operand.InputGSInstanceID:
+					usilOperand.operandType = USILOperandType.InputGSInstanceID;
+					break;
+				case Operand.InputDomainPoint:
+					usilOperand.operandType = USILOperandType.InputDomainPoint;
+					break;
+				case Operand.OutputControlPointID:
+					usilOperand.operandType = USILOperandType.OutputControlPointID;
+					break;
+				case Operand.OutputDepth:
+					usilOperand.operandType = USILOperandType.OutputDepth;
+					break;
+				case Operand.OutputCoverageMask:
+					usilOperand.operandType = USILOperandType.OutputCoverageMask;
+					break;
+				case Operand.OutputDepthGreaterEqual:
+					usilOperand.operandType = USILOperandType.OutputDepthGreaterEqual;
+					break;
+				case Operand.OutputDepthLessEqual:
+					usilOperand.operandType = USILOperandType.OutputDepthLessEqual;
+					break;
+				case Operand.StencilRef:
+					usilOperand.operandType = USILOperandType.StencilRef;
+					break;
+
+				case Operand.Immediate32:
                 {
                     usilOperand.immIsInt = immIsInt;
                     usilOperand.operandType = immIsInt ? USILOperandType.ImmediateInt : USILOperandType.ImmediateFloat;
@@ -339,9 +393,10 @@ namespace ShaderLabConvert
 				// immediates won't have a mask, so match them to destination values
 				return destMask;
 			}
-			else if (destMask.Length == 0 || destMask.Length == 4)
+			else if (destMask == null || destMask.Length == 0 || destMask.Length == 4)
             {
                 // 0 shouldn't happen, but with mask 4 (xyzw) don't worry about mapping mask
+				// some registers like OutputDepth don't have mask, so skip them too
                 return srcMask;
             }
             else if (destMask.Length == 1)
@@ -851,6 +906,75 @@ namespace ShaderLabConvert
             };
 
             Instructions.Add(usilInst);
+        }
+
+        private void HandleRoundNe(SHDRInstruction inst)
+        {
+            SHDRInstructionOperand dest = inst.operands[0]; // The address of the results of the operation.
+            SHDRInstructionOperand src0 = inst.operands[1]; // The components in the operation.
+
+            USILInstruction usilInst = new USILInstruction();
+            USILOperand usilDest = new USILOperand();
+            USILOperand usilSrc0 = new USILOperand();
+
+            FillUSILOperand(dest, usilDest, dest.swizzle, false);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
+
+            usilInst.instructionType = USILInstructionType.Round;
+            usilInst.destOperand = usilDest;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+                usilSrc0
+            };
+
+            Instructions.Add(usilInst);
+        }
+
+        private void HandleSincos(SHDRInstruction inst)
+        {
+            SHDRInstructionOperand dest0 = inst.operands[0]; // The address of sin(src0), computed per component.
+			SHDRInstructionOperand dest1 = inst.operands[1]; // The address of cos(src0), computed per component.
+			SHDRInstructionOperand src = inst.operands[2]; // The components for which to compute sin and cos.
+
+			// there is a sincos function in hlsl but we'll just skip that and use individual instructions
+
+			if (dest0.operand != Operand.Null)
+			{
+				USILInstruction usilSinInst = new USILInstruction();
+				USILOperand usilSinDest = new USILOperand();
+				USILOperand usilSinSrc = new USILOperand();
+
+				FillUSILOperand(dest0, usilSinDest, dest0.swizzle, false);
+				FillUSILOperand(src, usilSinSrc, MapMask(dest0.swizzle, src.swizzle), false);
+
+				usilSinInst.instructionType = USILInstructionType.Sine;
+				usilSinInst.destOperand = usilSinDest;
+				usilSinInst.srcOperands = new List<USILOperand>
+				{
+					usilSinSrc
+				};
+
+				Instructions.Add(usilSinInst);
+			}
+
+			if (dest1.operand != Operand.Null)
+			{
+				USILInstruction usilCosInst = new USILInstruction();
+				USILOperand usilCosDest = new USILOperand();
+				USILOperand usilCosSrc = new USILOperand();
+
+				FillUSILOperand(dest1, usilCosDest, dest1.swizzle, false);
+				FillUSILOperand(src, usilCosSrc, MapMask(dest1.swizzle, src.swizzle), false);
+
+				usilCosInst.instructionType = USILInstructionType.Cosine;
+				usilCosInst.destOperand = usilCosDest;
+				usilCosInst.srcOperands = new List<USILOperand>
+				{
+					usilCosSrc
+				};
+
+				Instructions.Add(usilCosInst);
+			}
         }
 
         private void HandleIShl(SHDRInstruction inst)

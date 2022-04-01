@@ -145,6 +145,11 @@ namespace ShaderLabConvert
                         body = "none";
                         break;
                     }
+					case USILOperandType.Null:
+					{
+						body = "null";
+						break;
+					}
                     case USILOperandType.Comment:
                     {
                         body = comment;
@@ -219,12 +224,22 @@ namespace ShaderLabConvert
                         body += $"float{GetValueCount()}({string.Join(", ", children.ToList())})";
                         break;
                     }
-                };
+
+					default:
+					{
+						if (DXShaderNamingUtils.HasSpecialInputOutputName(operandType))
+						{
+							body = DXShaderNamingUtils.GetSpecialInputOutputName(operandType);
+						}
+						break;
+					}
+				};
             }
 
             if (operandType != USILOperandType.ImmediateFloat &&
                 operandType != USILOperandType.ImmediateInt &&
                 operandType != USILOperandType.Multiple &&
+				!DXShaderNamingUtils.HasSpecialInputOutputName(operandType) &&
                 displayMaskOverride)
             {
                 if (mask.Length > 0)

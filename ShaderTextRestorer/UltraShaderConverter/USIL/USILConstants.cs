@@ -23,7 +23,8 @@ namespace ShaderLabConvert
             "_m02", "_m12", "_m22", "_m32",
             "_m03", "_m13", "_m23", "_m33"
         };
-
+		
+		// should be functions
 		public static string VERT_INPUT_NAME = "v";
 		public static string VERT_OUTPUT_LOCAL_NAME = "o";
 		public static string VERT_TO_FRAG_STRUCT_NAME = "v2f";

@@ -43,6 +43,9 @@ namespace ShaderLabConvert
                 { USILInstructionType.Fractional, new InstHandler(HandleFractional) },
                 { USILInstructionType.Floor, new InstHandler(HandleFloor) },
                 { USILInstructionType.Ceiling, new InstHandler(HandleCeiling) },
+                { USILInstructionType.Round, new InstHandler(HandleRound) },
+                { USILInstructionType.Sine, new InstHandler(HandleSine) },
+                { USILInstructionType.Cosine, new InstHandler(HandleCosine) },
                 { USILInstructionType.ShiftLeft, new InstHandler(HandleShiftLeft) },
                 { USILInstructionType.ShiftRight, new InstHandler(HandleShiftRight) },
                 { USILInstructionType.DotProduct2, new InstHandler(HandleDotProduct) },
@@ -278,6 +281,30 @@ namespace ShaderLabConvert
         {
             List<USILOperand> srcOps = inst.srcOperands;
             string value = $"ceil({srcOps[0]})";
+            string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
+        private void HandleRound(USILInstruction inst)
+        {
+            List<USILOperand> srcOps = inst.srcOperands;
+            string value = $"round({srcOps[0]})";
+            string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
+        private void HandleSine(USILInstruction inst)
+        {
+            List<USILOperand> srcOps = inst.srcOperands;
+            string value = $"sin({srcOps[0]})";
+            string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
+        private void HandleCosine(USILInstruction inst)
+        {
+            List<USILOperand> srcOps = inst.srcOperands;
+            string value = $"cos({srcOps[0]})";
             string comment = CommentString(inst);
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }

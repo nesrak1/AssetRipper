@@ -280,7 +280,9 @@ namespace DirectXDisassembler
         InputGSInstanceID,
         OutputDepthGreaterEqual,
         OutputDepthLessEqual,
-        CycleCounter
+        CycleCounter,
+		StencilRef,
+		InnerCoverage
     }
     public enum Type
     {

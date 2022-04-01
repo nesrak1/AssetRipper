@@ -262,7 +262,7 @@ namespace AssetRipper.Library
 			OverrideExporter<IMaterial>(engineExporter);
 			OverrideExporter<ITexture2D>(engineExporter);
 			OverrideExporter<IMesh>(engineExporter);
-			OverrideExporter<IShader>(engineExporter);
+			//OverrideExporter<IShader>(engineExporter);
 			OverrideExporter<IFont>(engineExporter);
 			OverrideExporter<ISprite>(engineExporter);
 			OverrideExporter<IMonoBehaviour>(engineExporter);
