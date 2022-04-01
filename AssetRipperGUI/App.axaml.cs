@@ -21,14 +21,14 @@ namespace AssetRipper.GUI
 
 			AppDomain.CurrentDomain.UnhandledException += (sender, e) =>
 			{
-				try
+				//try
 				{
 					Logger.Error(LogCategory.General, "Unhandled app-level fatal exception!", e.ExceptionObject as Exception);
 				}
-				catch (Exception)
-				{
-					//Ignore, that's all we can do.
-				}
+				//catch (Exception)
+				//{
+				//	//Ignore, that's all we can do.
+				//}
 			};
 
 			app.Run(new MainWindow());

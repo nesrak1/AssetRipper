@@ -224,6 +224,7 @@ namespace AssetRipper.Library
 			OverrideExporter<ISprite>(textureExporter);
 
 			//Shader exporters
+			OverrideExporter<IShader>(new USCShaderExporter(Settings));
 			OverrideExporter<IShader>(new DummyShaderTextExporter(Settings));
 			OverrideExporter<IShader>(new YamlShaderExporter(Settings));
 			OverrideExporter<Shader>(new ShaderDisassemblyExporter(Settings));

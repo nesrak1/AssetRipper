@@ -51,5 +51,16 @@ namespace AssetRipper.Core.Classes.Shader.Parameters
 		public int StructSize { get; set; }
 		public VectorParameter[] VectorMembers { get; set; }
 		public MatrixParameter[] MatrixMembers { get; set; }
+
+		public NumericShaderParameter[] AllNumericMembers
+		{
+			get
+			{
+				NumericShaderParameter[] shaderParams = new NumericShaderParameter[MatrixMembers.Length + VectorMembers.Length];
+				MatrixMembers.CopyTo(shaderParams, 0);
+				VectorMembers.CopyTo(shaderParams, MatrixMembers.Length);
+				return shaderParams;
+			}
+		}
 	}
 }

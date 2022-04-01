@@ -50,48 +50,48 @@ namespace AssetRipper.GUI.Managers
 
 		private static void ExportInternal(Ripper ripper, string toRoot, Action onSuccess, Action<Exception> onError)
 		{
-			try
+			//try
 			{
 				ripper.ExportProject(toRoot);
 			}
-			catch (Exception ex)
-			{
-				onError(ex);
-				return;
-			}
+			//catch (Exception ex)
+			//{
+			//	onError(ex);
+			//	return;
+			//}
 
 			onSuccess();
 		}
 
 		private static void ExportInternal(Ripper ripper, string toRoot, IUnityObjectBase asset, Action onSuccess, Action<Exception> onError)
 		{
-			try
+			//try
 			{
 				ripper.ExportProject(toRoot, asset);
 			}
-			catch (Exception ex)
-			{
-				onError(ex);
-				return;
-			}
+			//catch (Exception ex)
+			//{
+			//	onError(ex);
+			//	return;
+			//}
 
 			onSuccess();
 		}
 
 		private static void ExportInternal(Ripper ripper, string toRoot, Type assetType, Action onSuccess, Action<Exception> onError)
 		{
-			try
+			//try
 			{
 				if (assetType.IsAssignableTo(typeof(ISprite))) // Sprite wont be exported as it's a form of Texture2D
 					assetType = typeof(ITexture2D);
 
 				ripper.ExportProject(toRoot, assetType);
 			}
-			catch (Exception ex)
-			{
-				onError(ex);
-				return;
-			}
+			//catch (Exception ex)
+			//{
+			//	onError(ex);
+			//	return;
+			//}
 
 			onSuccess();
 		}

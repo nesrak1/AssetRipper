@@ -5,7 +5,7 @@ using AssetRipper.Core.YAML;
 
 namespace AssetRipper.Core.Classes.Shader.Parameters
 {
-	public sealed class VectorParameter : IAssetReadable, IYAMLExportable
+	public sealed class VectorParameter : NumericShaderParameter, IAssetReadable, IYAMLExportable
 	{
 		public VectorParameter() { }
 
@@ -17,6 +17,8 @@ namespace AssetRipper.Core.Classes.Shader.Parameters
 			ArraySize = 0;
 			Type = type;
 			Dim = (byte)columns;
+			ColumnCount = 1;
+			IsMatrix = false;
 		}
 
 		public VectorParameter(string name, ShaderParamType type, int index, int arraySize, int columns) : this(name, type, index, columns)
@@ -31,7 +33,9 @@ namespace AssetRipper.Core.Classes.Shader.Parameters
 			ArraySize = reader.ReadInt32();
 			Type = (ShaderParamType)reader.ReadByte();
 			Dim = reader.ReadByte();
+			ColumnCount = 1;
 			reader.AlignStream();
+			IsMatrix = false;
 		}
 
 		public YAMLNode ExportYAML(IExportContainer container)
@@ -45,11 +49,15 @@ namespace AssetRipper.Core.Classes.Shader.Parameters
 			return node;
 		}
 
-		public string Name { get; set; }
-		public int NameIndex { get; set; }
-		public int Index { get; set; }
-		public int ArraySize { get; set; }
-		public ShaderParamType Type { get; set; }
-		public byte Dim { get; set; }
+		//public string Name { get; set; }
+		//public int NameIndex { get; set; }
+		//public int Index { get; set; }
+		//public int ArraySize { get; set; }
+		//public ShaderParamType Type { get; set; }
+		public byte Dim
+		{
+			get { return RowCount; }
+			set { RowCount = value; }
+		}
 	}
 }

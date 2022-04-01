@@ -77,5 +77,16 @@ namespace AssetRipper.Core.Classes.Shader.Parameters
 		public StructParameter[] StructParams { get; set; }
 		public int Size { get; set; }
 		public bool IsPartialCB { get; set; }
+
+		public NumericShaderParameter[] AllNumericParams
+		{
+			get
+			{
+				NumericShaderParameter[] shaderParams = new NumericShaderParameter[MatrixParams.Length + VectorParams.Length];
+				MatrixParams.CopyTo(shaderParams, 0);
+				VectorParams.CopyTo(shaderParams, MatrixParams.Length);
+				return shaderParams;
+			}
+		}
 	}
 }

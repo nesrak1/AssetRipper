@@ -221,6 +221,8 @@ namespace AssetRipper.Core.Classes.Shader
 						structs.Add(@struct);
 					}
 				}
+
+				ConstantBuffer constBuffer = new ConstantBuffer(name, matrices.ToArray(), vectors.ToArray(), structs.ToArray(), usedSize);
 				if (i == 0)
 				{
 					VectorParameters = vectors.ToArray();
@@ -229,7 +231,6 @@ namespace AssetRipper.Core.Classes.Shader
 				}
 				else
 				{
-					ConstantBuffer constBuffer = new ConstantBuffer(name, matrices.ToArray(), vectors.ToArray(), structs.ToArray(), usedSize);
 					ConstantBuffers[i - 1] = constBuffer;
 				}
 			}

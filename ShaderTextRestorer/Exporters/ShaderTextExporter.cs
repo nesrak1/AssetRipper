@@ -65,7 +65,7 @@ namespace ShaderTextRestorer.Exporters
 
 		protected static void ExportListing(TextWriter writer, string listing)
 		{
-			writer.Write('\n');
+			//writer.Write('\n');
 			writer.WriteIndent(ExpectedIndent);
 
 			for (int i = 0; i < listing.Length;)

@@ -43,6 +43,8 @@ namespace ShaderTextRestorer.IO
 		public UnityVersion Version => Shader.SerializedFile.Version;
 		public Platform Platform => Shader.SerializedFile.Platform;
 
+		public bool WriteQuotesAroundProgram { get; set; } = true;
+
 		private readonly Func<UnityVersion, GPUPlatform, ShaderTextExporter> m_exporterInstantiator;
 	}
 }
