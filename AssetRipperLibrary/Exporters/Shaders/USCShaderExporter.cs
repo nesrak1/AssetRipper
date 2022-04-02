@@ -215,6 +215,9 @@ namespace AssetRipper.Library.Exporters.Shaders
 						fragmentConverter.LoadDirectXCompiledShader(new MemoryStream(trimmedProgramData));
 					}
 
+					writer.WriteIndent(3);
+					writer.WriteLine("CGPROGRAM");
+
 					if (hasVertex)
 					{
 						writer.WriteIndent(3);
@@ -254,7 +257,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 						}
 
 						writer.WriteIndent(3);
-						writer.WriteLine("}");
+						writer.WriteLine("};");
 					}
 					if (hasFragment)
 					{
@@ -276,7 +279,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 						}
 
 						writer.WriteIndent(3);
-						writer.WriteLine("}");
+						writer.WriteLine("};");
 					}
 
 					HashSet<string> declaredBufs = new HashSet<string>();
@@ -355,6 +358,16 @@ namespace AssetRipper.Library.Exporters.Shaders
 								else if (param.Dim == 4)
 								{
 									writer.WriteLine($"samplerCUBE {name};");
+									anyGlobalSlots = true;
+								}
+								else if (param.Dim == 5)
+								{
+									writer.WriteLine($"UNITY_DECLARE_TEX2DARRAY({name});");
+									anyGlobalSlots = true;
+								}
+								else if (param.Dim == 6)
+								{
+									writer.WriteLine($"UNITY_DECLARE_TEXCUBEARRAY({name});");
 									anyGlobalSlots = true;
 								}
 								else
@@ -439,6 +452,9 @@ namespace AssetRipper.Library.Exporters.Shaders
 						writer.WriteIndent(3);
 						writer.WriteLine("}");
 					}
+
+					writer.WriteIndent(3);
+					writer.WriteLine("ENDCG");
 				}
 				else
 				{
