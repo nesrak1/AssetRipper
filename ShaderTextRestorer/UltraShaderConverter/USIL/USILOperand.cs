@@ -203,7 +203,7 @@ namespace ShaderLabConvert
                     {
                         if (immValueFloat.Length == 1)
                         {
-                            body = $"{immValueFloat[0]}";
+                            body = $"{immValueFloat[0].ToString(CultureInfo.InvariantCulture)}";
                         }
                         else //if (immValueFloat.Length > 1)
                         {
