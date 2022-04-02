@@ -590,7 +590,7 @@ namespace DirectXDisassembler.Blocks
             {
                 case Opcode.dcl_resource:
                 {
-                    resourceDimension = (ResourceDimension)((reader.ReadInt32() & 0x0000f800) >> 11);
+                    resourceDimension = (ResourceDimension)((instData & 0x0000f800) >> 11);
                     operands = new SHDRInstructionOperand[1]
                     {
                         new SHDRInstructionOperand(reader)

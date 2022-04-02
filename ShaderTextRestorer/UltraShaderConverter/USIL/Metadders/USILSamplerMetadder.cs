@@ -39,7 +39,13 @@ namespace ShaderLabConvert
                                 operand.operandType = USILOperandType.Sampler3D;
                                 break;
                             case 4:
-                                operand.operandType = USILOperandType.Sampler4D;
+                                operand.operandType = USILOperandType.SamplerCube;
+                                break;
+                            case 5:
+                                operand.operandType = USILOperandType.Sampler2DArray;
+                                break;
+                            case 6:
+                                operand.operandType = USILOperandType.SamplerCubeArray;
                                 break;
                         }
 

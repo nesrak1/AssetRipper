@@ -335,13 +335,16 @@ namespace ShaderLabConvert
 
         private void HandleSample(USILInstruction inst)
         {
+			// todo: cannot handle samples in vertex yet
             List<USILOperand> srcOps = inst.srcOperands;
             USILOperand textureOperand = inst.srcOperands[2];
             string value = textureOperand.operandType switch
             {
                 USILOperandType.Sampler2D => $"tex2D({srcOps[2]}, {srcOps[0]})",
                 USILOperandType.Sampler3D => $"tex3D({srcOps[2]}, {srcOps[0]})",
-                USILOperandType.Sampler4D => $"texCUBE({srcOps[2]}, {srcOps[0]})",
+                USILOperandType.SamplerCube => $"texCUBE({srcOps[2]}, {srcOps[0]})",
+                USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY({srcOps[2]}, {srcOps[0]})",
+                USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY({srcOps[2]}, {srcOps[0]})",
                 _ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
             };
             string comment = CommentString(inst);

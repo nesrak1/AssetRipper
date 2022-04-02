@@ -20,6 +20,8 @@ namespace ShaderLabConvert
         private delegate void InstHandler(SHDRInstruction inst);
         private Dictionary<Opcode, InstHandler> _instructionHandlers;
 
+		private Dictionary<int, ResourceDimension> _samplerToDimension;
+
         public DirectXProgramToUSIL(DirectXCompiledShader dxShader)
         {
             _dxShader = dxShader;
@@ -76,8 +78,11 @@ namespace ShaderLabConvert
                 { Opcode.ret, new InstHandler(HandleRet) },
                 ////dec
                 { Opcode.dcl_temps, new InstHandler(HandleTemps) },
+                { Opcode.dcl_resource, new InstHandler(HandleResource) },
                 { Opcode.customdata, new InstHandler(HandleCustomData) }
             };
+
+			_samplerToDimension = new Dictionary<int, ResourceDimension>();
         }
 
         public void Convert()
@@ -1127,9 +1132,11 @@ namespace ShaderLabConvert
             USILOperand usilSrcSampler = new USILOperand();
 
             int[] mask = new int[] { 0, 1, 2, 3 };
-            int[] uvMask = new int[] { 0, 1 }; // todo: read dx dcl data
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, false);
+			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
+			int[] uvMask = GetMaskOfDimension(dimension);
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
             FillUSILOperand(srcResource, usilSrcResource, MapMask(dest.swizzle, srcResource.swizzle), false);
             FillUSILOperand(srcSampler, usilSrcSampler, mask, false);
@@ -1162,9 +1169,11 @@ namespace ShaderLabConvert
             USILOperand usilSrcReferenceValue = new USILOperand();
 
             int[] mask = new int[] { 0, 1, 2, 3 };
-            int[] uvMask = new int[] { 0, 1 }; // todo: read dx dcl data
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, false);
+			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
+			int[] uvMask = GetMaskOfDimension(dimension);
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
             FillUSILOperand(srcResource, usilSrcResource, MapMask(dest.swizzle, srcResource.swizzle), false);
             FillUSILOperand(srcSampler, usilSrcSampler, mask, false);
@@ -1203,9 +1212,11 @@ namespace ShaderLabConvert
             USILOperand usilSrcLOD = new USILOperand();
 
             int[] mask = new int[] { 0, 1, 2, 3 };
-            int[] uvMask = new int[] { 0, 1 }; // todo: read dx dcl data
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, false);
+			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
+			int[] uvMask = GetMaskOfDimension(dimension);
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
             FillUSILOperand(srcResource, usilSrcResource, MapMask(dest.swizzle, srcResource.swizzle), false);
             FillUSILOperand(srcSampler, usilSrcSampler, mask, false);
@@ -1432,6 +1443,25 @@ namespace ShaderLabConvert
             }
         }
 
+        private void HandleResource(SHDRInstruction inst)
+        {
+            ResourceDimension dimension = inst.declData.resourceDimension;
+
+			if (dimension != ResourceDimension.texture1d &&
+				dimension != ResourceDimension.texture2d &&
+				dimension != ResourceDimension.texture3d &&
+				dimension != ResourceDimension.texturecube &&
+				dimension != ResourceDimension.texture1darray &&
+				dimension != ResourceDimension.texture2darray &&
+				dimension != ResourceDimension.texturecubearray)
+			{
+				return;
+			}
+
+			int regIndex = inst.declData.operands[0].arraySizes[0]; // todo: not always tX
+			_samplerToDimension[regIndex] = dimension;
+        }
+
         private void HandleCustomData(SHDRInstruction inst)
         {
             USILLocal local = new USILLocal("const float4", "icb", USILLocalType.Vector4, true);
@@ -1464,10 +1494,30 @@ namespace ShaderLabConvert
 			Locals.Add(new USILLocal(outputStructName, outputName, USILLocalType.Vector4));
 		}
 
-        ///////////////////////
-        // stuff to be moved to other classes
+		private int[] GetMaskOfDimension(ResourceDimension dimension)
+		{
+			switch (dimension)
+			{
+				case ResourceDimension.texture1d:
+					return new[] { 0 };
+				case ResourceDimension.texture1darray:
+				case ResourceDimension.texture2d:
+					return new[] { 0, 1 };
+				case ResourceDimension.texture2darray:
+				case ResourceDimension.texture3d:
+				case ResourceDimension.texturecube:
+					return new[] { 0, 1, 2 };
+				case ResourceDimension.texturecubearray:
+					return new[] { 0, 1, 2, 3 };
+				default:
+					return new[] { 0, 1 }; // not handled yet
+			}
+		}
 
-        private int ConvertFloatToInt(float f)
+		///////////////////////
+		// stuff to be moved to other classes
+
+		private int ConvertFloatToInt(float f)
         {
             return BitConverter.SingleToInt32Bits(f);
         }

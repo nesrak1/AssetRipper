@@ -22,7 +22,9 @@ namespace ShaderLabConvert
 
         Sampler2D,
         Sampler3D,
-        Sampler4D,
+        SamplerCube,
+        Sampler2DArray,
+        SamplerCubeArray,
 
 		InputCoverageMask,
 		InputThreadGroupID,

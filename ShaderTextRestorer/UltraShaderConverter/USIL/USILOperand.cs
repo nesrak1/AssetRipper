@@ -162,7 +162,7 @@ namespace ShaderLabConvert
                     case USILOperandType.SamplerRegister:
                     case USILOperandType.Sampler2D:
                     case USILOperandType.Sampler3D:
-                    case USILOperandType.Sampler4D:
+                    case USILOperandType.SamplerCube:
                     {
                         body = $"{registerIndex}";
                         break;

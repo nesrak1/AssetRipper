@@ -86,6 +86,12 @@ namespace ShaderLabConvert
 
                 int tmp0Index = inst0.destOperand.registerIndex;
                 int tmp1Index = inst2.destOperand.registerIndex;
+
+				// registers can swap halfway through to be used for something else
+				// don't try to convert the matrix because we can't handle this yet
+				if (tmp0Index != tmp1Index)
+					continue;
+
                 bool tempRegisterCorrect =
                     inst0.destOperand.registerIndex == tmp0Index &&
                     inst1.destOperand.registerIndex == tmp0Index &&
@@ -300,7 +306,13 @@ namespace ShaderLabConvert
 
                 int tmp0Index = inst0.destOperand.registerIndex;
                 int tmp1Index = inst2.destOperand.registerIndex;
-                bool tempRegisterCorrect =
+
+				// registers can swap halfway through to be used for something else
+				// don't try to convert the matrix because we can't handle this yet
+				if (tmp0Index != tmp1Index)
+					continue;
+
+				bool tempRegisterCorrect =
                     inst0.destOperand.registerIndex == tmp0Index &&
                     inst1.destOperand.registerIndex == tmp0Index &&
                     inst1.srcOperands[2].registerIndex == tmp0Index &&
