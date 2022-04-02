@@ -42,6 +42,7 @@ namespace ShaderLabConvert
                 { Opcode.not, new InstHandler(HandleNot) },
                 { Opcode.ftoi, new InstHandler(HandleFtoi) },
                 { Opcode.ftou, new InstHandler(HandleFtoi) },
+                { Opcode.itof, new InstHandler(HandleItof) },
 				{ Opcode.min, new InstHandler(HandleMin) },
                 { Opcode.max, new InstHandler(HandleMax) },
                 { Opcode.sqrt, new InstHandler(HandleSqrt) },
@@ -685,6 +686,28 @@ namespace ShaderLabConvert
             Instructions.Add(usilInst);
         }
 
+        private void HandleItof(SHDRInstruction inst)
+        {
+            SHDRInstructionOperand dest = inst.operands[0]; // Contains the result of the operation.
+			SHDRInstructionOperand src0 = inst.operands[1]; // Contains the value to convert.
+
+			USILInstruction usilInst = new USILInstruction();
+            USILOperand usilDest = new USILOperand();
+            USILOperand usilSrc0 = new USILOperand();
+
+            FillUSILOperand(dest, usilDest, dest.swizzle, false);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
+
+            usilInst.instructionType = USILInstructionType.AsInt;
+            usilInst.destOperand = usilDest;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+                usilSrc0
+            };
+
+            Instructions.Add(usilInst);
+        }
+
         private void HandleMin(SHDRInstruction inst)
         {
             SHDRInstructionOperand dest = inst.operands[0]; // The result of the operation. dest = src0 < src1 ? src0 : src1
@@ -1227,7 +1250,6 @@ namespace ShaderLabConvert
             else //if (inst.opcode == Opcode.sample_l)
                 usilInst.instructionType = USILInstructionType.SampleLOD;
 
-            usilInst.instructionType = USILInstructionType.Sample;
             usilInst.destOperand = usilDest;
             usilInst.srcOperands = new List<USILOperand>
             {

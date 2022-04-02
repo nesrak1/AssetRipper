@@ -27,7 +27,8 @@ namespace ShaderLabConvert
 
 		Floor, //dx: round_ni
 		Ceiling, //dx: round_pi
-		Round, //dx: ???
+		Round, //dx: round_ne
+		AsInt, //dx: itof
 
 		Minimum, //dx: min
 		Maximum, //dx: max

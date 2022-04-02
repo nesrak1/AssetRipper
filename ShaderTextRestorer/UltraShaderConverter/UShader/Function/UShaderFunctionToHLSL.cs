@@ -44,6 +44,7 @@ namespace ShaderLabConvert
                 { USILInstructionType.Floor, new InstHandler(HandleFloor) },
                 { USILInstructionType.Ceiling, new InstHandler(HandleCeiling) },
                 { USILInstructionType.Round, new InstHandler(HandleRound) },
+                { USILInstructionType.AsInt, new InstHandler(HandleAsInt) },
                 { USILInstructionType.Sine, new InstHandler(HandleSine) },
                 { USILInstructionType.Cosine, new InstHandler(HandleCosine) },
                 { USILInstructionType.ShiftLeft, new InstHandler(HandleShiftLeft) },
@@ -289,6 +290,14 @@ namespace ShaderLabConvert
         {
             List<USILOperand> srcOps = inst.srcOperands;
             string value = $"round({srcOps[0]})";
+            string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
+        private void HandleAsInt(USILInstruction inst)
+        {
+            List<USILOperand> srcOps = inst.srcOperands;
+            string value = $"asint({srcOps[0]})";
             string comment = CommentString(inst);
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }
