@@ -1,5 +1,6 @@
 ﻿using AssetRipper.Core.Classes.Shader;
 using AssetRipper.Core.Classes.Shader.Parameters;
+using AssetRipper.Core.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,14 @@ namespace ShaderLabConvert
                         switch (dimension)
                         {
                             case 2:
-                                operand.operandType = USILOperandType.Sampler2D;
+                                if (instruction.instructionType == USILInstructionType.SampleLOD)
+                                {
+                                    operand.operandType = USILOperandType.Sampler2DLod;
+                                }
+                                else
+                                {
+                                    operand.operandType = USILOperandType.Sampler2D;
+                                }
                                 break;
                             case 3:
                                 operand.operandType = USILOperandType.Sampler3D;
@@ -46,6 +54,9 @@ namespace ShaderLabConvert
                                 break;
                             case 6:
                                 operand.operandType = USILOperandType.SamplerCubeArray;
+                                break;
+                            default:
+                                Logger.Error("Unsupported sampler dimension: " + dimension);
                                 break;
                         }
 

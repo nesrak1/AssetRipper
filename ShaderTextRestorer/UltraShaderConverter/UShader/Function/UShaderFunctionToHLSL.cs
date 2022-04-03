@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AssetRipper.Core.Logging;
 
 namespace ShaderLabConvert
 {
@@ -345,8 +346,17 @@ namespace ShaderLabConvert
                 USILOperandType.SamplerCube => $"texCUBE({srcOps[2]}, {srcOps[0]})",
                 USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY({srcOps[2]}, {srcOps[0]})",
                 USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY({srcOps[2]}, {srcOps[0]})",
+                USILOperandType.Sampler2DLod => $"tex2Dlod({srcOps[2]}, {srcOps[0]}, {srcOps[3]})",
                 _ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
             };
+            // log the instruction
+            Logger.Info($"DEBUG: {inst.ToString()}");
+
+            // if the instruction is Sampler2DLod, we need to print the type of the third operand
+            if (textureOperand.operandType == USILOperandType.Sampler2DLod)
+            {
+                Logger.Info($"DEBUG: The type of the third param of tex2Dlod is: {inst.srcOperands[3].operandType}");
+            }
             string comment = CommentString(inst);
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }

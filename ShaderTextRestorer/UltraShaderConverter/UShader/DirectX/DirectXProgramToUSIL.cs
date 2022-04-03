@@ -1227,7 +1227,7 @@ namespace ShaderLabConvert
             else //if (inst.opcode == Opcode.sample_l)
                 usilInst.instructionType = USILInstructionType.SampleLOD;
 
-            usilInst.instructionType = USILInstructionType.Sample;
+            // usilInst.instructionType = USILInstructionType.Sample;
             usilInst.destOperand = usilDest;
             usilInst.srcOperands = new List<USILOperand>
             {

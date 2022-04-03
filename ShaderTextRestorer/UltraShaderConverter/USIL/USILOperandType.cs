@@ -21,6 +21,7 @@ namespace ShaderLabConvert
         ConstantBuffer,
 
         Sampler2D,
+        Sampler2DLod,
         Sampler3D,
         SamplerCube,
         Sampler2DArray,
