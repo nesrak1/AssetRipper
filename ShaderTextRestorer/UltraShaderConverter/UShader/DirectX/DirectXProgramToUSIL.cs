@@ -1225,9 +1225,9 @@ namespace ShaderLabConvert
             SHDRInstructionOperand srcAddress = inst.operands[1]; // A set of texture coordinates. For more information, see the Remarks section.
             SHDRInstructionOperand srcResource = inst.operands[2]; // A texture register. For more information, see the Remarks section.
             SHDRInstructionOperand srcSampler = inst.operands[3]; // A sampler register. For more information, see the Remarks section.
-            SHDRInstructionOperand srcLOD = inst.operands[4]; // A sampler register. For more information, see the Remarks section.
+            SHDRInstructionOperand srcLOD = inst.operands[4]; // The LOD.
 
-            USILInstruction usilInst = new USILInstruction();
+			USILInstruction usilInst = new USILInstruction();
             USILOperand usilDest = new USILOperand();
             USILOperand usilSrcAddress = new USILOperand();
             USILOperand usilSrcResource = new USILOperand();
@@ -1243,7 +1243,7 @@ namespace ShaderLabConvert
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
             FillUSILOperand(srcResource, usilSrcResource, MapMask(dest.swizzle, srcResource.swizzle), false);
             FillUSILOperand(srcSampler, usilSrcSampler, mask, false);
-            FillUSILOperand(srcLOD, usilSrcLOD, mask, false);
+            FillUSILOperand(srcLOD, usilSrcLOD, srcLOD.swizzle, false);
 
             if (inst.opcode == Opcode.sample_b)
                 usilInst.instructionType = USILInstructionType.SampleLODBias;
