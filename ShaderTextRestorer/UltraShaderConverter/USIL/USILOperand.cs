@@ -203,7 +203,7 @@ namespace ShaderLabConvert
                     {
                         if (immValueFloat.Length == 1)
                         {
-                            body = $"{immValueFloat[0].ToString(CultureInfo.InvariantCulture)}";
+                            body = $"{immValueFloat[0].ToString("0.0######", CultureInfo.InvariantCulture)}";
                         }
                         else //if (immValueFloat.Length > 1)
                         {
@@ -212,9 +212,9 @@ namespace ShaderLabConvert
                             for (int i = 0; i < immValueFloat.Length; i++)
                             {
                                 if (i != immValueFloat.Length - 1)
-                                    body += $"{immValueFloat[i].ToString(CultureInfo.InvariantCulture)}, ";
+                                    body += $"{immValueFloat[i].ToString("0.0######", CultureInfo.InvariantCulture)}, ";
                                 else
-                                    body += $"{immValueFloat[i].ToString(CultureInfo.InvariantCulture)}";
+                                    body += $"{immValueFloat[i].ToString("0.0######", CultureInfo.InvariantCulture)}";
                             }
                             body += ")";
                         }
