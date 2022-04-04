@@ -25,7 +25,8 @@ namespace ShaderLabConvert
             // do simplification optimizers last when detection has been finished
             typeof(USILCompareOrderOptimizer),
             typeof(USILAddNegativeOptimizer),
-            typeof(USILAndOptimizer)
+            typeof(USILAndOptimizer),
+			typeof(USILForLoopOptimizer)
         };
 
         public static void Apply(UShaderProgram shader, ShaderSubProgram shaderData)

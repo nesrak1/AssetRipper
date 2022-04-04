@@ -28,7 +28,8 @@ namespace ShaderLabConvert
 		Floor, //dx: round_ni
 		Ceiling, //dx: round_pi
 		Round, //dx: round_ne
-		AsInt, //dx: itof
+		IntToFloat, //dx: itof
+		FloatToInt, //dx: ftoi
 
 		Minimum, //dx: min
 		Maximum, //dx: max
@@ -63,6 +64,11 @@ namespace ShaderLabConvert
 		Else, //dx: else
 		EndIf, //dx: endif
 		Return, //dx: return
+		Loop, //dx: loop
+		ForLoop, //dx: --- (loop, ige for example)
+		EndLoop, //dx: endloop
+		Break, //dx: break
+		Continue, //dx: continue
 
 		// graphics
 		Discard, //dx: discard

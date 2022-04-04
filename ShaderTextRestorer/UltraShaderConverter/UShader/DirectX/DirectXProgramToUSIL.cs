@@ -35,8 +35,10 @@ namespace ShaderLabConvert
                 { Opcode.add, new InstHandler(HandleAdd) },
                 { Opcode.iadd, new InstHandler(HandleAdd) },
                 { Opcode.mul, new InstHandler(HandleMul) },
+                { Opcode.imul, new InstHandler(HandleMul) },
                 { Opcode.div, new InstHandler(HandleDiv) },
                 { Opcode.mad, new InstHandler(HandleMad) },
+                { Opcode.imad, new InstHandler(HandleMad) },
                 { Opcode.and, new InstHandler(HandleAnd) },
                 { Opcode.or, new InstHandler(HandleOr) },
                 { Opcode.not, new InstHandler(HandleNot) },
@@ -57,6 +59,7 @@ namespace ShaderLabConvert
                 { Opcode.sincos, new InstHandler(HandleSincos) },
                 { Opcode.ishl, new InstHandler(HandleIShl) },
                 { Opcode.ishr, new InstHandler(HandleIShr) },
+                { Opcode.ushr, new InstHandler(HandleIShr) },
                 { Opcode.dp2, new InstHandler(HandleDp2) },
                 { Opcode.dp3, new InstHandler(HandleDp3) },
                 { Opcode.dp4, new InstHandler(HandleDp4) },
@@ -69,13 +72,22 @@ namespace ShaderLabConvert
                 { Opcode.@if, new InstHandler(HandleIf) },
                 { Opcode.@else, new InstHandler(HandleElse) },
                 { Opcode.endif, new InstHandler(HandleEndIf) },
+                { Opcode.loop, new InstHandler(HandleLoop) },
+                { Opcode.endloop, new InstHandler(HandleEndLoop) },
+                { Opcode.@break, new InstHandler(HandleBreak) },
+                { Opcode.breakc, new InstHandler(HandleBreakc) },
+                { Opcode.@continue, new InstHandler(HandleContinue) },
+                { Opcode.continuec, new InstHandler(HandleContinuec) },
                 { Opcode.eq, new InstHandler(HandleEq) },
-                { Opcode.ieq, new InstHandler(HandleEq) }, // hoping there are no floats in this
+                { Opcode.ieq, new InstHandler(HandleEq) },
                 { Opcode.ne, new InstHandler(HandleNeq) },
                 { Opcode.ine, new InstHandler(HandleNeq) },
                 { Opcode.lt, new InstHandler(HandleLt) },
                 { Opcode.ilt, new InstHandler(HandleLt) },
+                { Opcode.ult, new InstHandler(HandleLt) },
                 { Opcode.ge, new InstHandler(HandleGe) },
+                { Opcode.ige, new InstHandler(HandleGe) },
+                { Opcode.uge, new InstHandler(HandleGe) },
                 { Opcode.ret, new InstHandler(HandleRet) },
                 ////dec
                 { Opcode.dcl_temps, new InstHandler(HandleTemps) },
@@ -185,6 +197,7 @@ namespace ShaderLabConvert
             foreach (var instruction in Instructions)
             {
                 if (instruction.instructionType == USILInstructionType.EndIf ||
+                    instruction.instructionType == USILInstructionType.EndLoop ||
                     instruction.instructionType == USILInstructionType.Else)
                 {
                     depth--;
@@ -195,7 +208,8 @@ namespace ShaderLabConvert
                 
                 if (instruction.instructionType == USILInstructionType.IfFalse ||
                     instruction.instructionType == USILInstructionType.IfTrue ||
-                    instruction.instructionType == USILInstructionType.Else)
+                    instruction.instructionType == USILInstructionType.Else ||
+					instruction.instructionType == USILInstructionType.Loop)
                 {
                     depth++;
                 }
@@ -487,11 +501,11 @@ namespace ShaderLabConvert
             USILOperand usilSrc0 = new USILOperand();
             USILOperand usilSrc1 = new USILOperand();
 
-            bool immIsInt = inst.opcode == Opcode.iadd;
+            bool isInt = inst.opcode == Opcode.iadd;
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, immIsInt);
-            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), immIsInt);
-            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), immIsInt);
+            FillUSILOperand(dest, usilDest, dest.swizzle, isInt);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), isInt);
+            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), isInt);
 
             usilInst.instructionType = USILInstructionType.Add;
             usilInst.destOperand = usilDest;
@@ -501,6 +515,7 @@ namespace ShaderLabConvert
                 usilSrc1
             };
             usilInst.saturate = inst.saturated;
+			usilInst.isIntVariant = isInt;
 
             Instructions.Add(usilInst);
         }
@@ -516,7 +531,9 @@ namespace ShaderLabConvert
             USILOperand usilSrc0 = new USILOperand();
             USILOperand usilSrc1 = new USILOperand();
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, false);
+			bool isInt = inst.opcode == Opcode.imul;
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
             FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), false);
 
@@ -528,6 +545,7 @@ namespace ShaderLabConvert
                 usilSrc1
             };
             usilInst.saturate = inst.saturated;
+			usilInst.isIntVariant = isInt;
 
             Instructions.Add(usilInst);
         }
@@ -572,7 +590,9 @@ namespace ShaderLabConvert
             USILOperand usilSrc1 = new USILOperand();
             USILOperand usilSrc2 = new USILOperand();
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, false);
+			bool isInt = inst.opcode == Opcode.imad;
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
             FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), false);
             FillUSILOperand(src2, usilSrc2, MapMask(dest.swizzle, src2.swizzle), false);
@@ -586,6 +606,7 @@ namespace ShaderLabConvert
                 usilSrc2
             };
             usilInst.saturate = inst.saturated;
+            usilInst.isIntVariant = isInt;
 
             Instructions.Add(usilInst);
         }
@@ -676,7 +697,7 @@ namespace ShaderLabConvert
             FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
 
-            usilInst.instructionType = USILInstructionType.Floor;
+            usilInst.instructionType = USILInstructionType.FloatToInt;
             usilInst.destOperand = usilDest;
             usilInst.srcOperands = new List<USILOperand>
             {
@@ -698,7 +719,7 @@ namespace ShaderLabConvert
             FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
 
-            usilInst.instructionType = USILInstructionType.AsInt;
+            usilInst.instructionType = USILInstructionType.IntToFloat;
             usilInst.destOperand = usilDest;
             usilInst.srcOperands = new List<USILOperand>
             {
@@ -1027,6 +1048,7 @@ namespace ShaderLabConvert
                 usilSrc0,
                 usilSrc1
             };
+			usilInst.isIntVariant = true;
 
             Instructions.Add(usilInst);
         }
@@ -1053,8 +1075,9 @@ namespace ShaderLabConvert
                 usilSrc0,
                 usilSrc1
             };
+			usilInst.isIntVariant = true;
 
-            Instructions.Add(usilInst);
+			Instructions.Add(usilInst);
         }
 
         private void HandleDp2(SHDRInstruction inst)
@@ -1334,6 +1357,102 @@ namespace ShaderLabConvert
             Instructions.Add(usilInst);
         }
 
+        private void HandleLoop(SHDRInstruction inst)
+        {
+            USILInstruction usilInst = new USILInstruction();
+
+            usilInst.instructionType = USILInstructionType.Loop;
+            usilInst.destOperand = null;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+            };
+
+            Instructions.Add(usilInst);
+        }
+
+        private void HandleEndLoop(SHDRInstruction inst)
+        {
+            USILInstruction usilInst = new USILInstruction();
+
+            usilInst.instructionType = USILInstructionType.EndLoop;
+            usilInst.destOperand = null;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+            };
+
+            Instructions.Add(usilInst);
+        }
+
+        private void HandleBreak(SHDRInstruction inst)
+        {
+            USILInstruction usilInst = new USILInstruction();
+
+            usilInst.instructionType = USILInstructionType.Break;
+            usilInst.destOperand = null;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+            };
+
+            Instructions.Add(usilInst);
+        }
+
+        private void HandleBreakc(SHDRInstruction inst)
+		{
+			SHDRInstructionOperand src0 = inst.operands[0];
+
+			USILInstruction usilInst = new USILInstruction();
+			USILOperand usilSrc0 = new USILOperand();
+
+			FillUSILOperand(src0, usilSrc0, src0.swizzle, false);
+
+			usilInst.instructionType = USILInstructionType.Break;
+			usilInst.destOperand = null;
+			usilInst.srcOperands = new List<USILOperand>
+			{
+				usilSrc0
+			};
+
+			// if works the same way, so we can pretend the discard is an if
+			HandleIf(inst);
+			Instructions.Add(usilInst);
+			HandleEndIf(inst);
+		}
+
+        private void HandleContinue(SHDRInstruction inst)
+        {
+            USILInstruction usilInst = new USILInstruction();
+
+            usilInst.instructionType = USILInstructionType.Continue;
+            usilInst.destOperand = null;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+            };
+
+            Instructions.Add(usilInst);
+        }
+
+        private void HandleContinuec(SHDRInstruction inst)
+		{
+			SHDRInstructionOperand src0 = inst.operands[0];
+
+			USILInstruction usilInst = new USILInstruction();
+			USILOperand usilSrc0 = new USILOperand();
+
+			FillUSILOperand(src0, usilSrc0, src0.swizzle, false);
+
+			usilInst.instructionType = USILInstructionType.Continue;
+			usilInst.destOperand = null;
+			usilInst.srcOperands = new List<USILOperand>
+			{
+				usilSrc0
+			};
+
+			// if works the same way, so we can pretend the discard is an if
+			HandleIf(inst);
+			Instructions.Add(usilInst);
+			HandleEndIf(inst);
+		}
+
         private void HandleEq(SHDRInstruction inst)
         {
             SHDRInstructionOperand dest = inst.operands[0]; // The address of the result of the operation.
@@ -1358,6 +1477,7 @@ namespace ShaderLabConvert
                 usilSrc0,
                 usilSrc1
             };
+			usilInst.isIntVariant = isInt;
 
             Instructions.Add(usilInst);
         }
@@ -1386,6 +1506,7 @@ namespace ShaderLabConvert
                 usilSrc0,
                 usilSrc1
             };
+			usilInst.isIntVariant = isInt;
 
             Instructions.Add(usilInst);
         }
@@ -1401,7 +1522,7 @@ namespace ShaderLabConvert
             USILOperand usilSrc0 = new USILOperand();
             USILOperand usilSrc1 = new USILOperand();
 
-            bool isInt = inst.opcode == Opcode.ilt;
+            bool isInt = inst.opcode == Opcode.ilt || inst.opcode == Opcode.ult;
 
             FillUSILOperand(dest, usilDest, dest.swizzle, isInt);
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), isInt);
@@ -1414,8 +1535,10 @@ namespace ShaderLabConvert
                 usilSrc0,
                 usilSrc1
             };
+			usilInst.isIntVariant = isInt;
+			usilInst.isIntUnsigned = inst.opcode == Opcode.ult;
 
-            Instructions.Add(usilInst);
+			Instructions.Add(usilInst);
         }
 
         private void HandleGe(SHDRInstruction inst)
@@ -1429,7 +1552,7 @@ namespace ShaderLabConvert
             USILOperand usilSrc0 = new USILOperand();
             USILOperand usilSrc1 = new USILOperand();
 
-            bool isInt = inst.opcode == Opcode.ige;
+            bool isInt = inst.opcode == Opcode.ige || inst.opcode == Opcode.uge;
 
             FillUSILOperand(dest, usilDest, dest.swizzle, isInt);
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), isInt);
@@ -1442,8 +1565,10 @@ namespace ShaderLabConvert
                 usilSrc0,
                 usilSrc1
             };
+			usilInst.isIntVariant = isInt;
+			usilInst.isIntUnsigned = inst.opcode == Opcode.uge;
 
-            Instructions.Add(usilInst);
+			Instructions.Add(usilInst);
         }
 
         private void HandleRet(SHDRInstruction inst)

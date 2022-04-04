@@ -14,6 +14,9 @@ namespace ShaderLabConvert
         public bool saturate;
 		public bool commented;
 
+		public bool isIntVariant;
+		public bool isIntUnsigned;
+
 		public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

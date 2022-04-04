@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +45,8 @@ namespace ShaderLabConvert
                 { USILInstructionType.Floor, new InstHandler(HandleFloor) },
                 { USILInstructionType.Ceiling, new InstHandler(HandleCeiling) },
                 { USILInstructionType.Round, new InstHandler(HandleRound) },
-                { USILInstructionType.AsInt, new InstHandler(HandleAsInt) },
+                { USILInstructionType.IntToFloat, new InstHandler(HandleAsInt) },
+                { USILInstructionType.FloatToInt, new InstHandler(HandleFloor) },
                 { USILInstructionType.Sine, new InstHandler(HandleSine) },
                 { USILInstructionType.Cosine, new InstHandler(HandleCosine) },
                 { USILInstructionType.ShiftLeft, new InstHandler(HandleShiftLeft) },
@@ -61,6 +63,11 @@ namespace ShaderLabConvert
                 { USILInstructionType.IfTrue, new InstHandler(HandleIf) },
                 { USILInstructionType.Else, new InstHandler(HandleElse) },
                 { USILInstructionType.EndIf, new InstHandler(HandleEndIf) },
+                { USILInstructionType.Loop, new InstHandler(HandleLoop) },
+                { USILInstructionType.EndLoop, new InstHandler(HandleEndLoop) },
+                { USILInstructionType.Break, new InstHandler(HandleBreak) },
+                { USILInstructionType.Continue, new InstHandler(HandleContinue) },
+                { USILInstructionType.ForLoop, new InstHandler(HandleForLoop) },
                 { USILInstructionType.Equal, new InstHandler(HandleEqual) },
                 { USILInstructionType.NotEqual, new InstHandler(HandleNotEqual) },
                 { USILInstructionType.LessThan, new InstHandler(HandleLessThan) },
@@ -407,9 +414,76 @@ namespace ShaderLabConvert
             _indentLevel--;
             string comment = CommentString(inst);
             AppendLine($"{comment}}}");
-        }
+		}
 
-        private void HandleEqual(USILInstruction inst)
+		private void HandleLoop(USILInstruction inst)
+		{
+			// this can create bad optos and should be
+			// replaced with USILXXXLoopOptimizer if possible.
+			string comment = CommentString(inst);
+			AppendLine($"{comment}while (true) {{");
+			_indentLevel++;
+		}
+
+		private void HandleEndLoop(USILInstruction inst)
+		{
+			_indentLevel--;
+			string comment = CommentString(inst);
+			AppendLine($"{comment}}}");
+		}
+
+		private void HandleBreak(USILInstruction inst)
+		{
+			string comment = CommentString(inst);
+			AppendLine($"{comment}break;");
+		}
+
+		private void HandleContinue(USILInstruction inst)
+		{
+			string comment = CommentString(inst);
+			AppendLine($"{comment}continue;");
+		}
+
+		private void HandleForLoop(USILInstruction inst)
+		{
+			string comment = CommentString(inst);
+
+			USILOperand iterRegOp = inst.srcOperands[0];
+			USILOperand compOp = inst.srcOperands[1];
+			USILInstructionType compType = (USILInstructionType)inst.srcOperands[2].immValueInt[0];
+			USILNumberType numberType = (USILNumberType)inst.srcOperands[3].immValueInt[0];
+			float addCount = inst.srcOperands[4].immValueFloat[0]; // todo use an int instead of float when int incremented?
+			int depth = inst.srcOperands[5].immValueInt[0];
+
+			string numberTypeName = numberType switch
+			{
+				USILNumberType.Float => "float",
+				USILNumberType.Int => "int",
+				USILNumberType.UnsignedInt => "unsigned int",
+				_ => "?"
+			};
+			string iterName = USILConstants.ITER_CHARS[depth].ToString(); // better hope someone's not crazy enough to go over
+			string compText = compType switch
+			{
+				USILInstructionType.Equal => "==",
+				USILInstructionType.NotEqual => "!=",
+				USILInstructionType.GreaterThan => ">",
+				USILInstructionType.GreaterThanOrEqual => ">=",
+				USILInstructionType.LessThan => "<",
+				USILInstructionType.LessThanOrEqual => "<=",
+				_ => "?"
+			};
+
+			AppendLine(
+				$"{comment}for ({numberTypeName} {iterName} = {iterRegOp}; " +
+				$"{iterName} {compText} {compOp}; " +
+				$"{iterName} += {addCount.ToString(CultureInfo.InvariantCulture)}) {{"
+			);
+
+			_indentLevel++;
+		}
+
+		private void HandleEqual(USILInstruction inst)
         {
             List<USILOperand> srcOps = inst.srcOperands;
             string value = $"{srcOps[0]} == {srcOps[1]}";

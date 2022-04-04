@@ -23,7 +23,7 @@ namespace ShaderLabConvert
                 {
                     USILOperand leftOperand = instruction.srcOperands[0];
                     USILOperand rightOperand = instruction.srcOperands[1];
-                    if (!IsTrulyNegative(leftOperand) && IsTrulyNegative(rightOperand))
+                    if (IsTrulyNegative(rightOperand))
                     {
                         instruction.instructionType = USILInstructionType.Subtract;
                         NegateOperand(rightOperand);

@@ -90,6 +90,22 @@ namespace ShaderLabConvert
             displayMask = original.displayMask;
         }
 
+		public USILOperand(int value)
+		{
+			operandType = USILOperandType.ImmediateInt;
+			immValueInt = new[] { value };
+			immIsInt = true;
+			mask = new[] { 0 };
+		}
+
+		public USILOperand(float value)
+		{
+			operandType = USILOperandType.ImmediateFloat;
+			immValueFloat = new[] { value };
+			immIsInt = false;
+			mask = new[] { 0 };
+		}
+
         public int GetValueCount()
         {
             switch (operandType)
@@ -287,7 +303,10 @@ namespace ShaderLabConvert
                 USILOperandType.SamplerRegister => "smp",
                 USILOperandType.ConstantBuffer => "cb",
                 USILOperandType.ImmediateConstantBuffer => "icb",
-                _ => ""
+
+				USILOperandType.TempIntRegister => "tmpi",
+
+				_ => ""
             };
         }
     }
