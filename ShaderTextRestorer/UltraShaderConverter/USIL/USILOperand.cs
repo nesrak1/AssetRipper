@@ -304,8 +304,6 @@ namespace ShaderLabConvert
                 USILOperandType.ConstantBuffer => "cb",
                 USILOperandType.ImmediateConstantBuffer => "icb",
 
-				USILOperandType.TempIntRegister => "tmpi",
-
 				_ => ""
             };
         }

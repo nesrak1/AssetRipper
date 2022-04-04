@@ -137,7 +137,7 @@ namespace ShaderLabConvert
 						insts.RemoveAt(startIndex + 1); // Break
 						insts.RemoveAt(startIndex + 1); // EndIf
 
-						i -= 3 - 1; // move iterator back for these four
+						i -= 4 - 1; // move iterator back for these five
 
 						changes = true;
 					}
