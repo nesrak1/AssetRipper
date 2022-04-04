@@ -139,7 +139,7 @@ namespace ShaderLabConvert
                     operand.metadataName = body;
                     operand.metadataNameAssigned = true;
 
-                    if (cbMasks.Count == param.ColumnCount && !param.IsMatrix)
+                    if (cbMasks.Count == param.RowCount && !param.IsMatrix)
                     {
                         operand.displayMask = false;
                     }

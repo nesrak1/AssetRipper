@@ -86,7 +86,7 @@ namespace ShaderLabConvert
                 children[i] = new USILOperand(original.children[i]);
             }
 
-            mask = original.mask;
+            mask = original.mask.ToArray();
             displayMask = original.displayMask;
         }
 
