@@ -107,7 +107,7 @@ namespace ShaderLabConvert
             {
                 if (local.defaultValues.Count > 0 && local.isArray)
                 {
-                    AppendLine($"{local.type} {local.name}[{local.defaultValues.Count}] {{");
+                    AppendLine($"{local.type} {local.name}[{local.defaultValues.Count}] = {{");
                     if (local.defaultValues.Count > 0)
                     {
                         _indentLevel++;
