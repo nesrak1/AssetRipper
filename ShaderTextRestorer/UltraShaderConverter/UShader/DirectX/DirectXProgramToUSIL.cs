@@ -238,12 +238,28 @@ namespace ShaderLabConvert
                 case Operand.ConstantBuffer:
                 {
                     // figure out cb names in a later pass
-                    int cbSlotIdx = dxOperand.arraySizes[0];
-                    int cbArrIdx = dxOperand.arraySizes[1];
+					if (dxOperand.subOperands[1] != null)
+					{
+						// todo combine cb and icb
+						int cbSlotIdx = dxOperand.arraySizes[0];
+						int cbOff = dxOperand.registerNumber;
+						SHDRInstructionOperand cbOperand = dxOperand.subOperands[1];
 
-                    usilOperand.operandType = USILOperandType.ConstantBuffer;
-                    usilOperand.registerIndex = cbSlotIdx;
-                    usilOperand.arrayIndex = cbArrIdx;
+						usilOperand.operandType = USILOperandType.ConstantBuffer;
+						usilOperand.registerIndex = cbSlotIdx;
+						usilOperand.arrayRelative = new USILOperand();
+						FillUSILOperand(cbOperand, usilOperand.arrayRelative, cbOperand.swizzle, false);
+						usilOperand.arrayIndex = cbOff;
+					}
+					else
+					{
+						int cbSlotIdx = dxOperand.arraySizes[0];
+						int cbArrIdx = dxOperand.arraySizes[1];
+
+						usilOperand.operandType = USILOperandType.ConstantBuffer;
+						usilOperand.registerIndex = cbSlotIdx;
+						usilOperand.arrayIndex = cbArrIdx;
+					}
                     break;
                 }
                 case Operand.Input:
@@ -392,9 +408,8 @@ namespace ShaderLabConvert
 
                     usilOperand.operandType = USILOperandType.ImmediateConstantBuffer;
                     usilOperand.registerIndex = icbSlotIdx;
-                    usilOperand.children = new USILOperand[1];
-                    usilOperand.children[0] = new USILOperand();
-                    FillUSILOperand(icbOperand, usilOperand.children[0], icbOperand.swizzle, false);
+                    usilOperand.arrayRelative = new USILOperand();
+                    FillUSILOperand(icbOperand, usilOperand.arrayRelative, icbOperand.swizzle, false);
                     usilOperand.arrayIndex = icbOff;
                     break;
                 }

@@ -116,28 +116,29 @@ namespace ShaderLabConvert
                         childOperand.mask = MatchMaskToConstantBuffer(operand.mask, param.Index, param.RowCount);
                         childOperand.metadataName = param.Name;
                         childOperand.metadataNameAssigned = true;
+						childOperand.metadataNameWithArray = childOperand.arrayRelative != null;
 
-                        operand.children[i++] = childOperand;
+						operand.children[i++] = childOperand;
                     }
                 }
                 else if (cbParams.Count == 1)
                 {
 					NumericShaderParameter param = cbParams.First();
-                    string body = param.Name;
 
                     // Matrix
                     if (param.IsMatrix)
                     {
                         int matrixIdx = cbArrIdx - param.Index / 16;
-                        body = $"{body}";
 
                         operand.operandType = USILOperandType.Matrix;
                         operand.arrayIndex = matrixIdx;
                         operand.transposeMatrix = true;
                     }
+
                     operand.mask = cbMasks.ToArray();
-                    operand.metadataName = body;
+                    operand.metadataName = param.Name;
                     operand.metadataNameAssigned = true;
+					operand.metadataNameWithArray = operand.arrayRelative != null;
 
                     if (cbMasks.Count == param.RowCount && !param.IsMatrix)
                     {

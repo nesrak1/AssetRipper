@@ -142,24 +142,29 @@ namespace ShaderLabConvert
 						changes = true;
 					}
 				}
-
-				// better hope there's no matches in destOperands
-				foreach (USILOperand op in insts[i].srcOperands)
+				
+				if (loopInfos.Count > 0)
 				{
-					// todo: split mask from instruction if more than one component
-					if (op.operandType == USILOperandType.TempRegister && op.mask.Length == 1)
+					List<USILOperand> allOperands = GetAllOperands(insts[i]);
+					foreach (USILOperand op in allOperands)
 					{
-						foreach (LoopInstanceInfo loopInfo in loopInfos)
+						// todo: split mask from instruction if more than one component
+						if (op.operandType == USILOperandType.TempRegister && op.mask.Length == 1)
 						{
-							USILOperand iterRegOp = loopInfo.iterRegOp;
-							bool matchesIter = op.registerIndex == iterRegOp.registerIndex &&
-								op.mask[0] == iterRegOp.mask[0];
+							foreach (LoopInstanceInfo loopInfo in loopInfos)
+							{
+								USILOperand iterRegOp = loopInfo.iterRegOp;
+								bool matchesIter = op.registerIndex == iterRegOp.registerIndex &&
+									op.mask[0] == iterRegOp.mask[0];
 
-							if (!matchesIter)
-								break;
+								if (!matchesIter)
+									break;
 
-							op.metadataName = USILConstants.ITER_CHARS[loopInfo.loopDepth].ToString();
-							op.metadataNameAssigned = true;
+								op.metadataName = USILConstants.ITER_CHARS[loopInfo.loopDepth].ToString();
+								op.metadataNameAssigned = true;
+
+
+							}
 						}
 					}
 				}
@@ -251,6 +256,47 @@ namespace ShaderLabConvert
 					return false;
 			}
 			return true;
+		}
+
+		private List<USILOperand> GetAllOperands(USILInstruction inst)
+		{
+			List<USILOperand> operands = new List<USILOperand>();
+
+			if (inst.destOperand != null)
+				operands.AddRange(GetAllOperands(inst.destOperand));
+
+			if (inst.srcOperands != null)
+			{
+				foreach (USILOperand srcOp in inst.srcOperands)
+				{
+					operands.AddRange(GetAllOperands(srcOp));
+				}
+			}
+
+			return operands;
+		}
+		
+		private List<USILOperand> GetAllOperands(USILOperand operand)
+		{
+			if (operand.arrayRelative == null && (operand.children == null || operand.children.Length == 0))
+				return new List<USILOperand> { operand };
+
+			List<USILOperand> operands = new List<USILOperand>();
+			
+			operands.Add(operand);
+
+			if (operand.arrayRelative != null)
+				operands.AddRange(GetAllOperands(operand.arrayRelative));
+
+			if (operand.children != null)
+			{
+				foreach (USILOperand child in operand.children)
+				{
+					operands.AddRange(GetAllOperands(child));
+				}
+			}
+
+			return operands;
 		}
 
 		class LoopInstanceInfo

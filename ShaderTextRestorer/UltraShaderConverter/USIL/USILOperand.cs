@@ -23,11 +23,13 @@ namespace ShaderLabConvert
 
         public int registerIndex;
         public int arrayIndex;
+		public USILOperand arrayRelative;
 
         public string metadataName;
         public bool metadataNameAssigned;
+        public bool metadataNameWithArray;
 
-        public string comment;
+		public string comment;
 
         public USILOperand[] children;
 
@@ -48,9 +50,11 @@ namespace ShaderLabConvert
 
             registerIndex = 0;
             arrayIndex = 0;
+			arrayRelative = null;
 
-            metadataName = null;
+			metadataName = null;
             metadataNameAssigned = false;
+			metadataNameWithArray = false;
 
             comment = "";
 
@@ -75,8 +79,14 @@ namespace ShaderLabConvert
             registerIndex = original.registerIndex;
             arrayIndex = original.arrayIndex;
 
-            metadataName = original.metadataName;
+			if (original.arrayRelative != null)
+				arrayRelative = new USILOperand(original.arrayRelative);
+			else
+				arrayRelative = null;
+
+			metadataName = original.metadataName;
             metadataNameAssigned = original.metadataNameAssigned;
+			metadataNameWithArray = original.metadataNameWithArray;
 
             comment = original.comment;
 
@@ -187,12 +197,12 @@ namespace ShaderLabConvert
                     case USILOperandType.ConstantBuffer:
                     case USILOperandType.Matrix:
                     {
-                        body = $"{registerIndex}[{arrayIndex}]";
+						body = $"{registerIndex}";
                         break;
                     }
                     case USILOperandType.ImmediateConstantBuffer:
                     {
-                        body = $"[{children[0]} + {arrayIndex}]";
+                        body = "";
                         break;
                     }
                     case USILOperandType.ImmediateInt:
@@ -252,6 +262,34 @@ namespace ShaderLabConvert
 					}
 				};
             }
+
+			if (!metadataNameAssigned || metadataNameWithArray)
+			{
+				switch (operandType)
+				{
+					case USILOperandType.ConstantBuffer:
+					case USILOperandType.Matrix:
+					{
+						if (arrayRelative != null)
+						{
+							if (arrayIndex == 0)
+								body += $"[{arrayRelative}]";
+							else
+								body += $"[{arrayRelative} + {arrayIndex}]";
+						}
+						else
+						{
+							body += $"[{arrayIndex}]";
+						}
+						break;
+					}
+					case USILOperandType.ImmediateConstantBuffer:
+					{
+						body += $"[{arrayRelative} + {arrayIndex}]";
+						break;
+					}
+				}
+			}
 
             if (operandType != USILOperandType.ImmediateFloat &&
                 operandType != USILOperandType.ImmediateInt &&
