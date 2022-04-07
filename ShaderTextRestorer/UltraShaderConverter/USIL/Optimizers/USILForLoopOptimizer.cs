@@ -163,7 +163,7 @@ namespace ShaderLabConvert
 								op.metadataName = USILConstants.ITER_CHARS[loopInfo.loopDepth].ToString();
 								op.metadataNameAssigned = true;
 
-
+								op.displayMask = false;
 							}
 						}
 					}
