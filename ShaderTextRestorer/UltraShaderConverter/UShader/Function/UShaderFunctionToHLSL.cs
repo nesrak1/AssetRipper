@@ -45,8 +45,8 @@ namespace ShaderLabConvert
                 { USILInstructionType.Floor, new InstHandler(HandleFloor) },
                 { USILInstructionType.Ceiling, new InstHandler(HandleCeiling) },
                 { USILInstructionType.Round, new InstHandler(HandleRound) },
-                { USILInstructionType.IntToFloat, new InstHandler(HandleAsInt) },
-                { USILInstructionType.FloatToInt, new InstHandler(HandleFloor) },
+                { USILInstructionType.IntToFloat, new InstHandler(HandleIntToFloat) },
+                { USILInstructionType.FloatToInt, new InstHandler(HandleFloatToInt) },
                 { USILInstructionType.Sine, new InstHandler(HandleSine) },
                 { USILInstructionType.Cosine, new InstHandler(HandleCosine) },
                 { USILInstructionType.ShiftLeft, new InstHandler(HandleShiftLeft) },
@@ -301,7 +301,15 @@ namespace ShaderLabConvert
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }
 
-        private void HandleAsInt(USILInstruction inst)
+        private void HandleIntToFloat(USILInstruction inst)
+        {
+            List<USILOperand> srcOps = inst.srcOperands;
+            string value = $"floor({srcOps[0]})";
+            string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
+        private void HandleFloatToInt(USILInstruction inst)
         {
             List<USILOperand> srcOps = inst.srcOperands;
             string value = $"asint({srcOps[0]})";
@@ -328,7 +336,26 @@ namespace ShaderLabConvert
         private void HandleShiftLeft(USILInstruction inst)
         {
             List<USILOperand> srcOps = inst.srcOperands;
-            string value = $"{srcOps[0]} << {srcOps[1]}";
+			USILOperand srcOp0 = srcOps[0];
+			USILOperand srcOp1 = srcOps[1];
+
+			// temp fix to prevent compile errors, still innacurate
+			int op0IntSize = srcOp0.GetValueCount();
+			int op1IntSize = srcOp1.GetValueCount();
+
+			string op0Text, op1Text;
+
+			if (srcOp0.operandType == USILOperandType.ImmediateInt)
+				op0Text = $"{srcOp0}";
+			else
+				op0Text = $"int{op0IntSize}({srcOp0})";
+
+			if (srcOp1.operandType == USILOperandType.ImmediateInt)
+				op1Text = $"{srcOp1}";
+			else
+				op1Text = $"int{op1IntSize}({srcOp1})";
+
+			string value = $"float{op0IntSize}({op0Text} << {op1Text})";
             string comment = CommentString(inst);
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }
@@ -336,8 +363,27 @@ namespace ShaderLabConvert
         private void HandleShiftRight(USILInstruction inst)
         {
             List<USILOperand> srcOps = inst.srcOperands;
-            string value = $"{srcOps[0]} >> {srcOps[1]}";
-            string comment = CommentString(inst);
+			USILOperand srcOp0 = srcOps[0];
+			USILOperand srcOp1 = srcOps[1];
+
+			// temp fix to prevent compile errors, still innacurate
+			int op0IntSize = srcOp0.GetValueCount();
+			int op1IntSize = srcOp1.GetValueCount();
+
+			string op0Text, op1Text;
+
+			if (srcOp0.operandType == USILOperandType.ImmediateInt)
+				op0Text = $"{srcOp0}";
+			else
+				op0Text = $"int{op0IntSize}({srcOp0})";
+
+			if (srcOp1.operandType == USILOperandType.ImmediateInt)
+				op1Text = $"{srcOp1}";
+			else
+				op1Text = $"int{op1IntSize}({srcOp1})";
+
+			string value = $"float{op0IntSize}({op0Text} >> {op1Text})";
+			string comment = CommentString(inst);
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }
 
@@ -353,13 +399,14 @@ namespace ShaderLabConvert
         {
             List<USILOperand> srcOps = inst.srcOperands;
             USILOperand textureOperand = inst.srcOperands[2];
+			string args = $"{srcOps[2]}, {srcOps[0]}";
             string value = textureOperand.operandType switch
             {
-                USILOperandType.Sampler2D => $"tex2D({srcOps[2]}, {srcOps[0]})",
-                USILOperandType.Sampler3D => $"tex3D({srcOps[2]}, {srcOps[0]})",
-                USILOperandType.SamplerCube => $"texCUBE({srcOps[2]}, {srcOps[0]})",
-                USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY({srcOps[2]}, {srcOps[0]})",
-                USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY({srcOps[2]}, {srcOps[0]})",
+                USILOperandType.Sampler2D => $"tex2D({args})",
+                USILOperandType.Sampler3D => $"tex3D({args})",
+                USILOperandType.SamplerCube => $"texCUBE({args})",
+                USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY({args})",
+                USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY({args})",
                 _ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
             };
             string comment = CommentString(inst);
@@ -370,13 +417,18 @@ namespace ShaderLabConvert
         {
             List<USILOperand> srcOps = inst.srcOperands;
             USILOperand textureOperand = inst.srcOperands[2];
-            string value = textureOperand.operandType switch
+			string args;
+			if (srcOps[0].mask.Length == 2) // texture2d
+				args = $"{srcOps[2]}, float4({srcOps[0]}, 0, {srcOps[3]})";
+			else
+				args = $"{srcOps[2]}, float4({srcOps[0]}, {srcOps[3]})";
+			string value = textureOperand.operandType switch
             {
-                USILOperandType.Sampler2D => $"tex2Dlod({srcOps[2]}, {srcOps[0]}, {srcOps[3]})",
-                USILOperandType.Sampler3D => $"tex3Dlod({srcOps[2]}, {srcOps[0]}, {srcOps[3]})",
-                USILOperandType.SamplerCube => $"texCUBElod({srcOps[2]}, {srcOps[0]}, {srcOps[3]})",
-                USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_LOD({srcOps[2]}, {srcOps[0]}, {srcOps[3]})",
-                USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_LOD({srcOps[2]}, {srcOps[0]}, {srcOps[3]})",
+                USILOperandType.Sampler2D => $"tex2Dlod({args})",
+                USILOperandType.Sampler3D => $"tex3Dlod({args})",
+                USILOperandType.SamplerCube => $"texCUBElod({args})",
+                USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_LOD({args})",
+                USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_LOD({args})",
                 _ => $"texNDlod({srcOps[2]}, {srcOps[0]}, {srcOps[3]})" // unknown real type
             };
             string comment = CommentString(inst);

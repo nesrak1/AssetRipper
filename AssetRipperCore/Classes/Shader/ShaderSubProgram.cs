@@ -101,7 +101,7 @@ namespace AssetRipper.Core.Classes.Shader
 
 			if (HasMergedKeywords(reader.Version))
 			{
-				reader.ReadStringArray();
+				GlobalKeywords = reader.ReadStringArray();
 			}
 			else
 			{

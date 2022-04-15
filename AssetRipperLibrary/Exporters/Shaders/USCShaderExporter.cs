@@ -191,6 +191,18 @@ namespace AssetRipper.Library.Exporters.Shaders
 					bool hasVertex = (_this.ProgramMask & ShaderType.Vertex.ToProgramMask()) != 0;
 					bool hasFragment = (_this.ProgramMask & ShaderType.Fragment.ToProgramMask()) != 0;
 
+					List<ShaderSubProgram> vertexSubPrograms = null;
+					List<ShaderSubProgram> fragmentSubPrograms = null;
+
+					if (hasVertex)
+					{
+						vertexSubPrograms = GetSubPrograms(writer.Shader, _this.ProgVertex, writer.Version, writer.Platform, ShaderType.Vertex, _this);
+					}
+					if (hasFragment)
+					{
+						fragmentSubPrograms = GetSubPrograms(writer.Shader, _this.ProgFragment, writer.Version, writer.Platform, ShaderType.Fragment, _this);
+					}
+
 					ShaderSubProgram vertexSubProgram = null;
 					ShaderSubProgram fragmentSubProgram = null;
 					USCShaderConverter vertexConverter = null;
@@ -198,7 +210,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 
 					if (hasVertex)
 					{
-						vertexSubProgram = GetSubProgram(writer.Shader, _this.ProgVertex, writer.Version, writer.Platform, ShaderType.Vertex);
+						vertexSubProgram = vertexSubPrograms[0];
 
 						byte[] trimmedProgramData = TrimShaderBytes(vertexSubProgram, writer.Version, writer.Platform);
 
@@ -207,7 +219,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 					}
 					if (hasFragment)
 					{
-						fragmentSubProgram = GetSubProgram(writer.Shader, _this.ProgFragment, writer.Version, writer.Platform, ShaderType.Fragment);
+						fragmentSubProgram = fragmentSubPrograms[0];
 
 						byte[] trimmedProgramData = TrimShaderBytes(fragmentSubProgram, writer.Version, writer.Platform);
 
@@ -405,6 +417,16 @@ namespace AssetRipper.Library.Exporters.Shaders
 									writer.WriteLine($"samplerCUBE {name};");
 									anyGlobalSlots = true;
 								}
+								else if (param.Dim == 5)
+								{
+									writer.WriteLine($"UNITY_DECLARE_TEX2DARRAY({name});");
+									anyGlobalSlots = true;
+								}
+								else if (param.Dim == 6)
+								{
+									writer.WriteLine($"UNITY_DECLARE_TEXCUBEARRAY({name});");
+									anyGlobalSlots = true;
+								}
 								else
 								{
 									writer.WriteLine($"sampler2D {name}; // Unsure of real type ({param.Dim})");
@@ -484,8 +506,9 @@ namespace AssetRipper.Library.Exporters.Shaders
 			writer.Write("}\n");
 		}
 
-		private static ShaderSubProgram GetSubProgram(Shader shader, SerializedProgram program, UnityVersion version, Platform platform, ShaderType shaderType)
+		private static List<ShaderSubProgram> GetSubPrograms(Shader shader, SerializedProgram program, UnityVersion version, Platform platform, ShaderType shaderType, SerializedPass pass)
 		{
+			List<ShaderSubProgram> matchingPrograms = new List<ShaderSubProgram>();
 			for (int i = 0; i < program.SubPrograms.Length; i++)
 			{
 				SerializedSubProgram subProgram = program.SubPrograms[i];
@@ -511,14 +534,69 @@ namespace AssetRipper.Library.Exporters.Shaders
 						break;
 				}
 
+				// skip instanced shaders
+				if (subProgram.GlobalKeywordIndices != null)
+				{
+					for (int j = 0; j < subProgram.GlobalKeywordIndices.Length; j++)
+					{
+						if (pass.NameIndices["INSTANCING_ON"] == subProgram.GlobalKeywordIndices[j])
+							matched = false;
+					}
+				}
+				if (subProgram.LocalKeywordIndices != null)
+				{
+					for (int j = 0; j < subProgram.LocalKeywordIndices.Length; j++)
+					{
+						if (pass.NameIndices["INSTANCING_ON"] == subProgram.LocalKeywordIndices[j])
+							matched = false;
+					}
+				}
+
 				if (matched)
 				{
 					int platformIndex = shader.Platforms.IndexOf(graphicApi);
-					return shader.Blobs[platformIndex].SubPrograms[subProgram.BlobIndex];
+					matchingPrograms.Add(shader.Blobs[platformIndex].SubPrograms[subProgram.BlobIndex]);
 				}
 			}
 
-			return null;
+			return matchingPrograms;
+		}
+
+		// this is necessary because sometimes vertex programs can have more
+		// variations than frag programs and vice versa. we need to collect
+		// all possible combos for both. if one has more combos than the other,
+		// they will always be at the end (I think).
+		private static List<string[]> GetAllVariantCombos(List<ShaderSubProgram> subPrograms, UnityVersion version, Platform platform, List<GPUPlatform> progPlats)
+		{
+			List<string[]> combos = new List<string[]>();
+			HashSet<string> comboHashes = new HashSet<string>();
+			foreach (ShaderSubProgram subProgram in subPrograms)
+			{
+				ShaderGpuProgramType programType = subProgram.GetProgramType(version);
+				GPUPlatform graphicApi = programType.ToGPUPlatform(platform);
+
+				if (!progPlats.Contains(graphicApi))
+					continue;
+
+				List<string> keywords = new List<string>();
+
+				if (subProgram.GlobalKeywords != null)
+					keywords.AddRange(subProgram.GlobalKeywords);
+				if (subProgram.LocalKeywords != null)
+					keywords.AddRange(subProgram.LocalKeywords);
+
+				// don't have to worry about order I don't think
+				// although it would probably be safer to sort
+				string keywordsStr = string.Join(',', keywords);
+
+				if (!comboHashes.Contains(keywordsStr))
+				{
+					comboHashes.Add(keywordsStr);
+					combos.Add(keywords.ToArray());
+				}
+			}
+
+			return combos;
 		}
 
 		// DUPLICATE CODE!!!!

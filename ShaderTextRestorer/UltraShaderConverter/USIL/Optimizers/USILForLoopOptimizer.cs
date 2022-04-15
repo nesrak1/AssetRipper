@@ -48,7 +48,7 @@ namespace ShaderLabConvert
 				if (insts[i].instructionType == USILInstructionType.EndLoop)
 				{
 					loopDepth--;
-					if (loopInfos.Peek().loopDepth == loopDepth)
+					if (loopInfos.Count > 0 && loopInfos.Peek().loopDepth == loopDepth)
 					{
 						// didn't match and we're exiting this loop now
 						loopInfos.Pop();
@@ -91,7 +91,7 @@ namespace ShaderLabConvert
 
 				if (endOpcodesMatch)
 				{
-					if (loopInfos.Peek().loopDepth == loopDepth - 1)
+					if (loopInfos.Count > 0 && loopInfos.Peek().loopDepth == loopDepth - 1)
 					{
 						LoopInstanceInfo loopInfo = loopInfos.Pop();
 
