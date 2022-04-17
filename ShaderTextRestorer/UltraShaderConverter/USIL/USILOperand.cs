@@ -213,7 +213,7 @@ namespace ShaderLabConvert
                         }
                         else //if (immValueInt.Length > 1)
                         {
-                            body += $"float{immValueInt.Length}("; //int?
+                            body += $"int{immValueInt.Length}(";
                             for (int i = 0; i < immValueInt.Length; i++)
                             {
                                 if (i != immValueInt.Length - 1)
@@ -229,6 +229,8 @@ namespace ShaderLabConvert
                     {
                         if (immValueFloat.Length == 1)
                         {
+							// todo: check if number can't possibly be expressed as float and write in hex.
+							// todo: float precision isn't correct atm. add precision check somewhere.
                             body = $"{immValueFloat[0].ToString("0.0######", CultureInfo.InvariantCulture)}";
                         }
                         else //if (immValueFloat.Length > 1)

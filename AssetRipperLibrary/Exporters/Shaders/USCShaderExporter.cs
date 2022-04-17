@@ -197,10 +197,26 @@ namespace AssetRipper.Library.Exporters.Shaders
 					if (hasVertex)
 					{
 						vertexSubPrograms = GetSubPrograms(writer.Shader, _this.ProgVertex, writer.Version, writer.Platform, ShaderType.Vertex, _this);
+						if (vertexSubPrograms.Count == 0)
+						{
+							writer.WriteIndent(3);
+							writer.Write("// No subprograms found\n");
+							writer.WriteIndent(2);
+							writer.Write("}\n");
+							return;
+						}
 					}
 					if (hasFragment)
 					{
 						fragmentSubPrograms = GetSubPrograms(writer.Shader, _this.ProgFragment, writer.Version, writer.Platform, ShaderType.Fragment, _this);
+						if (fragmentSubPrograms.Count == 0)
+						{
+							writer.WriteIndent(3);
+							writer.Write("// No subprograms found\n");
+							writer.WriteIndent(2);
+							writer.Write("}\n");
+							return;
+						}
 					}
 
 					ShaderSubProgram vertexSubProgram = null;
@@ -308,13 +324,21 @@ namespace AssetRipper.Library.Exporters.Shaders
 							NumericShaderParameter[] allParams = globalsCb.AllNumericParams;
 							foreach (NumericShaderParameter param in allParams)
 							{
-								string typeName = DXShaderNamingUtils.GetConstantBufferParamType(param);
+								string typeName = DXShaderNamingUtils.GetConstantBufferParamTypeName(param);
 								string name = param.Name;
 
 								if (!declaredBufs.Contains(name))
 								{
-									writer.WriteIndent(3);
-									writer.WriteLine($"{typeName} {name};");
+									if (param.ArraySize > 1)
+									{
+										writer.WriteIndent(3);
+										writer.WriteLine($"{typeName} {name}[{param.ArraySize}];");
+									}
+									else
+									{
+										writer.WriteIndent(3);
+										writer.WriteLine($"{typeName} {name};");
+									}
 									declaredBufs.Add(name);
 								}
 							}
@@ -333,13 +357,21 @@ namespace AssetRipper.Library.Exporters.Shaders
 							NumericShaderParameter[] allParams = globalsCb.AllNumericParams;
 							foreach (NumericShaderParameter param in allParams)
 							{
-								string typeName = DXShaderNamingUtils.GetConstantBufferParamType(param);
+								string typeName = DXShaderNamingUtils.GetConstantBufferParamTypeName(param);
 								string name = param.Name;
 
 								if (!declaredBufs.Contains(name))
 								{
-									writer.WriteIndent(3);
-									writer.WriteLine($"{typeName} {name};");
+									if (param.ArraySize > 1)
+									{
+										writer.WriteIndent(3);
+										writer.WriteLine($"{typeName} {name}[{param.ArraySize}];");
+									}
+									else
+									{
+										writer.WriteIndent(3);
+										writer.WriteLine($"{typeName} {name};");
+									}
 									declaredBufs.Add(name);
 								}
 							}
@@ -354,7 +386,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 						foreach (TextureParameter param in vertexSubProgram.TextureParameters)
 						{
 							string name = param.Name;
-							if (!declaredBufs.Contains(name))
+							if (!declaredBufs.Contains(name) && !USILSamplerTypeFixer.BUILTIN_TEXTURE_NAMES.Contains(name))
 							{
 								writer.WriteIndent(3);
 								if (param.Dim == 2)
@@ -399,7 +431,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 						foreach (TextureParameter param in fragmentSubProgram.TextureParameters)
 						{
 							string name = param.Name;
-							if (!declaredBufs.Contains(name))
+							if (!declaredBufs.Contains(name) && !USILSamplerTypeFixer.BUILTIN_TEXTURE_NAMES.Contains(name))
 							{
 								writer.WriteIndent(3);
 								if (param.Dim == 2)
@@ -509,6 +541,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 		private static List<ShaderSubProgram> GetSubPrograms(Shader shader, SerializedProgram program, UnityVersion version, Platform platform, ShaderType shaderType, SerializedPass pass)
 		{
 			List<ShaderSubProgram> matchingPrograms = new List<ShaderSubProgram>();
+			ShaderSubProgram fallbackProgram = null;
 			for (int i = 0; i < program.SubPrograms.Length; i++)
 			{
 				SerializedSubProgram subProgram = program.SubPrograms[i];
@@ -534,30 +567,50 @@ namespace AssetRipper.Library.Exporters.Shaders
 						break;
 				}
 
-				// skip instanced shaders
-				if (subProgram.GlobalKeywordIndices != null)
-				{
-					for (int j = 0; j < subProgram.GlobalKeywordIndices.Length; j++)
-					{
-						if (pass.NameIndices["INSTANCING_ON"] == subProgram.GlobalKeywordIndices[j])
-							matched = false;
-					}
-				}
-				if (subProgram.LocalKeywordIndices != null)
-				{
-					for (int j = 0; j < subProgram.LocalKeywordIndices.Length; j++)
-					{
-						if (pass.NameIndices["INSTANCING_ON"] == subProgram.LocalKeywordIndices[j])
-							matched = false;
-					}
-				}
-
+				ShaderSubProgram matchedProgram = null;
 				if (matched)
 				{
 					int platformIndex = shader.Platforms.IndexOf(graphicApi);
-					matchingPrograms.Add(shader.Blobs[platformIndex].SubPrograms[subProgram.BlobIndex]);
+					matchedProgram = shader.Blobs[platformIndex].SubPrograms[subProgram.BlobIndex];
+				}
+
+				// skip instanced shaders
+				if (pass.NameIndices.ContainsKey("INSTANCING_ON"))
+				{
+					if (subProgram.GlobalKeywordIndices != null)
+					{
+						for (int j = 0; j < subProgram.GlobalKeywordIndices.Length; j++)
+						{
+							if (pass.NameIndices["INSTANCING_ON"] == subProgram.GlobalKeywordIndices[j])
+								matched = false;
+						}
+					}
+					if (subProgram.LocalKeywordIndices != null)
+					{
+						for (int j = 0; j < subProgram.LocalKeywordIndices.Length; j++)
+						{
+							if (pass.NameIndices["INSTANCING_ON"] == subProgram.LocalKeywordIndices[j])
+								matched = false;
+						}
+					}
+				}
+
+				if (matchedProgram != null)
+				{
+					if (matched)
+					{
+						matchingPrograms.Add(matchedProgram);
+					}
+					else if (fallbackProgram == null)
+					{
+						// we don't want a case where no programs match, so pick at least one
+						fallbackProgram = matchedProgram;
+					}
 				}
 			}
+
+			if (matchingPrograms.Count == 0 && fallbackProgram != null)
+				matchingPrograms.Add(fallbackProgram);
 
 			return matchingPrograms;
 		}

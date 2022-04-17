@@ -1186,13 +1186,14 @@ namespace ShaderLabConvert
             SHDRInstructionOperand srcResource = inst.operands[2]; // A texture register. For more information, see the Remarks section.
             SHDRInstructionOperand srcSampler = inst.operands[3]; // A sampler register. For more information, see the Remarks section.
 
-            USILInstruction usilInst = new USILInstruction();
+			USILInstruction usilInst = new USILInstruction();
             USILOperand usilDest = new USILOperand();
             USILOperand usilSrcAddress = new USILOperand();
             USILOperand usilSrcResource = new USILOperand();
             USILOperand usilSrcSampler = new USILOperand();
+			USILOperand usilSamplerType = new USILOperand(0); // i.e. unity_ProbeVolumeSH (handled by USILSamplerTypeFixer)
 
-            int[] mask = new int[] { 0, 1, 2, 3 };
+			int[] mask = new int[] { 0, 1, 2, 3 };
 
 			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
 			int[] uvMask = GetMaskOfDimension(dimension);
@@ -1208,8 +1209,9 @@ namespace ShaderLabConvert
             {
                 usilSrcAddress,
                 usilSrcResource,
-                usilSrcSampler
-            };
+                usilSrcSampler,
+				usilSamplerType
+			};
 
             Instructions.Add(usilInst);
         }
@@ -1228,8 +1230,9 @@ namespace ShaderLabConvert
             USILOperand usilSrcResource = new USILOperand();
             USILOperand usilSrcSampler = new USILOperand();
             USILOperand usilSrcReferenceValue = new USILOperand();
+			USILOperand usilSamplerType = new USILOperand(0); // i.e. unity_ProbeVolumeSH (handled by USILSamplerTypeFixer)
 
-            int[] mask = new int[] { 0, 1, 2, 3 };
+			int[] mask = new int[] { 0, 1, 2, 3 };
 
 			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
 			int[] uvMask = GetMaskOfDimension(dimension);
@@ -1251,8 +1254,9 @@ namespace ShaderLabConvert
                 usilSrcAddress,
                 usilSrcResource,
                 usilSrcSampler,
-                usilSrcReferenceValue
-            };
+                usilSrcReferenceValue,
+				usilSamplerType
+			};
 
             Instructions.Add(usilInst);
         }
@@ -1271,8 +1275,9 @@ namespace ShaderLabConvert
             USILOperand usilSrcResource = new USILOperand();
             USILOperand usilSrcSampler = new USILOperand();
             USILOperand usilSrcLOD = new USILOperand();
+			USILOperand usilSamplerType = new USILOperand(0); // i.e. unity_ProbeVolumeSH (handled by USILSamplerTypeFixer)
 
-            int[] mask = new int[] { 0, 1, 2, 3 };
+			int[] mask = new int[] { 0, 1, 2, 3 };
 
 			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
 			int[] uvMask = GetMaskOfDimension(dimension);
@@ -1294,8 +1299,9 @@ namespace ShaderLabConvert
                 usilSrcAddress,
                 usilSrcResource,
                 usilSrcSampler,
-                usilSrcLOD
-            };
+                usilSrcLOD,
+				usilSamplerType
+			};
 
             Instructions.Add(usilInst);
         }

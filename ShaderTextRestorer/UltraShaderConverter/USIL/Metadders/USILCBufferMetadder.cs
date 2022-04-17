@@ -116,7 +116,9 @@ namespace ShaderLabConvert
                         childOperand.mask = MatchMaskToConstantBuffer(operand.mask, param.Index, param.RowCount);
                         childOperand.metadataName = param.Name;
                         childOperand.metadataNameAssigned = true;
-						childOperand.metadataNameWithArray = childOperand.arrayRelative != null || param.IsMatrix;
+						childOperand.arrayRelative = operand.arrayRelative;
+						childOperand.arrayIndex -= param.Index / 16;
+						childOperand.metadataNameWithArray = operand.arrayRelative != null && !param.IsMatrix;
 
 						operand.children[i++] = childOperand;
                     }
@@ -128,17 +130,21 @@ namespace ShaderLabConvert
                     // Matrix
                     if (param.IsMatrix)
                     {
-                        int matrixIdx = cbArrIdx - param.Index / 16;
+                        //int matrixIdx = cbArrIdx - param.Index / 16;
 
                         operand.operandType = USILOperandType.Matrix;
-                        operand.arrayIndex = matrixIdx;
+                        //operand.arrayIndex = matrixIdx;
                         operand.transposeMatrix = true;
                     }
+					//else
+					//{
+						operand.arrayIndex -= param.Index / 16;
+					//}
 
                     operand.mask = cbMasks.ToArray();
                     operand.metadataName = param.Name;
                     operand.metadataNameAssigned = true;
-					operand.metadataNameWithArray = operand.arrayRelative != null || param.IsMatrix;
+					operand.metadataNameWithArray = operand.arrayRelative != null && !param.IsMatrix;
 
                     if (cbMasks.Count == param.RowCount && !param.IsMatrix)
                     {

@@ -60,5 +60,20 @@ namespace ShaderLabConvert
 					return false;
 			}
 		}
+
+		public bool IsSampleType()
+		{
+			switch (instructionType)
+			{
+				case USILInstructionType.Sample:
+				case USILInstructionType.SampleComparison:
+				case USILInstructionType.SampleLOD:
+				case USILInstructionType.SampleLODBias:
+				case USILInstructionType.SampleComparisonLODZero:
+					return true;
+				default:
+					return false;
+			}
+		}
 	}
 }

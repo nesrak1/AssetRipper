@@ -32,7 +32,7 @@ namespace ShaderLabConvert
 		public const string VERT_OUTPUT_LOCAL_NAME = "o";
 		public const string VERT_TO_FRAG_STRUCT_NAME = "v2f";
 
-		public const string FRAG_INPUT_NAME = "i";
+		public const string FRAG_INPUT_NAME = "inp";
 		public const string FRAG_OUTPUT_LOCAL_NAME = "o";
 		public const string FRAG_OUTPUT_STRUCT_NAME = "fout";
 	}

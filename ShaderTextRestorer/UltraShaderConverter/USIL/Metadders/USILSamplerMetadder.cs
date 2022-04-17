@@ -1,5 +1,6 @@
 ﻿using AssetRipper.Core.Classes.Shader;
 using AssetRipper.Core.Classes.Shader.Parameters;
+using AssetRipper.Core.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,14 @@ namespace ShaderLabConvert
                             p => p.SamplerIndex == operand.registerIndex
                         );
 
-                        int dimension = sampSlot.Dim;
+						if (sampSlot == null)
+						{
+							operand.operandType = USILOperandType.Sampler2D;
+							Logger.Warning($"Could not find samp slot for {operand}");
+							continue;
+						}
+
+						int dimension = sampSlot.Dim;
                         switch (dimension)
                         {
                             case 2:

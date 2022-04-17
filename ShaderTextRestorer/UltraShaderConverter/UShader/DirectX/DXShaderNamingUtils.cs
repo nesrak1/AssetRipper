@@ -1,4 +1,5 @@
-﻿using AssetRipper.Core.Classes.Shader.Parameters;
+﻿using AssetRipper.Core.Classes.Shader.Enums;
+using AssetRipper.Core.Classes.Shader.Parameters;
 using DirectXDisassembler;
 using DirectXDisassembler.Blocks;
 using System;
@@ -12,33 +13,34 @@ namespace ShaderLabConvert
     public static class DXShaderNamingUtils
     {
 		// these two are useless now
-		public static string GetConstantBufferParamType(VectorParameter param) => GetConstantBufferParamType(param.Dim, 1, false);
-		public static string GetConstantBufferParamType(MatrixParameter param) => GetConstantBufferParamType(param.RowCount, param.ColumnCount, true);
+		public static string GetConstantBufferParamTypeName(VectorParameter param) => GetConstantBufferParamTypeName(param.Dim, 1, param.Type, false);
+		public static string GetConstantBufferParamTypeName(MatrixParameter param) => GetConstantBufferParamTypeName(param.RowCount, param.ColumnCount, param.Type, true);
 
-		public static string GetConstantBufferParamType(NumericShaderParameter param) => GetConstantBufferParamType(param.RowCount, param.ColumnCount, true);
+		public static string GetConstantBufferParamTypeName(NumericShaderParameter param) => GetConstantBufferParamTypeName(param.RowCount, param.ColumnCount, param.Type, true);
 
-        public static string GetConstantBufferParamType(int rowCount, int columnCount, bool isMatrix)
+        public static string GetConstantBufferParamTypeName(int rowCount, int columnCount, ShaderParamType paramType, bool isMatrix)
         {
-            string paramType = $"unknownType";
+            string name = $"unknownType";
+			string baseName = paramType.ToString().ToLower();
 
             if (columnCount == 1)
             {
                 if (rowCount == 1)
-                    paramType = "float";
+					name = $"{baseName}";
                 if (rowCount == 2)
-                    paramType = "float2";
+					name = $"{baseName}2";
                 if (rowCount == 3)
-                    paramType = "float3";
+					name = $"{baseName}3";
                 if (rowCount == 4)
-                    paramType = "float4";
+					name = $"{baseName}4";
             }
             else if (columnCount == 4)
             {
                 if (rowCount == 4 && isMatrix)
-                    paramType = "float4x4";
+					name = $"{baseName}4x4";
             }
 
-            return paramType;
+            return name;
         }
 
         public static string GetISGNInputName(ISGN.Input input)

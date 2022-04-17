@@ -33,16 +33,15 @@
 
 	<ItemGroup>
 		<Compile Remove="obj\**" />
+		<Compile Remove="UltraShaderConverter\USIL\Optimizers\Enums\**" />
 		<EmbeddedResource Remove="obj\**" />
+		<EmbeddedResource Remove="UltraShaderConverter\USIL\Optimizers\Enums\**" />
 		<None Remove="obj\**" />
+		<None Remove="UltraShaderConverter\USIL\Optimizers\Enums\**" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="DXDecompiler-ly" Version="0.0.1" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="UltraShaderConverter\USIL\Optimizers\Enums\" />
 	</ItemGroup>
 
 </Project>

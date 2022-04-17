@@ -85,11 +85,13 @@ namespace ShaderLabConvert
                     continue;
 
                 int tmp0Index = inst0.destOperand.registerIndex;
-                int tmp1Index = inst2.destOperand.registerIndex;
+                int tmp1Index = inst1.destOperand.registerIndex;
+                int tmp2Index = inst2.destOperand.registerIndex;
+                int tmp3Index = inst3.destOperand.registerIndex;
 
 				// registers can swap halfway through to be used for something else
 				// don't try to convert the matrix because we can't handle this yet
-				if (tmp0Index != tmp1Index)
+				if (tmp0Index != tmp1Index || tmp1Index != tmp2Index || tmp2Index != tmp3Index)
 					continue;
 
                 bool tempRegisterCorrect =
@@ -201,7 +203,17 @@ namespace ShaderLabConvert
                 if (!matricesCorrect)
                     continue;
 
-                int tmpIndex = inst0.destOperand.registerIndex;
+				int tmp0Index = inst0.destOperand.registerIndex;
+				int tmp1Index = inst1.destOperand.registerIndex;
+				int tmp2Index = inst2.destOperand.registerIndex;
+				int tmp3Index = inst3.destOperand.registerIndex;
+
+				// registers can swap halfway through to be used for something else
+				// don't try to convert the matrix because we can't handle this yet
+				if (tmp0Index != tmp1Index || tmp1Index != tmp2Index || tmp2Index != tmp3Index)
+					continue;
+
+				int tmpIndex = inst0.destOperand.registerIndex;
                 bool tempRegisterCorrect =
                     inst0.destOperand.registerIndex == tmpIndex &&
 
@@ -304,12 +316,14 @@ namespace ShaderLabConvert
                 if (!matricesCorrect)
                     continue;
 
-                int tmp0Index = inst0.destOperand.registerIndex;
-                int tmp1Index = inst2.destOperand.registerIndex;
+				int tmp0Index = inst0.destOperand.registerIndex;
+				int tmp1Index = inst1.destOperand.registerIndex;
+				int tmp2Index = inst2.destOperand.registerIndex;
+				int tmp3Index = inst3.destOperand.registerIndex;
 
 				// registers can swap halfway through to be used for something else
 				// don't try to convert the matrix because we can't handle this yet
-				if (tmp0Index != tmp1Index)
+				if (tmp0Index != tmp1Index || tmp1Index != tmp2Index || tmp2Index != tmp3Index)
 					continue;
 
 				bool tempRegisterCorrect =

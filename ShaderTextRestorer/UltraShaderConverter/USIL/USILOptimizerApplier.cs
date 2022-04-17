@@ -18,6 +18,9 @@ namespace ShaderLabConvert
             typeof(USILCBufferMetadder),
             typeof(USILSamplerMetadder),
             typeof(USILInputOutputMetadder),
+			
+			// do fixes (you really should have these enabled!)
+			typeof(USILSamplerTypeFixer),
 
             // do detection optimizers which usually depend on metadders
             typeof(USILMatrixMulOptimizer),

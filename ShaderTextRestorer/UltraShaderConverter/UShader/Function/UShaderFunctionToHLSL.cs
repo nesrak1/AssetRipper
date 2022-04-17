@@ -399,16 +399,35 @@ namespace ShaderLabConvert
         {
             List<USILOperand> srcOps = inst.srcOperands;
             USILOperand textureOperand = inst.srcOperands[2];
+			int samplerTypeIdx = inst.instructionType == USILInstructionType.Sample ? 3 : 4;
+			bool samplerType = srcOps[samplerTypeIdx].immValueInt[0] == 1;
 			string args = $"{srcOps[2]}, {srcOps[0]}";
-            string value = textureOperand.operandType switch
-            {
-                USILOperandType.Sampler2D => $"tex2D({args})",
-                USILOperandType.Sampler3D => $"tex3D({args})",
-                USILOperandType.SamplerCube => $"texCUBE({args})",
-                USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY({args})",
-                USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY({args})",
-                _ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
-            };
+			string value;
+			if (!samplerType)
+			{
+				value = textureOperand.operandType switch
+				{
+					USILOperandType.Sampler2D => $"tex2D({args})",
+					USILOperandType.Sampler3D => $"tex3D({args})",
+					USILOperandType.SamplerCube => $"texCUBE({args})",
+					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY({args})",
+					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY({args})",
+					_ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
+				};
+			}
+			else
+			{
+				args = $"{srcOps[2]}, {args}";
+				value = textureOperand.operandType switch
+				{
+					USILOperandType.Sampler2D => $"UNITY_SAMPLE_TEX2D_SAMPLER({args})",
+					USILOperandType.Sampler3D => $"UNITY_SAMPLE_TEX3D_SAMPLER({args})",
+					USILOperandType.SamplerCube => $"UNITY_SAMPLE_TEXCUBE_SAMPLER({args})",
+					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_SAMPLER({args})",
+					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_SAMPLER({args})",
+					_ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
+				};
+			}
             string comment = CommentString(inst);
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }
@@ -417,20 +436,38 @@ namespace ShaderLabConvert
         {
             List<USILOperand> srcOps = inst.srcOperands;
             USILOperand textureOperand = inst.srcOperands[2];
+			bool samplerType = srcOps[4].immValueInt[0] == 1;
 			string args;
 			if (srcOps[0].mask.Length == 2) // texture2d
 				args = $"{srcOps[2]}, float4({srcOps[0]}, 0, {srcOps[3]})";
 			else
 				args = $"{srcOps[2]}, float4({srcOps[0]}, {srcOps[3]})";
-			string value = textureOperand.operandType switch
-            {
-                USILOperandType.Sampler2D => $"tex2Dlod({args})",
-                USILOperandType.Sampler3D => $"tex3Dlod({args})",
-                USILOperandType.SamplerCube => $"texCUBElod({args})",
-                USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_LOD({args})",
-                USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_LOD({args})",
-                _ => $"texNDlod({srcOps[2]}, {srcOps[0]}, {srcOps[3]})" // unknown real type
-            };
+			string value;
+			if (!samplerType)
+			{
+				value = textureOperand.operandType switch
+				{
+					USILOperandType.Sampler2D => $"tex2Dlod({args})",
+					USILOperandType.Sampler3D => $"tex3Dlod({args})",
+					USILOperandType.SamplerCube => $"texCUBElod({args})",
+					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_LOD({args})",
+					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_LOD({args})",
+					_ => $"texNDlod({srcOps[2]}, {srcOps[0]}, {srcOps[3]})" // unknown real type
+				};
+			}
+			else
+			{
+				args = $"{srcOps[2]}, {args}";
+				value = textureOperand.operandType switch
+				{
+					USILOperandType.Sampler2D => $"UNITY_SAMPLE_TEX2D_SAMPLER({args})",
+					USILOperandType.Sampler3D => $"UNITY_SAMPLE_TEX3D_SAMPLER({args})",
+					USILOperandType.SamplerCube => $"UNITY_SAMPLE_TEXCUBE_SAMPLER({args})",
+					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_SAMPLER({args})",
+					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_SAMPLER({args})",
+					_ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
+				};
+			}
             string comment = CommentString(inst);
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }
