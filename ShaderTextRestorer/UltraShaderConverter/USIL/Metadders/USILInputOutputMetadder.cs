@@ -68,7 +68,7 @@ namespace ShaderLabConvert
                     // correct mask
                     int[] matchedMask = MatchMaskToInputOutput(operand.mask, output.mask, true);
                     int[] realMatchedMask = MatchMaskToInputOutput(operand.mask, output.mask, false);
-                    operand.mask = realMatchedMask;
+                    operand.mask = matchedMask;
 
                     operand.metadataName = _shader.shaderFunctionType switch
                     {
@@ -92,8 +92,6 @@ namespace ShaderLabConvert
 				operand.metadataNameAssigned = true;
 			}
         }
-
-		// bug: mask is incorrect when there's a float2
 
         private int[] MatchMaskToInputOutput(int[] mask, int maskTest, bool moveSwizzles)
         {

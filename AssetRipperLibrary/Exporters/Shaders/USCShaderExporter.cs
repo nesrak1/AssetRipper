@@ -318,32 +318,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 						writer.WriteIndent(3);
 						writer.WriteLine("// $Globals ConstantBuffers for Vertex Shader");
 
-						ConstantBuffer globalsCb = vertexSubProgram.ConstantBuffers.FirstOrDefault(cb => cb.Name == "$Globals");
-
-						if (globalsCb != null)
-						{
-							NumericShaderParameter[] allParams = globalsCb.AllNumericParams;
-							foreach (NumericShaderParameter param in allParams)
-							{
-								string typeName = DXShaderNamingUtils.GetConstantBufferParamTypeName(param);
-								string name = param.Name;
-
-								if (!declaredBufs.Contains(name))
-								{
-									if (param.ArraySize > 0)
-									{
-										writer.WriteIndent(3);
-										writer.WriteLine($"{typeName} {name}[{param.ArraySize}];");
-									}
-									else
-									{
-										writer.WriteIndent(3);
-										writer.WriteLine($"{typeName} {name};");
-									}
-									declaredBufs.Add(name);
-								}
-							}
-						}
+						ExportPassConstantBufferDefinitions(vertexSubProgram, writer, declaredBufs, "$Globals", 3);
 					}
 
 					if (hasFragment)
@@ -351,130 +326,55 @@ namespace AssetRipper.Library.Exporters.Shaders
 						writer.WriteIndent(3);
 						writer.WriteLine("// $Globals ConstantBuffers for Fragment Shader");
 
-						ConstantBuffer globalsCb = fragmentSubProgram.ConstantBuffers.FirstOrDefault(cb => cb.Name == "$Globals");
-
-						if (globalsCb != null)
-						{
-							NumericShaderParameter[] allParams = globalsCb.AllNumericParams;
-							foreach (NumericShaderParameter param in allParams)
-							{
-								string typeName = DXShaderNamingUtils.GetConstantBufferParamTypeName(param);
-								string name = param.Name;
-
-								if (!declaredBufs.Contains(name))
-								{
-									if (param.ArraySize > 0)
-									{
-										writer.WriteIndent(3);
-										writer.WriteLine($"{typeName} {name}[{param.ArraySize}];");
-									}
-									else
-									{
-										writer.WriteIndent(3);
-										writer.WriteLine($"{typeName} {name};");
-									}
-									declaredBufs.Add(name);
-								}
-							}
-						}
+						ExportPassConstantBufferDefinitions(fragmentSubProgram, writer, declaredBufs, "$Globals", 3);
 					}
 
-					bool anyGlobalSlots = false;
 					if (hasVertex)
 					{
 						writer.WriteIndent(3);
-						writer.WriteLine("// Texture params for Vertex Shader");
-						foreach (TextureParameter param in vertexSubProgram.TextureParameters)
+						writer.WriteLine("// Custom ConstantBuffers for Vertex Shader");
+
+						foreach (ConstantBuffer cbuffer in vertexSubProgram.ConstantBuffers)
 						{
-							string name = param.Name;
-							if (!declaredBufs.Contains(name) && !USILSamplerTypeFixer.BUILTIN_TEXTURE_NAMES.Contains(name))
-							{
-								writer.WriteIndent(3);
-								if (param.Dim == 2)
-								{
-									writer.WriteLine($"sampler2D {name};");
-									anyGlobalSlots = true;
-								}
-								else if (param.Dim == 3)
-								{
-									writer.WriteLine($"sampler3D {name};");
-									anyGlobalSlots = true;
-								}
-								else if (param.Dim == 4)
-								{
-									writer.WriteLine($"samplerCUBE {name};");
-									anyGlobalSlots = true;
-								}
-								else if (param.Dim == 5)
-								{
-									writer.WriteLine($"UNITY_DECLARE_TEX2DARRAY({name});");
-									anyGlobalSlots = true;
-								}
-								else if (param.Dim == 6)
-								{
-									writer.WriteLine($"UNITY_DECLARE_TEXCUBEARRAY({name});");
-									anyGlobalSlots = true;
-								}
-								else
-								{
-									writer.WriteLine($"sampler2D {name}; // Unsure of real type ({param.Dim})");
-									anyGlobalSlots = true;
-								}
-								declaredBufs.Add(name);
-							}
+							if (UnityShaderConstants.BUILTIN_CBUFFER_NAMES.Contains(cbuffer.Name))
+								continue;
+
+							ExportPassConstantBufferDefinitions(vertexSubProgram, writer, declaredBufs, cbuffer, 3);
 						}
 					}
 
 					if (hasFragment)
 					{
 						writer.WriteIndent(3);
-						writer.WriteLine("// Texture params for Fragment Shader");
-						foreach (TextureParameter param in fragmentSubProgram.TextureParameters)
+						writer.WriteLine("// Custom ConstantBuffers for Fragment Shader");
+
+						foreach (ConstantBuffer cbuffer in fragmentSubProgram.ConstantBuffers)
 						{
-							string name = param.Name;
-							if (!declaredBufs.Contains(name) && !USILSamplerTypeFixer.BUILTIN_TEXTURE_NAMES.Contains(name))
-							{
-								writer.WriteIndent(3);
-								if (param.Dim == 2)
-								{
-									writer.WriteLine($"sampler2D {name};");
-									anyGlobalSlots = true;
-								}
-								else if (param.Dim == 3)
-								{
-									writer.WriteLine($"sampler3D {name};");
-									anyGlobalSlots = true;
-								}
-								else if (param.Dim == 4)
-								{
-									writer.WriteLine($"samplerCUBE {name};");
-									anyGlobalSlots = true;
-								}
-								else if (param.Dim == 5)
-								{
-									writer.WriteLine($"UNITY_DECLARE_TEX2DARRAY({name});");
-									anyGlobalSlots = true;
-								}
-								else if (param.Dim == 6)
-								{
-									writer.WriteLine($"UNITY_DECLARE_TEXCUBEARRAY({name});");
-									anyGlobalSlots = true;
-								}
-								else
-								{
-									writer.WriteLine($"sampler2D {name}; // Unsure of real type ({param.Dim})");
-									anyGlobalSlots = true;
-								}
-								declaredBufs.Add(name);
-							}
+							if (UnityShaderConstants.BUILTIN_CBUFFER_NAMES.Contains(cbuffer.Name))
+								continue;
+
+							ExportPassConstantBufferDefinitions(fragmentSubProgram, writer, declaredBufs, cbuffer, 3);
 						}
 					}
 
-					if (anyGlobalSlots)
+					if (hasVertex)
 					{
 						writer.WriteIndent(3);
-						writer.WriteLine("");
+						writer.WriteLine("// Texture params for Vertex Shader");
+
+						ExportPassTextureParamDefinitions(vertexSubProgram, writer, declaredBufs, 3);
 					}
+
+					if (hasFragment)
+					{
+						writer.WriteIndent(3);
+						writer.WriteLine("// Texture params for Fragment Shader");
+
+						ExportPassTextureParamDefinitions(fragmentSubProgram, writer, declaredBufs, 3);
+					}
+
+					writer.WriteIndent(3);
+					writer.WriteLine("");
 
 					if (hasVertex)
 					{
@@ -518,6 +418,98 @@ namespace AssetRipper.Library.Exporters.Shaders
 
 				writer.WriteIndent(2);
 				writer.Write("}\n");
+			}
+		}
+
+		private static void ExportPassConstantBufferDefinitions(
+			ShaderSubProgram _this, ShaderWriter writer, HashSet<string> declaredBufs,
+			string cbufferName, int depth)
+		{
+			ConstantBuffer cbuffer = _this.ConstantBuffers.FirstOrDefault(cb => cb.Name == cbufferName);
+
+			ExportPassConstantBufferDefinitions(_this, writer, declaredBufs, cbuffer, depth);
+		}
+
+		private static void ExportPassConstantBufferDefinitions(
+			ShaderSubProgram _this, ShaderWriter writer, HashSet<string> declaredBufs,
+			ConstantBuffer cbuffer, int depth)
+		{
+			if (cbuffer != null)
+			{
+				bool nonGlobalCbuffer = cbuffer.Name != "$Globals";
+
+				if (nonGlobalCbuffer)
+				{
+					writer.WriteIndent(depth);
+					writer.WriteLine($"CBUFFER_START({cbuffer.Name})");
+					depth++;
+				}
+
+				NumericShaderParameter[] allParams = cbuffer.AllNumericParams;
+				foreach (NumericShaderParameter param in allParams)
+				{
+					string typeName = DXShaderNamingUtils.GetConstantBufferParamTypeName(param);
+					string name = param.Name;
+
+					if (!declaredBufs.Contains(name))
+					{
+						if (param.ArraySize > 0)
+						{
+							writer.WriteIndent(depth);
+							writer.WriteLine($"{typeName} {name}[{param.ArraySize}];");
+						}
+						else
+						{
+							writer.WriteIndent(depth);
+							writer.WriteLine($"{typeName} {name};");
+						}
+						declaredBufs.Add(name);
+					}
+				}
+
+				if (nonGlobalCbuffer)
+				{
+					depth--;
+					writer.WriteIndent(depth);
+					writer.WriteLine("CBUFFER_END");
+				}
+			}
+		}
+
+		private static void ExportPassTextureParamDefinitions(ShaderSubProgram _this, ShaderWriter writer, HashSet<string> declaredBufs, int depth)
+		{
+			foreach (TextureParameter param in _this.TextureParameters)
+			{
+				string name = param.Name;
+				if (!declaredBufs.Contains(name) && !UnityShaderConstants.BUILTIN_TEXTURE_NAMES.Contains(name))
+				{
+					writer.WriteIndent(depth);
+					if (param.Dim == 2)
+					{
+						writer.WriteLine($"sampler2D {name};");
+					}
+					else if (param.Dim == 3)
+					{
+						writer.WriteLine($"sampler3D {name};");
+					}
+					else if (param.Dim == 4)
+					{
+						writer.WriteLine($"samplerCUBE {name};");
+					}
+					else if (param.Dim == 5)
+					{
+						writer.WriteLine($"UNITY_DECLARE_TEX2DARRAY({name});");
+					}
+					else if (param.Dim == 6)
+					{
+						writer.WriteLine($"UNITY_DECLARE_TEXCUBEARRAY({name});");
+					}
+					else
+					{
+						writer.WriteLine($"sampler2D {name}; // Unsure of real type ({param.Dim})");
+					}
+					declaredBufs.Add(name);
+				}
 			}
 		}
 
@@ -595,6 +587,55 @@ namespace AssetRipper.Library.Exporters.Shaders
 						}
 					}
 				}
+
+				bool hasDirectional = false;
+				bool hasPoint = false;
+				bool matchesDirectional = false;
+				bool matchesPoint = false;
+				if (pass.NameIndices.ContainsKey("DIRECTIONAL"))
+				{
+					hasDirectional = true;
+					if (subProgram.GlobalKeywordIndices != null)
+					{
+						for (int j = 0; j < subProgram.GlobalKeywordIndices.Length; j++)
+						{
+							if (pass.NameIndices["DIRECTIONAL"] == subProgram.GlobalKeywordIndices[j])
+								matchesDirectional = true;
+						}
+					}
+					if (subProgram.LocalKeywordIndices != null)
+					{
+						for (int j = 0; j < subProgram.LocalKeywordIndices.Length; j++)
+						{
+							if (pass.NameIndices["DIRECTIONAL"] == subProgram.LocalKeywordIndices[j])
+								matchesDirectional = true;
+						}
+					}
+				}
+
+				if (pass.NameIndices.ContainsKey("POINT"))
+				{
+					hasPoint = true;
+					if (subProgram.GlobalKeywordIndices != null)
+					{
+						for (int j = 0; j < subProgram.GlobalKeywordIndices.Length; j++)
+						{
+							if (pass.NameIndices["POINT"] == subProgram.GlobalKeywordIndices[j])
+								matchesPoint = true;
+						}
+					}
+					if (subProgram.LocalKeywordIndices != null)
+					{
+						for (int j = 0; j < subProgram.LocalKeywordIndices.Length; j++)
+						{
+							if (pass.NameIndices["POINT"] == subProgram.LocalKeywordIndices[j])
+								matchesPoint = true;
+						}
+					}
+				}
+
+				if ((hasDirectional || hasPoint) && (!matchesDirectional && !matchesPoint))
+					matched = false;
 
 				if (matchedProgram != null)
 				{

@@ -23,22 +23,6 @@ namespace ShaderLabConvert
 			"_ShadowMapTexture"
 		};
 
-		// TODO: move these two into a different file (where?)
-		// TODO: there are more, but they aren't included by default
-		public static readonly HashSet<string> BUILTIN_TEXTURE_NAMES = new HashSet<string>()
-		{
-			"unity_Lightmap",
-			"unity_LightmapInd",
-			"unity_ShadowMask",
-			"unity_DynamicLightmap",
-			"unity_DynamicDirectionality",
-			"unity_DynamicNormal",
-			"unity_SpecCube0",
-			"unity_SpecCube1",
-			"unity_ProbeVolumeSH",
-			"_ShadowMapTexture"
-		};
-
 		public bool Run(UShaderProgram shader, ShaderSubProgram shaderData)
 		{
 			_shader = shader;
