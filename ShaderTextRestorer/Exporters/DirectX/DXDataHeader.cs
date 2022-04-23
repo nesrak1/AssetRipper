@@ -14,17 +14,13 @@ namespace ShaderTextRestorer.Exporters.DirectX
 		/// 5.4.0 and greater
 		/// </summary>
 		public static bool HasGSInputPrimitive(UnityVersion version) => version.IsGreaterEqual(5, 4);
-		/// <summary>
-		/// 2020.3.11 and greater
-		/// </summary>
-		public static bool HasUnknown32Bytes(UnityVersion version) => version.IsGreaterEqual(2020, 3, 11);
 
-		public static int GetDataOffset(UnityVersion version, GPUPlatform graphicApi)
+		public static int GetDataOffset(UnityVersion version, GPUPlatform graphicApi, int headerVersion)
 		{
 			if (HasHeader(graphicApi))
 			{
 				int offset = HasGSInputPrimitive(version) ? 6 : 5;
-				if (HasUnknown32Bytes(version))
+				if (headerVersion >= 2)
 					offset += 0x20;
 
 				return offset;
@@ -37,7 +33,7 @@ namespace ShaderTextRestorer.Exporters.DirectX
 
 		public void Read(BinaryReader reader, UnityVersion version)
 		{
-			Unknown1 = reader.ReadByte();
+			Version = reader.ReadByte();
 			Textures = reader.ReadByte();
 			CBs = reader.ReadByte();
 			Samplers = reader.ReadByte();
@@ -50,7 +46,7 @@ namespace ShaderTextRestorer.Exporters.DirectX
 
 		public void Write(BinaryWriter writer, UnityVersion version)
 		{
-			writer.Write(Unknown1);
+			writer.Write(Version);
 			writer.Write(Textures);
 			writer.Write(CBs);
 			writer.Write(Samplers);
@@ -62,9 +58,10 @@ namespace ShaderTextRestorer.Exporters.DirectX
 		}
 
 		/// <summary>
-		/// Always 1
+		/// 1: No block of 32 00s after these parameters
+		/// 2: Block of 32 00s after these parameters
 		/// </summary>
-		public byte Unknown1 { get; set; }
+		public byte Version { get; set; }
 		public byte Textures { get; set; }
 		public byte CBs { get; set; }
 		public byte Samplers { get; set; }

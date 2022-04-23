@@ -12,7 +12,7 @@ namespace ShaderTextRestorer.Exporters.DirectX
 			int dataOffset = 0;
 			if (DXDataHeader.HasHeader(gpuPlatform))
 			{
-				dataOffset = DXDataHeader.GetDataOffset(version, gpuPlatform);
+				dataOffset = DXDataHeader.GetDataOffset(version, gpuPlatform, data[0]);
 			}
 
 			if (DXDecompilerlyHandler.TryDisassemble(data, dataOffset, out disassemblyText))
@@ -39,7 +39,7 @@ namespace ShaderTextRestorer.Exporters.DirectX
 			int dataOffset = 0;
 			if (DXDataHeader.HasHeader(gpuPlatform))
 			{
-				dataOffset = DXDataHeader.GetDataOffset(version, gpuPlatform);
+				dataOffset = DXDataHeader.GetDataOffset(version, gpuPlatform, data[0]);
 			}
 
 			return DXDecompilerlyHandler.TryDecompile(data, dataOffset, out decompiledText);

@@ -662,12 +662,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 			int dataOffset = 0;
 			if (DXDataHeader.HasHeader(graphicApi))
 			{
-				dataOffset = DXDataHeader.GetDataOffset(version, graphicApi);
-				if (subProgram.ProgramData[dataOffset] == 0)
-				{
-					dataOffset += 0x20;
-					Logger.Warning($"Unexpected unknown 32 bytes appeared in version {version}!");
-				}
+				dataOffset = DXDataHeader.GetDataOffset(version, graphicApi, subProgram.ProgramData[0]);
 			}
 
 			return GetRelevantData(subProgram.ProgramData, dataOffset);
