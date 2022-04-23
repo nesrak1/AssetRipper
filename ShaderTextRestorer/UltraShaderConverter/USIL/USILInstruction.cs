@@ -70,6 +70,7 @@ namespace ShaderLabConvert
 				case USILInstructionType.SampleLOD:
 				case USILInstructionType.SampleLODBias:
 				case USILInstructionType.SampleComparisonLODZero:
+				case USILInstructionType.SampleDerivative:
 					return true;
 				default:
 					return false;

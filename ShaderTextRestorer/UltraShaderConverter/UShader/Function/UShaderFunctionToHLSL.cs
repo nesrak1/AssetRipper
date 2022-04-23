@@ -45,6 +45,7 @@ namespace ShaderLabConvert
                 { USILInstructionType.Floor, new InstHandler(HandleFloor) },
                 { USILInstructionType.Ceiling, new InstHandler(HandleCeiling) },
                 { USILInstructionType.Round, new InstHandler(HandleRound) },
+                { USILInstructionType.Truncate, new InstHandler(HandleTruncate) },
                 { USILInstructionType.IntToFloat, new InstHandler(HandleIntToFloat) },
                 { USILInstructionType.FloatToInt, new InstHandler(HandleFloatToInt) },
                 { USILInstructionType.Sine, new InstHandler(HandleSine) },
@@ -58,7 +59,20 @@ namespace ShaderLabConvert
                 { USILInstructionType.SampleComparison, new InstHandler(HandleSample) },
                 { USILInstructionType.SampleComparisonLODZero, new InstHandler(HandleSample) },
                 { USILInstructionType.SampleLOD, new InstHandler(HandleSampleLOD) },
+				{ USILInstructionType.SampleDerivative, new InstHandler(HandleSampleDerivative) },
+				{ USILInstructionType.LoadResource, new InstHandler(HandleLoadResource) },
+				{ USILInstructionType.LoadResourceMultisampled, new InstHandler(HandleLoadResource) },
+				{ USILInstructionType.LoadResourceStructured, new InstHandler(HandleLoadResourceStructured) },
                 { USILInstructionType.Discard, new InstHandler(HandleDiscard) },
+                { USILInstructionType.ResourceDimensionInfo, new InstHandler(HandleResourceDimensionInfo) },
+                { USILInstructionType.SampleCountInfo, new InstHandler(HandleSampleCountInfo) },
+				{ USILInstructionType.GetDimensions, new InstHandler(HandleResourceDimensionInfo) },
+				{ USILInstructionType.DerivativeRenderTargetX, new InstHandler(HandleDerivativeRenderTarget) },
+                { USILInstructionType.DerivativeRenderTargetY, new InstHandler(HandleDerivativeRenderTarget) },
+                { USILInstructionType.DerivativeRenderTargetXCoarse, new InstHandler(HandleDerivativeRenderTarget) },
+                { USILInstructionType.DerivativeRenderTargetYCoarse, new InstHandler(HandleDerivativeRenderTarget) },
+                { USILInstructionType.DerivativeRenderTargetXFine, new InstHandler(HandleDerivativeRenderTarget) },
+                { USILInstructionType.DerivativeRenderTargetYFine, new InstHandler(HandleDerivativeRenderTarget) },
                 { USILInstructionType.IfFalse, new InstHandler(HandleIf) },
                 { USILInstructionType.IfTrue, new InstHandler(HandleIf) },
                 { USILInstructionType.Else, new InstHandler(HandleElse) },
@@ -301,6 +315,14 @@ namespace ShaderLabConvert
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }
 
+        private void HandleTruncate(USILInstruction inst)
+        {
+            List<USILOperand> srcOps = inst.srcOperands;
+            string value = $"trunc({srcOps[0]})";
+            string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
         private void HandleIntToFloat(USILInstruction inst)
         {
             List<USILOperand> srcOps = inst.srcOperands;
@@ -398,7 +420,7 @@ namespace ShaderLabConvert
         private void HandleSample(USILInstruction inst)
         {
             List<USILOperand> srcOps = inst.srcOperands;
-            USILOperand textureOperand = inst.srcOperands[2];
+            USILOperand textureOperand = srcOps[2];
 			int samplerTypeIdx = inst.instructionType == USILInstructionType.Sample ? 3 : 4;
 			bool samplerType = srcOps[samplerTypeIdx].immValueInt[0] == 1;
 			string args = $"{srcOps[2]}, {srcOps[0]}";
@@ -412,7 +434,7 @@ namespace ShaderLabConvert
 					USILOperandType.SamplerCube => $"texCUBE({args})",
 					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY({args})",
 					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY({args})",
-					_ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
+					_ => $"texND({args})" // unknown real type
 				};
 			}
 			else
@@ -425,7 +447,7 @@ namespace ShaderLabConvert
 					USILOperandType.SamplerCube => $"UNITY_SAMPLE_TEXCUBE_SAMPLER({args})",
 					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_SAMPLER({args})",
 					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_SAMPLER({args})",
-					_ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
+					_ => $"texND({args})" // unknown real type
 				};
 			}
             string comment = CommentString(inst);
@@ -435,7 +457,7 @@ namespace ShaderLabConvert
         private void HandleSampleLOD(USILInstruction inst)
         {
             List<USILOperand> srcOps = inst.srcOperands;
-            USILOperand textureOperand = inst.srcOperands[2];
+            USILOperand textureOperand = srcOps[2];
 			bool samplerType = srcOps[4].immValueInt[0] == 1;
 			string args;
 			if (srcOps[0].mask.Length == 2) // texture2d
@@ -452,7 +474,7 @@ namespace ShaderLabConvert
 					USILOperandType.SamplerCube => $"texCUBElod({args})",
 					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_LOD({args})",
 					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_LOD({args})",
-					_ => $"texNDlod({srcOps[2]}, {srcOps[0]}, {srcOps[3]})" // unknown real type
+					_ => $"texNDlod({args})" // unknown real type
 				};
 			}
 			else
@@ -465,10 +487,48 @@ namespace ShaderLabConvert
 					USILOperandType.SamplerCube => $"UNITY_SAMPLE_TEXCUBE_SAMPLER({args})",
 					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_SAMPLER({args})",
 					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_SAMPLER({args})",
-					_ => $"texND({srcOps[2]}, {srcOps[0]})" // unknown real type
+					_ => $"texND({args})" // unknown real type
 				};
 			}
             string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
+        private void HandleSampleDerivative(USILInstruction inst)
+        {
+            List<USILOperand> srcOps = inst.srcOperands;
+            USILOperand textureOperand = srcOps[2];
+			string value;
+			string args = $"{srcOps[2]}, {srcOps[0]}, {srcOps[3]}, {srcOps[4]}";
+			value = textureOperand.operandType switch
+			{
+				USILOperandType.Sampler2D => $"tex2Dgrad({args})",
+				USILOperandType.Sampler3D => $"tex3Dgrad({args})",
+				USILOperandType.SamplerCube => $"texCUBEgrad({args})",
+				_ => $"texNDgrad({args})" // unknown real type
+			};
+            string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
+        private void HandleLoadResource(USILInstruction inst)
+        {
+            List<USILOperand> srcOps = inst.srcOperands;
+			string args = $"{srcOps[1]}, {srcOps[0]}";
+			string value = $"Load({args})";
+			string comment = CommentString(inst);
+            AppendLine($"{comment}{inst.destOperand} = {value};");
+        }
+
+        private void HandleLoadResourceStructured(USILInstruction inst)
+        {
+			// todo (won't work because struct doesn't exist)
+			// DXDecompiler: ((float4[arraySize])_Buffer.Load(srcAddress))[srcByteOffset / 16];
+			// 3DMigoto: _Buffer[srcAddress].val[srcByteOffset/4]; (with /4 literally part of the output lmao)
+			// yo idk
+			List<USILOperand> srcOps = inst.srcOperands;
+			string value = $"((float4[1]){srcOps[2]}.Load({srcOps[0]}))[{srcOps[1].immValueInt[0] / 16}]";
+			string comment = CommentString(inst);
             AppendLine($"{comment}{inst.destOperand} = {value};");
         }
 
@@ -476,7 +536,92 @@ namespace ShaderLabConvert
         {
             string comment = CommentString(inst);
             AppendLine($"{comment}discard;");
-        }
+		}
+
+		private void HandleResourceDimensionInfo(USILInstruction inst)
+		{
+			// assumes resinfo_extra exists
+			List<USILOperand> srcOps = inst.srcOperands;
+
+			USILOperand usilResource = srcOps[0];
+			USILOperand usilMipLevel = srcOps[1];
+			USILOperand usilWidth = srcOps[2];
+			USILOperand usilHeight = srcOps[3];
+			USILOperand usilDepthOrArraySize = srcOps[4];
+			USILOperand usilMipCount = srcOps[5];
+
+			List<string> args = new List<string>();
+
+			if (usilMipLevel.immValueFloat[0] == 0 && usilMipCount.operandType == USILOperandType.Null)
+			{
+				// shorter version (not checking the compiler did this correctly!)
+				args.Add(usilWidth.ToString());
+				
+				if (usilHeight.operandType != USILOperandType.Null)
+				{
+					args.Add(usilHeight.ToString());
+				}
+
+				if (usilDepthOrArraySize.operandType != USILOperandType.Null)
+				{
+					args.Add(usilDepthOrArraySize.ToString());
+				}
+			}
+			else
+			{
+				args.Add(usilMipLevel.ToString());
+				args.Add(usilWidth.ToString());
+
+				if (usilHeight.operandType != USILOperandType.Null)
+				{
+					args.Add(usilHeight.ToString());
+				}
+				
+				if (usilDepthOrArraySize.operandType != USILOperandType.Null)
+				{
+					args.Add(usilDepthOrArraySize.ToString());
+				}
+				
+				if (usilMipCount.operandType != USILOperandType.Null)
+				{
+					args.Add(usilMipCount.ToString());
+				}
+				else
+				{
+					args.Add("resinfo_extra");
+				}
+			}
+
+			string call = $"GetDimensions({string.Join(", ", args)})";
+			string comment = CommentString(inst);
+			AppendLine($"{comment}{usilResource}.{call};");
+		}
+
+		private void HandleSampleCountInfo(USILInstruction inst)
+		{
+			List<USILOperand> srcOps = inst.srcOperands;
+			string value = $"{srcOps[0]} = GetRenderTargetSampleCount()";
+			string comment = CommentString(inst);
+			AppendLine($"{comment}{value};");
+		}
+
+		private void HandleDerivativeRenderTarget(USILInstruction inst)
+		{
+			List<USILOperand> srcOps = inst.srcOperands;
+			string fun = inst.instructionType switch
+			{
+				USILInstructionType.DerivativeRenderTargetX => "ddx",
+				USILInstructionType.DerivativeRenderTargetY => "ddy",
+				USILInstructionType.DerivativeRenderTargetXCoarse => "ddx_coarse",
+				USILInstructionType.DerivativeRenderTargetYCoarse => "ddy_coarse",
+				USILInstructionType.DerivativeRenderTargetXFine => "ddx_fine",
+				USILInstructionType.DerivativeRenderTargetYFine => "ddy_fine",
+				_ => "dd?"
+			};
+			string value = $"{fun}({srcOps[0]})";
+			string comment = CommentString(inst);
+			AppendLine($"{comment}{inst.destOperand} = {value};");
+		}
 
         private void HandleIf(USILInstruction inst)
         {

@@ -93,6 +93,8 @@ namespace ShaderLabConvert
 			}
         }
 
+		// bug: mask is incorrect when there's a float2
+
         private int[] MatchMaskToInputOutput(int[] mask, int maskTest, bool moveSwizzles)
         {
             // Move swizzles (for example, .zw -> .xy) based on first letter

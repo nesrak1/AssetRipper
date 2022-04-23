@@ -64,8 +64,11 @@ namespace ShaderLabConvert
 					if (BUILTIN_SAMPLER_TEXTURE_NAMES.Contains(sampleOperand.metadataName))
 					{
 						int samplerTypeIdx = GetSamplerTypeIdx(instruction.instructionType);
-						instruction.srcOperands[samplerTypeIdx] = new USILOperand(1);
-						changes = true;
+						if (samplerTypeIdx != -1)
+						{
+							instruction.srcOperands[samplerTypeIdx] = new USILOperand(1);
+							changes = true;
+						}
 					}
 				}
 			}
@@ -81,7 +84,7 @@ namespace ShaderLabConvert
 				USILInstructionType.SampleComparison => 4,
 				USILInstructionType.SampleComparisonLODZero => 4,
 				USILInstructionType.SampleLOD => 4,
-				_ => 0
+				_ => -1
 			};
 		}
 	}

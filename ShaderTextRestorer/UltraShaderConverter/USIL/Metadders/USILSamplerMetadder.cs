@@ -26,18 +26,18 @@ namespace ShaderLabConvert
                 {
                     if (operand.operandType == USILOperandType.SamplerRegister)
                     {
-                        TextureParameter sampSlot = _shaderData.TextureParameters.FirstOrDefault(
+                        TextureParameter texParam = _shaderData.TextureParameters.FirstOrDefault(
                             p => p.SamplerIndex == operand.registerIndex
                         );
 
-						if (sampSlot == null)
+						if (texParam == null)
 						{
 							operand.operandType = USILOperandType.Sampler2D;
-							Logger.Warning($"Could not find samp slot for {operand}");
+							Logger.Warning($"Could not find texture parameter for sampler {operand}");
 							continue;
 						}
 
-						int dimension = sampSlot.Dim;
+						int dimension = texParam.Dim;
                         switch (dimension)
                         {
                             case 2:
@@ -57,12 +57,30 @@ namespace ShaderLabConvert
                                 break;
                         }
 
-                        if (sampSlot != null)
+                        if (texParam != null)
                         {
-                            operand.metadataName = sampSlot.Name;
+                            operand.metadataName = texParam.Name;
                             operand.metadataNameAssigned = true;
                         }
                     }
+					else if (operand.operandType == USILOperandType.ResourceRegister)
+					{
+						TextureParameter texParam = _shaderData.TextureParameters.FirstOrDefault(
+							p => p.Index == operand.registerIndex
+						);
+
+						if (texParam == null)
+						{
+							Logger.Warning($"Could not find texture parameter for resource {operand}");
+							continue;
+						}
+
+						if (texParam != null)
+						{
+							operand.metadataName = texParam.Name;
+							operand.metadataNameAssigned = true;
+						}
+					}
                 }
             }
             return true; // any changes made?

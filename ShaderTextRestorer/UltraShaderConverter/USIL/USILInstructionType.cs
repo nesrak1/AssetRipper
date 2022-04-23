@@ -28,8 +28,11 @@ namespace ShaderLabConvert
 		Floor, //dx: round_ni
 		Ceiling, //dx: round_pi
 		Round, //dx: round_ne
+		Truncate, //dx: round_z
 		IntToFloat, //dx: itof
+		UIntToFloat, //dx: utof
 		FloatToInt, //dx: ftoi
+		FloatToUInt, //dx: ftou
 
 		Minimum, //dx: min
 		Maximum, //dx: max
@@ -49,6 +52,17 @@ namespace ShaderLabConvert
 
 		Reciprocal, //dx: rcp
 		Fractional, //dx: frc
+
+		ResourceDimensionInfo, //dx: resinfo
+		SampleCountInfo, //dx: sampleinfo
+
+		// probably should be an argument
+		DerivativeRenderTargetX, //dx: deriv_rtx
+		DerivativeRenderTargetY, //dy: deriv_rty
+		DerivativeRenderTargetXCoarse, //dx: deriv_rtx_coarse
+		DerivativeRenderTargetYCoarse, //dx: deriv_rtx_coarse
+		DerivativeRenderTargetXFine, //dy: deriv_rty_fine
+		DerivativeRenderTargetYFine, //dy: deriv_rty_fine
 
 		// comparisons
 		Equal, //dx: eq
@@ -77,14 +91,13 @@ namespace ShaderLabConvert
 		SampleComparison, //dx: sample_c
 		SampleComparisonLODZero, //dx: sample_c_lz
 		SampleLOD, //dx: sample_l
+		SampleDerivative, //dx: sample_d
+		LoadResource, //dx: ld
+		LoadResourceMultisampled, //dx: ld2dms
+		LoadResourceStructured, //dx: ld_structured
 
 		// artifical instructions
-		// dx
-		Negate,
-		Saturate,
-		AbsoluteValue,
-
-		TempRegister,
+		GetDimensions, //dx: --- (resinfo/sampleinfo)
 
 		// math
 		MultiplyMatrixByVector,
@@ -95,6 +108,6 @@ namespace ShaderLabConvert
 		WorldSpaceViewDir,
 
 		// extra
-		Comment,
+		Comment
 	}
 }

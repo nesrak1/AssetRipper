@@ -21,6 +21,7 @@ namespace ShaderLabConvert
 			
 			// do fixes (you really should have these enabled!)
 			typeof(USILSamplerTypeFixer),
+			typeof(USILGetDimensionsFixer),
 
             // do detection optimizers which usually depend on metadders
             typeof(USILMatrixMulOptimizer),

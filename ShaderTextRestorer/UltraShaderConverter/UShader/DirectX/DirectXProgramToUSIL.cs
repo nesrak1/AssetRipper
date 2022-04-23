@@ -20,7 +20,7 @@ namespace ShaderLabConvert
         private delegate void InstHandler(SHDRInstruction inst);
         private Dictionary<Opcode, InstHandler> _instructionHandlers;
 
-		private Dictionary<int, ResourceDimension> _samplerToDimension;
+		private Dictionary<int, ResourceDimension> _resourceToDimension;
 
         public DirectXProgramToUSIL(DirectXCompiledShader dxShader)
         {
@@ -36,7 +36,9 @@ namespace ShaderLabConvert
                 { Opcode.iadd, new InstHandler(HandleAdd) },
                 { Opcode.mul, new InstHandler(HandleMul) },
                 { Opcode.imul, new InstHandler(HandleMul) },
+                { Opcode.umul, new InstHandler(HandleMul) },
                 { Opcode.div, new InstHandler(HandleDiv) },
+                { Opcode.udiv, new InstHandler(HandleDiv) },
                 { Opcode.mad, new InstHandler(HandleMad) },
                 { Opcode.imad, new InstHandler(HandleMad) },
                 { Opcode.and, new InstHandler(HandleAnd) },
@@ -45,8 +47,13 @@ namespace ShaderLabConvert
                 { Opcode.ftoi, new InstHandler(HandleFtoi) },
                 { Opcode.ftou, new InstHandler(HandleFtoi) },
                 { Opcode.itof, new InstHandler(HandleItof) },
+                { Opcode.utof, new InstHandler(HandleItof) },
 				{ Opcode.min, new InstHandler(HandleMin) },
+				{ Opcode.imin, new InstHandler(HandleMin) },
+				{ Opcode.umin, new InstHandler(HandleMin) },
                 { Opcode.max, new InstHandler(HandleMax) },
+                { Opcode.imax, new InstHandler(HandleMax) },
+                { Opcode.umax, new InstHandler(HandleMax) },
                 { Opcode.sqrt, new InstHandler(HandleSqrt) },
                 { Opcode.rsq, new InstHandler(HandleRsq) },
                 { Opcode.log, new InstHandler(HandleLog) },
@@ -56,6 +63,7 @@ namespace ShaderLabConvert
                 { Opcode.round_ni, new InstHandler(HandleRoundNi) },
                 { Opcode.round_pi, new InstHandler(HandleRoundPi) },
                 { Opcode.round_ne, new InstHandler(HandleRoundNe) },
+                { Opcode.round_z, new InstHandler(HandleRoundZ) },
                 { Opcode.sincos, new InstHandler(HandleSincos) },
                 { Opcode.ishl, new InstHandler(HandleIShl) },
                 { Opcode.ishr, new InstHandler(HandleIShr) },
@@ -68,7 +76,19 @@ namespace ShaderLabConvert
                 { Opcode.sample_c_lz, new InstHandler(HandleSampleC) },
                 { Opcode.sample_l, new InstHandler(HandleSampleL) },
                 { Opcode.sample_b, new InstHandler(HandleSampleL) },
+                { Opcode.sample_d, new InstHandler(HandleSampleD) },
+                { Opcode.ld, new InstHandler(HandleLd) },
+                { Opcode.ldms, new InstHandler(HandleLd) },
+                { Opcode.ld_structured, new InstHandler(HandleLdStructured) },
                 { Opcode.discard, new InstHandler(HandleDiscard) },
+                { Opcode.resinfo, new InstHandler(HandleResInfo) },
+                { Opcode.sampleinfo, new InstHandler(HandleSampleInfo) },
+				{ Opcode.deriv_rtx, new InstHandler(HandleDerivRt) },
+				{ Opcode.deriv_rty, new InstHandler(HandleDerivRt) },
+				{ Opcode.deriv_rtx_coarse, new InstHandler(HandleDerivRt) },
+				{ Opcode.deriv_rty_coarse, new InstHandler(HandleDerivRt) },
+				{ Opcode.deriv_rtx_fine, new InstHandler(HandleDerivRt) },
+				{ Opcode.deriv_rty_fine, new InstHandler(HandleDerivRt) },
                 { Opcode.@if, new InstHandler(HandleIf) },
                 { Opcode.@else, new InstHandler(HandleElse) },
                 { Opcode.endif, new InstHandler(HandleEndIf) },
@@ -95,7 +115,7 @@ namespace ShaderLabConvert
                 { Opcode.customdata, new InstHandler(HandleCustomData) }
             };
 
-			_samplerToDimension = new Dictionary<int, ResourceDimension>();
+			_resourceToDimension = new Dictionary<int, ResourceDimension>();
         }
 
         public void Convert()
@@ -546,11 +566,11 @@ namespace ShaderLabConvert
             USILOperand usilSrc0 = new USILOperand();
             USILOperand usilSrc1 = new USILOperand();
 
-			bool isInt = inst.opcode == Opcode.imul;
+			bool isInt = inst.opcode == Opcode.imul || inst.opcode == Opcode.umul;
 
-			FillUSILOperand(dest, usilDest, dest.swizzle, false);
-            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
-            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), false);
+			FillUSILOperand(dest, usilDest, dest.swizzle, isInt);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), isInt);
+            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), isInt);
 
             usilInst.instructionType = USILInstructionType.Multiply;
             usilInst.destOperand = usilDest;
@@ -561,8 +581,9 @@ namespace ShaderLabConvert
             };
             usilInst.saturate = inst.saturated;
 			usilInst.isIntVariant = isInt;
+			usilInst.isIntUnsigned = inst.opcode == Opcode.umul;
 
-            Instructions.Add(usilInst);
+			Instructions.Add(usilInst);
         }
 
         private void HandleDiv(SHDRInstruction inst)
@@ -576,9 +597,11 @@ namespace ShaderLabConvert
             USILOperand usilSrc0 = new USILOperand();
             USILOperand usilSrc1 = new USILOperand();
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, false);
-            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
-            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), false);
+			bool isInt = inst.opcode == Opcode.udiv;
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, isInt);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), isInt);
+            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), isInt);
 
             usilInst.instructionType = USILInstructionType.Divide;
             usilInst.destOperand = usilDest;
@@ -588,6 +611,8 @@ namespace ShaderLabConvert
                 usilSrc1
             };
             usilInst.saturate = inst.saturated;
+			usilInst.isIntVariant = isInt;
+			usilInst.isIntUnsigned = inst.opcode == Opcode.udiv;
 
             Instructions.Add(usilInst);
         }
@@ -605,12 +630,12 @@ namespace ShaderLabConvert
             USILOperand usilSrc1 = new USILOperand();
             USILOperand usilSrc2 = new USILOperand();
 
-			bool isInt = inst.opcode == Opcode.imad;
+			bool isInt = inst.opcode == Opcode.imad || inst.opcode == Opcode.umad;
 
-			FillUSILOperand(dest, usilDest, dest.swizzle, false);
-            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
-            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), false);
-            FillUSILOperand(src2, usilSrc2, MapMask(dest.swizzle, src2.swizzle), false);
+			FillUSILOperand(dest, usilDest, dest.swizzle, isInt);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), isInt);
+            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), isInt);
+            FillUSILOperand(src2, usilSrc2, MapMask(dest.swizzle, src2.swizzle), isInt);
 
             usilInst.instructionType = USILInstructionType.MultiplyAdd;
             usilInst.destOperand = usilDest;
@@ -622,8 +647,9 @@ namespace ShaderLabConvert
             };
             usilInst.saturate = inst.saturated;
             usilInst.isIntVariant = isInt;
+			usilInst.isIntUnsigned = inst.opcode == Opcode.umad;
 
-            Instructions.Add(usilInst);
+			Instructions.Add(usilInst);
         }
 
         private void HandleAnd(SHDRInstruction inst)
@@ -712,7 +738,11 @@ namespace ShaderLabConvert
             FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
 
-            usilInst.instructionType = USILInstructionType.FloatToInt;
+			if (inst.opcode == Opcode.ftoi)
+				usilInst.instructionType = USILInstructionType.FloatToInt;
+			else // if (inst.opcode == Opcode.ftoi)
+				usilInst.instructionType = USILInstructionType.FloatToUInt;
+
             usilInst.destOperand = usilDest;
             usilInst.srcOperands = new List<USILOperand>
             {
@@ -734,8 +764,12 @@ namespace ShaderLabConvert
             FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
 
-            usilInst.instructionType = USILInstructionType.IntToFloat;
-            usilInst.destOperand = usilDest;
+			if (inst.opcode == Opcode.itof)
+				usilInst.instructionType = USILInstructionType.IntToFloat;
+			else // if (inst.opcode == Opcode.utof)
+				usilInst.instructionType = USILInstructionType.UIntToFloat;
+
+			usilInst.destOperand = usilDest;
             usilInst.srcOperands = new List<USILOperand>
             {
                 usilSrc0
@@ -755,9 +789,11 @@ namespace ShaderLabConvert
             USILOperand usilSrc0 = new USILOperand();
             USILOperand usilSrc1 = new USILOperand();
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, false);
-            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
-            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), false);
+			bool isInt = inst.opcode == Opcode.imin || inst.opcode == Opcode.umin;
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, isInt);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), isInt);
+            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), isInt);
 
             usilInst.instructionType = USILInstructionType.Minimum;
             usilInst.destOperand = usilDest;
@@ -766,8 +802,10 @@ namespace ShaderLabConvert
                 usilSrc0,
                 usilSrc1
             };
+			usilInst.isIntVariant = isInt;
+			usilInst.isIntUnsigned = inst.opcode == Opcode.umin;
 
-            Instructions.Add(usilInst);
+			Instructions.Add(usilInst);
         }
 
         private void HandleMax(SHDRInstruction inst)
@@ -781,9 +819,11 @@ namespace ShaderLabConvert
             USILOperand usilSrc0 = new USILOperand();
             USILOperand usilSrc1 = new USILOperand();
 
-            FillUSILOperand(dest, usilDest, dest.swizzle, false);
-            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
-            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), false);
+			bool isInt = inst.opcode == Opcode.imax || inst.opcode == Opcode.umax;
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, isInt);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), isInt);
+            FillUSILOperand(src1, usilSrc1, MapMask(dest.swizzle, src1.swizzle), isInt);
 
             usilInst.instructionType = USILInstructionType.Maximum;
             usilInst.destOperand = usilDest;
@@ -792,6 +832,8 @@ namespace ShaderLabConvert
                 usilSrc0,
                 usilSrc1
             };
+			usilInst.isIntVariant = isInt;
+			usilInst.isIntUnsigned = inst.opcode == Opcode.umax;
 
             Instructions.Add(usilInst);
         }
@@ -985,6 +1027,28 @@ namespace ShaderLabConvert
             FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
 
             usilInst.instructionType = USILInstructionType.Round;
+            usilInst.destOperand = usilDest;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+                usilSrc0
+            };
+
+            Instructions.Add(usilInst);
+        }
+
+        private void HandleRoundZ(SHDRInstruction inst)
+        {
+            SHDRInstructionOperand dest = inst.operands[0]; // The address of the results of the operation.
+            SHDRInstructionOperand src0 = inst.operands[1]; // The components in the operation.
+
+            USILInstruction usilInst = new USILInstruction();
+            USILOperand usilDest = new USILOperand();
+            USILOperand usilSrc0 = new USILOperand();
+
+            FillUSILOperand(dest, usilDest, dest.swizzle, false);
+            FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
+
+            usilInst.instructionType = USILInstructionType.Truncate;
             usilInst.destOperand = usilDest;
             usilInst.srcOperands = new List<USILOperand>
             {
@@ -1195,7 +1259,7 @@ namespace ShaderLabConvert
 
 			int[] mask = new int[] { 0, 1, 2, 3 };
 
-			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
+			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
 			int[] uvMask = GetMaskOfDimension(dimension);
 
 			FillUSILOperand(dest, usilDest, dest.swizzle, false);
@@ -1234,7 +1298,7 @@ namespace ShaderLabConvert
 
 			int[] mask = new int[] { 0, 1, 2, 3 };
 
-			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
+			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
 			int[] uvMask = GetMaskOfDimension(dimension);
 
 			FillUSILOperand(dest, usilDest, dest.swizzle, false);
@@ -1279,7 +1343,7 @@ namespace ShaderLabConvert
 
 			int[] mask = new int[] { 0, 1, 2, 3 };
 
-			ResourceDimension dimension = _samplerToDimension[srcResource.arraySizes[0]];
+			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
 			int[] uvMask = GetMaskOfDimension(dimension);
 
 			FillUSILOperand(dest, usilDest, dest.swizzle, false);
@@ -1306,6 +1370,123 @@ namespace ShaderLabConvert
             Instructions.Add(usilInst);
         }
 
+        private void HandleSampleD(SHDRInstruction inst)
+        {
+            SHDRInstructionOperand dest = inst.operands[0]; // The address of the results of the operation.
+			SHDRInstructionOperand srcAddress = inst.operands[1]; // A set of texture coordinates. For more information see the sample instruction.
+			SHDRInstructionOperand srcResource = inst.operands[2]; // A texture register. For more information see the sample instruction.
+			SHDRInstructionOperand srcSampler = inst.operands[3]; // A sampler register. For more information see the sample instruction.
+			SHDRInstructionOperand srcXDerivatives = inst.operands[4]; // The derivatives for the source address in the x direction. For more information, see the Remarks section.
+			SHDRInstructionOperand srcYDerivatives = inst.operands[5]; // The derivatives for the source address in the y direction. For more information, see the Remarks section.
+
+			USILInstruction usilInst = new USILInstruction();
+            USILOperand usilDest = new USILOperand();
+            USILOperand usilSrcAddress = new USILOperand();
+            USILOperand usilSrcResource = new USILOperand();
+            USILOperand usilSrcSampler = new USILOperand();
+            USILOperand usilSrcXDerivatives = new USILOperand();
+            USILOperand usilSrcYDerivatives = new USILOperand();
+
+			int[] mask = new int[] { 0, 1, 2, 3 };
+
+			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
+			int[] uvMask = GetMaskOfDimension(dimension);
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
+            FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
+            FillUSILOperand(srcResource, usilSrcResource, MapMask(dest.swizzle, srcResource.swizzle), false);
+            FillUSILOperand(srcSampler, usilSrcSampler, mask, false);
+            FillUSILOperand(srcXDerivatives, usilSrcXDerivatives, srcXDerivatives.swizzle, false);
+            FillUSILOperand(srcYDerivatives, usilSrcYDerivatives, srcYDerivatives.swizzle, false);
+
+            usilInst.instructionType = USILInstructionType.SampleDerivative;
+
+            usilInst.destOperand = usilDest;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+                usilSrcAddress,
+                usilSrcResource,
+                usilSrcSampler,
+                usilSrcXDerivatives,
+				usilSrcYDerivatives
+			};
+
+            Instructions.Add(usilInst);
+        }
+
+        private void HandleLd(SHDRInstruction inst)
+        {
+            SHDRInstructionOperand dest = inst.operands[0]; // The address of the result of the operation.
+			SHDRInstructionOperand srcAddress = inst.operands[1]; // The texture coordinates needed to perform the sample.
+			SHDRInstructionOperand srcResource = inst.operands[2]; // A texture register (t#) which must have been declared identifying which Texture or Buffer to fetch from.
+
+			USILInstruction usilInst = new USILInstruction();
+            USILOperand usilDest = new USILOperand();
+            USILOperand usilSrcAddress = new USILOperand();
+            USILOperand usilSrcResource = new USILOperand();
+
+			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
+			int[] uvMask = GetMaskOfDimension(dimension);
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
+            FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
+            FillUSILOperand(srcResource, usilSrcResource, MapMask(dest.swizzle, srcResource.swizzle), false);
+
+			if (inst.opcode == Opcode.ld)
+				usilInst.instructionType = USILInstructionType.LoadResource;
+			else //(inst.opcode == Opcode.ldms)
+				usilInst.instructionType = USILInstructionType.LoadResourceMultisampled;
+
+			usilInst.destOperand = usilDest;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+                usilSrcAddress,
+                usilSrcResource
+			};
+
+            Instructions.Add(usilInst);
+        }
+
+        private void HandleLdStructured(SHDRInstruction inst)
+        {
+            SHDRInstructionOperand dest = inst.operands[0]; // The address of the result of the operation.
+			SHDRInstructionOperand srcAddress = inst.operands[1]; // Specifies the index of the structure to read.
+			SHDRInstructionOperand srcByteOffset = inst.operands[2]; // Specifies the byte offset in the structure to start reading from. 
+			SHDRInstructionOperand src0 = inst.operands[3]; // The buffer to read from. This parameter must be a SRV (t#), UAV (u#). In the compute shader it can also be thread group shared memory (g#). 
+
+			USILInstruction usilInst = new USILInstruction();
+            USILOperand usilDest = new USILOperand();
+            USILOperand usilSrcAddress = new USILOperand();
+            USILOperand usilSrcByteOffset = new USILOperand();
+            USILOperand usilSrc0 = new USILOperand();
+
+			if (src0.operand == Operand.UnorderedAccessView)
+			{
+				throw new NotSupportedException("uav on ld_structured not supported");
+			}
+			else if (src0.operand == Operand.ThreadGroupSharedMemory)
+			{
+				throw new NotSupportedException("gsm on ld_structured not supported");
+			}
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
+            FillUSILOperand(srcAddress, usilSrcAddress, srcAddress.swizzle, true);
+            FillUSILOperand(srcByteOffset, usilSrcByteOffset, srcByteOffset.swizzle, true);
+            FillUSILOperand(src0, usilSrc0, src0.swizzle, false);
+
+			usilInst.instructionType = USILInstructionType.LoadResourceStructured;
+
+			usilInst.destOperand = usilDest;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+                usilSrcAddress,
+                usilSrcByteOffset,
+				usilSrc0
+			};
+
+            Instructions.Add(usilInst);
+        }
+
         private void HandleDiscard(SHDRInstruction inst)
         {
             SHDRInstructionOperand src0 = inst.operands[0]; // The value that determines whether to discard the current pixel being processed.
@@ -1326,9 +1507,132 @@ namespace ShaderLabConvert
             HandleIf(inst);
             Instructions.Add(usilInst);
             HandleEndIf(inst);
-        }
+		}
 
-        private void HandleIf(SHDRInstruction inst)
+		private void HandleResInfo(SHDRInstruction inst)
+		{
+			SHDRInstructionOperand dest = inst.operands[0]; // The address of the result of the operation.
+			SHDRInstructionOperand src0 = inst.operands[1]; // The mip level.
+			SHDRInstructionOperand src1 = inst.operands[2]; // A t# or u# input texture for which the dimensions are being queried. 
+
+			USILInstruction usilInst = new USILInstruction();
+			USILOperand usilResource = new USILOperand();
+			USILOperand usilMipLevel = new USILOperand();
+			USILOperand usilWidth = new USILOperand();
+			USILOperand usilHeight = new USILOperand();
+			USILOperand usilDepthOrArraySize = new USILOperand();
+			USILOperand usilMipCount = new USILOperand();
+
+			bool hasWidth = false;
+			bool hasHeight = false;
+			bool hasDepth = false;
+			bool hasMipCount = false;
+			// resinfo_indexable*** r0.xy, l(0), t0.xwyz ->
+			// r0.xy means two outputs, t0.xw means hasWidth and hasMipCount
+			for (int i = 0; i < dest.swizzle.Length; i++)
+			{
+				int index = src1.swizzle[i];
+				switch (index)
+				{
+					case 0: hasWidth = true; break;
+					case 1: hasHeight = true; break;
+					case 2: hasDepth = true; break;
+					case 3: hasMipCount = true; break;
+				}
+			}
+
+			FillUSILOperand(src1, usilResource, new int[] { 0, 1, 2, 3 }, false);
+			FillUSILOperand(src0, usilMipLevel, src0.swizzle, false);
+
+			if (hasWidth)
+				FillUSILOperand(dest, usilWidth, new int[] { 0 }, false);
+			else
+				usilWidth.operandType = USILOperandType.Null;
+
+			if (hasHeight)
+				FillUSILOperand(dest, usilHeight, new int[] { 1 }, false);
+			else
+				usilHeight.operandType = USILOperandType.Null;
+
+			if (hasDepth)
+				FillUSILOperand(dest, usilDepthOrArraySize, new int[] { 2 }, false);
+			else
+				usilDepthOrArraySize.operandType = USILOperandType.Null;
+
+			if (hasMipCount)
+				FillUSILOperand(dest, usilMipCount, new int[] { 3 }, false);
+			else
+				usilMipCount.operandType = USILOperandType.Null;
+
+			usilInst.instructionType = USILInstructionType.ResourceDimensionInfo;
+			usilInst.destOperand = null;
+			usilInst.srcOperands = new List<USILOperand>
+			{
+				usilResource,
+				usilMipLevel,
+				usilWidth,
+				usilHeight,
+				usilDepthOrArraySize,
+				usilMipCount
+			};
+
+			Instructions.Add(usilInst);
+		}
+
+		private void HandleSampleInfo(SHDRInstruction inst)
+		{
+			SHDRInstructionOperand dest = inst.operands[0]; // The address of the results of the operation.
+			SHDRInstructionOperand src0 = inst.operands[1]; // The shader resource.
+
+			USILInstruction usilInst = new USILInstruction();
+			USILOperand usilDest = new USILOperand();
+			USILOperand usilSrc0 = new USILOperand();
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
+			FillUSILOperand(src0, usilSrc0, src0.swizzle, false);
+
+			usilInst.instructionType = USILInstructionType.SampleCountInfo;
+			usilInst.destOperand = usilDest;
+			usilInst.srcOperands = new List<USILOperand>
+			{
+				usilSrc0
+			};
+
+			Instructions.Add(usilInst);
+		}
+
+		private void HandleDerivRt(SHDRInstruction inst)
+		{
+			SHDRInstructionOperand dest = inst.operands[0]; // The address of the result of the operation.
+			SHDRInstructionOperand src0 = inst.operands[1]; // The component in the operation.
+
+			USILInstruction usilInst = new USILInstruction();
+			USILOperand usilDest = new USILOperand();
+			USILOperand usilSrc0 = new USILOperand();
+
+			FillUSILOperand(dest, usilDest, dest.swizzle, false);
+			FillUSILOperand(src0, usilSrc0, MapMask(dest.swizzle, src0.swizzle), false);
+
+			usilInst.instructionType = inst.opcode switch
+			{
+				Opcode.deriv_rtx => USILInstructionType.DerivativeRenderTargetX,
+				Opcode.deriv_rty => USILInstructionType.DerivativeRenderTargetY,
+				Opcode.deriv_rtx_coarse => USILInstructionType.DerivativeRenderTargetXCoarse,
+				Opcode.deriv_rty_coarse => USILInstructionType.DerivativeRenderTargetYCoarse,
+				Opcode.deriv_rtx_fine => USILInstructionType.DerivativeRenderTargetXFine,
+				Opcode.deriv_rty_fine => USILInstructionType.DerivativeRenderTargetYFine,
+				_ => USILInstructionType.DerivativeRenderTargetX
+			};
+			usilInst.destOperand = usilDest;
+			usilInst.srcOperands = new List<USILOperand>
+			{
+				usilSrc0
+			};
+
+			Instructions.Add(usilInst);
+		}
+
+		private void HandleIf(SHDRInstruction inst)
         {
             SHDRInstructionOperand src0 = inst.operands[0]; // The value that determines whether to discard the current pixel being processed.
 
@@ -1627,7 +1931,7 @@ namespace ShaderLabConvert
 			}
 
 			int regIndex = inst.declData.operands[0].arraySizes[0]; // todo: not always tX
-			_samplerToDimension[regIndex] = dimension;
+			_resourceToDimension[regIndex] = dimension;
         }
 
         private void HandleCustomData(SHDRInstruction inst)

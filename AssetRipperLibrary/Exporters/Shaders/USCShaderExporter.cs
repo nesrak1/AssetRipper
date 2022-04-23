@@ -6,6 +6,7 @@ using AssetRipper.Core.Classes.Shader.SerializedShader;
 using AssetRipper.Core.Classes.Shader.SerializedShader.Enum;
 using AssetRipper.Core.Extensions;
 using AssetRipper.Core.Interfaces;
+using AssetRipper.Core.Logging;
 using AssetRipper.Core.Parser.Files;
 using AssetRipper.Core.Project;
 using AssetRipper.Core.Project.Exporters;
@@ -329,7 +330,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 
 								if (!declaredBufs.Contains(name))
 								{
-									if (param.ArraySize > 1)
+									if (param.ArraySize > 0)
 									{
 										writer.WriteIndent(3);
 										writer.WriteLine($"{typeName} {name}[{param.ArraySize}];");
@@ -362,7 +363,7 @@ namespace AssetRipper.Library.Exporters.Shaders
 
 								if (!declaredBufs.Contains(name))
 								{
-									if (param.ArraySize > 1)
+									if (param.ArraySize > 0)
 									{
 										writer.WriteIndent(3);
 										writer.WriteLine($"{typeName} {name}[{param.ArraySize}];");
@@ -662,6 +663,11 @@ namespace AssetRipper.Library.Exporters.Shaders
 			if (DXDataHeader.HasHeader(graphicApi))
 			{
 				dataOffset = DXDataHeader.GetDataOffset(version, graphicApi);
+				if (subProgram.ProgramData[dataOffset] == 0)
+				{
+					dataOffset += 0x20;
+					Logger.Warning($"Unexpected unknown 32 bytes appeared in version {version}!");
+				}
 			}
 
 			return GetRelevantData(subProgram.ProgramData, dataOffset);

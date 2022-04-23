@@ -343,7 +343,6 @@ namespace ShaderLabConvert
                 USILOperandType.SamplerRegister => "smp",
                 USILOperandType.ConstantBuffer => "cb",
                 USILOperandType.ImmediateConstantBuffer => "icb",
-
 				_ => ""
             };
         }
