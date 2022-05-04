@@ -18,9 +18,9 @@ namespace DirectXDisassembler
         public ShaderBlock[] blocks;
 
         //10/24/2021 this is really bad but I'm lazy rn
-        public ISGN Isgn { get { return blocks.First(b => b.GetType() == typeof(ISGN)) as ISGN; } }
-        public OSGN Osgn { get { return blocks.First(b => b.GetType() == typeof(OSGN)) as OSGN; } }
-        public SHDR Shdr { get { return blocks.First(b => b.GetType() == typeof(SHDR)) as SHDR; } }
+        public ISGN Isgn { get { return blocks.First(b => b != null && b.GetType() == typeof(ISGN)) as ISGN; } }
+        public OSGN Osgn { get { return blocks.First(b => b != null && b.GetType() == typeof(OSGN)) as OSGN; } }
+        public SHDR Shdr { get { return blocks.First(b => b != null && b.GetType() == typeof(SHDR)) as SHDR; } }
 
         public DirectXCompiledShader(Stream stream)
         {

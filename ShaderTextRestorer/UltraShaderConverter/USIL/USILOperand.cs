@@ -194,6 +194,11 @@ namespace ShaderLabConvert
                         body = $"{registerIndex}";
                         break;
                     }
+					case USILOperandType.IndexableTempRegister:
+					{
+						body = $"{registerIndex}[{arrayIndex}]";
+						break;
+					}
                     case USILOperandType.ConstantBuffer:
                     case USILOperandType.Matrix:
                     {
@@ -337,6 +342,7 @@ namespace ShaderLabConvert
             return operandType switch
             {
                 USILOperandType.TempRegister => "tmp",
+                USILOperandType.IndexableTempRegister => "xtmp",
                 USILOperandType.InputRegister => "in",
                 USILOperandType.OutputRegister => "out",
                 USILOperandType.ResourceRegister => "rsc",

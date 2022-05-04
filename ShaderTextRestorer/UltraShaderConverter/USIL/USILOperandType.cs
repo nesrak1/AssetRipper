@@ -13,6 +13,7 @@ namespace ShaderLabConvert
         Comment,
 
         TempRegister,
+		IndexableTempRegister,
         InputRegister,
         OutputRegister,
         ResourceRegister,

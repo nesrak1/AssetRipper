@@ -44,4 +44,8 @@
 		<PackageReference Include="DXDecompiler-ly" Version="0.0.1" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="UltraShaderConverter\USIL\CodeAnalysis\" />
+	</ItemGroup>
+
 </Project>

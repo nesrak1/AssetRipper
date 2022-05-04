@@ -448,8 +448,8 @@ namespace ShaderTextRestorer.IO
 
 		public static void Export(this SerializedStencilOp _this, TextWriter writer, StencilType type)
 		{
-			writer.WriteIndent(4);
-			writer.Write("Comp{0} {1}\n", type.ToSuffixString(), _this.CompValue);
+			//writer.WriteIndent(4);
+			//writer.Write("Comp{0} {1}\n", type.ToSuffixString(), _this.CompValue);
 			writer.WriteIndent(4);
 			writer.Write("Pass{0} {1}\n", type.ToSuffixString(), _this.PassValue);
 			writer.WriteIndent(4);

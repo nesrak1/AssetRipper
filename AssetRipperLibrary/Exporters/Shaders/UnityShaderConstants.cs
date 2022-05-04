@@ -42,5 +42,35 @@ namespace AssetRipper.Library.Exporters.Shaders
 			"UnityReflectionProbes",
 			"UnityProbeVolume"
 		};
+
+		// these start showing up in $Globals in later versions (2020+?)
+		// there's a lot so obviously incomplete
+		public static readonly HashSet<string> INCLUDED_UNITY_PROP_NAMES = new HashSet<string>()
+		{
+			"unity_ObjectToWorld",
+			"unity_WorldToObject",
+			"unity_MatrixVP",
+			"unity_MatrixV",
+			"unity_MatrixInvV",
+			"glstate_matrix_projection",
+			"unity_Lightmap_HDR",
+			"unity_DynamicLightmap_HDR",
+
+			"_Time",
+			"_SinTime",
+			"_CosTime",
+			"_ProjectionParams",
+			"_ScreenParams",
+			"_WorldSpaceCameraPos",
+			"_WorldSpaceLightPos0",
+			"_ZBufferParams",
+			"_LightPositionRange"
+		};
+
+		// not in cgincludes but needed
+		public static readonly HashSet<string> NONINCLUDED_UNITY_PROP_NAMES = new HashSet<string>()
+		{
+			"unity_LightData"
+		};
 	}
 }

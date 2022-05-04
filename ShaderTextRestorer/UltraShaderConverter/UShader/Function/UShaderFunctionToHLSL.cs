@@ -469,11 +469,11 @@ namespace ShaderLabConvert
 			{
 				value = textureOperand.operandType switch
 				{
-					USILOperandType.Sampler2D => $"tex2Dlod({args})",
-					USILOperandType.Sampler3D => $"tex3Dlod({args})",
-					USILOperandType.SamplerCube => $"texCUBElod({args})",
-					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_LOD({args})",
-					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_LOD({args})",
+					USILOperandType.Sampler2D => $"tex2Dlod({args}, {srcOps[4]})",
+					USILOperandType.Sampler3D => $"tex3Dlod({args}, {srcOps[4]})",
+					USILOperandType.SamplerCube => $"texCUBElod({args}, {srcOps[4]})",
+					USILOperandType.Sampler2DArray => $"UNITY_SAMPLE_TEX2DARRAY_LOD({args}, {srcOps[4]})",
+					USILOperandType.SamplerCubeArray => $"UNITY_SAMPLE_TEXCUBEARRAY_LOD({args}, {srcOps[4]})",
 					_ => $"texNDlod({args})" // unknown real type
 				};
 			}

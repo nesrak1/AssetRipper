@@ -451,6 +451,10 @@ namespace AssetRipper.Library.Exporters.Shaders
 					string typeName = DXShaderNamingUtils.GetConstantBufferParamTypeName(param);
 					string name = param.Name;
 
+					// skip things like unity_MatrixVP if they show up in $Globals
+					if (UnityShaderConstants.INCLUDED_UNITY_PROP_NAMES.Contains(name))
+						continue;
+
 					if (!declaredBufs.Contains(name))
 					{
 						if (param.ArraySize > 0)

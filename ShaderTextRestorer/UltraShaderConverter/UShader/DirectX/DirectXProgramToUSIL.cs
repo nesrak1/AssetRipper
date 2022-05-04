@@ -35,8 +35,8 @@ namespace ShaderLabConvert
                 { Opcode.add, new InstHandler(HandleAdd) },
                 { Opcode.iadd, new InstHandler(HandleAdd) },
                 { Opcode.mul, new InstHandler(HandleMul) },
-                { Opcode.imul, new InstHandler(HandleMul) },
-                { Opcode.umul, new InstHandler(HandleMul) },
+                { Opcode.imul, new InstHandler(HandleIMul) },
+                { Opcode.umul, new InstHandler(HandleIMul) },
                 { Opcode.div, new InstHandler(HandleDiv) },
                 { Opcode.udiv, new InstHandler(HandleDiv) },
                 { Opcode.mad, new InstHandler(HandleMad) },
@@ -282,6 +282,16 @@ namespace ShaderLabConvert
 					}
                     break;
                 }
+				case Operand.IndexableTemp:
+				{
+					int cbSlotIdx = dxOperand.arraySizes[0];
+					int cbArrIdx = dxOperand.arraySizes[1];
+
+					usilOperand.operandType = USILOperandType.ConstantBuffer;
+					usilOperand.registerIndex = cbSlotIdx;
+					usilOperand.arrayIndex = cbArrIdx;
+					break;
+				}
                 case Operand.Input:
                 {
                     int inRegIdx = dxOperand.arraySizes[0];
@@ -581,6 +591,37 @@ namespace ShaderLabConvert
             };
             usilInst.saturate = inst.saturated;
 			usilInst.isIntVariant = isInt;
+			usilInst.isIntUnsigned = inst.opcode == Opcode.umul;
+
+			Instructions.Add(usilInst);
+        }
+
+        private void HandleIMul(SHDRInstruction inst)
+        {
+            SHDRInstructionOperand destHI = inst.operands[0]; // The address of the high 32 bits of the result.
+            SHDRInstructionOperand destLO = inst.operands[1]; // The address of the high 32 bits of the result.
+			SHDRInstructionOperand src0 = inst.operands[2]; // The value to multiply with src1.
+			SHDRInstructionOperand src1 = inst.operands[3]; // The value to multiply with src0.
+
+			USILInstruction usilInst = new USILInstruction();
+            USILOperand usilDest = new USILOperand();
+            USILOperand usilSrc0 = new USILOperand();
+            USILOperand usilSrc1 = new USILOperand();
+
+			// todo, hi isn't handled
+			FillUSILOperand(destLO, usilDest, destLO.swizzle, true);
+            FillUSILOperand(src0, usilSrc0, MapMask(destLO.swizzle, src0.swizzle), true);
+            FillUSILOperand(src1, usilSrc1, MapMask(destLO.swizzle, src1.swizzle), true);
+
+            usilInst.instructionType = USILInstructionType.Multiply;
+            usilInst.destOperand = usilDest;
+            usilInst.srcOperands = new List<USILOperand>
+            {
+                usilSrc0,
+                usilSrc1
+            };
+            usilInst.saturate = inst.saturated;
+			usilInst.isIntVariant = true;
 			usilInst.isIntUnsigned = inst.opcode == Opcode.umul;
 
 			Instructions.Add(usilInst);
@@ -1260,11 +1301,11 @@ namespace ShaderLabConvert
 			int[] mask = new int[] { 0, 1, 2, 3 };
 
 			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
-			int[] uvMask = GetMaskOfDimension(dimension);
+			int[] uvMask = GetSampleLocationMask(dimension);
 
 			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
-            FillUSILOperand(srcResource, usilSrcResource, MapMask(dest.swizzle, srcResource.swizzle), false);
+			FillUSILOperand(srcResource, usilSrcResource, MapMask(dest.swizzle, srcResource.swizzle), false);
             FillUSILOperand(srcSampler, usilSrcSampler, mask, false);
 
             usilInst.instructionType = USILInstructionType.Sample;
@@ -1299,7 +1340,7 @@ namespace ShaderLabConvert
 			int[] mask = new int[] { 0, 1, 2, 3 };
 
 			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
-			int[] uvMask = GetMaskOfDimension(dimension);
+			int[] uvMask = GetSampleLocationMask(dimension);
 
 			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
@@ -1344,7 +1385,7 @@ namespace ShaderLabConvert
 			int[] mask = new int[] { 0, 1, 2, 3 };
 
 			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
-			int[] uvMask = GetMaskOfDimension(dimension);
+			int[] uvMask = GetSampleLocationMask(dimension);
 
 			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
@@ -1390,7 +1431,7 @@ namespace ShaderLabConvert
 			int[] mask = new int[] { 0, 1, 2, 3 };
 
 			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
-			int[] uvMask = GetMaskOfDimension(dimension);
+			int[] uvMask = GetSampleLocationMask(dimension);
 
 			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
@@ -1426,7 +1467,7 @@ namespace ShaderLabConvert
             USILOperand usilSrcResource = new USILOperand();
 
 			ResourceDimension dimension = _resourceToDimension[srcResource.arraySizes[0]];
-			int[] uvMask = GetMaskOfDimension(dimension);
+			int[] uvMask = GetLoadLocationMask(dimension);
 
 			FillUSILOperand(dest, usilDest, dest.swizzle, false);
             FillUSILOperand(srcAddress, usilSrcAddress, MapMask(uvMask, srcAddress.swizzle), false);
@@ -1918,18 +1959,6 @@ namespace ShaderLabConvert
         private void HandleResource(SHDRInstruction inst)
         {
             ResourceDimension dimension = inst.declData.resourceDimension;
-
-			if (dimension != ResourceDimension.texture1d &&
-				dimension != ResourceDimension.texture2d &&
-				dimension != ResourceDimension.texture3d &&
-				dimension != ResourceDimension.texturecube &&
-				dimension != ResourceDimension.texture1darray &&
-				dimension != ResourceDimension.texture2darray &&
-				dimension != ResourceDimension.texturecubearray)
-			{
-				return;
-			}
-
 			int regIndex = inst.declData.operands[0].arraySizes[0]; // todo: not always tX
 			_resourceToDimension[regIndex] = dimension;
         }
@@ -1966,23 +1995,114 @@ namespace ShaderLabConvert
 			Locals.Add(new USILLocal(outputStructName, outputName, USILLocalType.Vector4));
 		}
 
-		private int[] GetMaskOfDimension(ResourceDimension dimension)
+		private int[] GetSampleLocationMask(ResourceDimension dimension)
 		{
 			switch (dimension)
 			{
 				case ResourceDimension.texture1d:
-					return new[] { 0 };
+					return GetMaskOfSize(1);
 				case ResourceDimension.texture1darray:
 				case ResourceDimension.texture2d:
-					return new[] { 0, 1 };
+					return GetMaskOfSize(2);
 				case ResourceDimension.texture2darray:
 				case ResourceDimension.texture3d:
 				case ResourceDimension.texturecube:
-					return new[] { 0, 1, 2 };
+					return GetMaskOfSize(3);
 				case ResourceDimension.texturecubearray:
+					return GetMaskOfSize(4);
+				default:
+					return GetMaskOfSize(2); // not handled yet
+			}
+		}
+
+		private int[] GetSampleOffsetMask(ResourceDimension dimension)
+		{
+			switch (dimension)
+			{
+				case ResourceDimension.texture1d:
+				case ResourceDimension.texture1darray:
+					return GetMaskOfSize(1);
+				case ResourceDimension.texture2d:
+				case ResourceDimension.texture2darray:
+					return GetMaskOfSize(2);
+				case ResourceDimension.texture3d:
+					return GetMaskOfSize(3);
+				case ResourceDimension.texturecube:
+				case ResourceDimension.texturecubearray:
+					return GetMaskOfSize(4);
+				default:
+					return GetMaskOfSize(2); // not handled yet
+			}
+		}
+
+		private int[] GetLoadLocationMask(ResourceDimension dimension)
+		{
+			switch (dimension)
+			{
+				case ResourceDimension.buffer:
+					return GetMaskOfSize(1);
+				case ResourceDimension.texture1d:
+				case ResourceDimension.texture2dms:
+					return GetMaskOfSize(2);
+				case ResourceDimension.texture1darray:
+				case ResourceDimension.texture2d:
+				case ResourceDimension.texture2dmsarray:
+					return GetMaskOfSize(3);
+				case ResourceDimension.texture2darray:
+				case ResourceDimension.texture3d:
+					return GetMaskOfSize(4);
+				default:
+					return GetMaskOfSize(2); // not handled yet
+			}
+		}
+
+		private int[] GetLoadSampleIndexMask(ResourceDimension dimension)
+		{
+			switch (dimension)
+			{
+				case ResourceDimension.texture2dms:
+				case ResourceDimension.texture2dmsarray:
+					return GetMaskOfSize(2);
+				default:
+					return GetMaskOfSize(2); // not handled yet
+			}
+		}
+
+		private int[] GetLoadOffsetMask(ResourceDimension dimension)
+		{
+			switch (dimension)
+			{
+				case ResourceDimension.texture1d:
+				case ResourceDimension.texture1darray:
+					return GetMaskOfSize(1);
+				case ResourceDimension.texture2d:
+				case ResourceDimension.texture2darray:
+				case ResourceDimension.texture2dms:
+				case ResourceDimension.texture2dmsarray:
+					return GetMaskOfSize(2);
+				case ResourceDimension.texture3d:
+					return GetMaskOfSize(3);
+				default:
+					return GetMaskOfSize(2); // not handled yet
+			}
+		}
+
+		public int[] GetMaskOfSize(int size)
+		{
+			switch (size)
+			{
+				case 0:
+					return new int[0];
+				case 1:
+					return new[] { 0 };
+				case 2:
+					return new[] { 0, 1 };
+				case 3:
+					return new[] { 0, 1, 2 };
+				case 4:
 					return new[] { 0, 1, 2, 3 };
 				default:
-					return new[] { 0, 1 }; // not handled yet
+					throw new ArgumentOutOfRangeException();
 			}
 		}
 
