@@ -1,5 +1,6 @@
 ﻿using AssetRipper.Assets;
 using AssetRipper.Assets.Export;
+using AssetRipper.Assets.Generics;
 using AssetRipper.Export.Modules.Shaders.Exporters;
 using AssetRipper.Export.Modules.Shaders.Exporters.DirectX;
 using AssetRipper.Export.Modules.Shaders.Exporters.USCDirectX;
@@ -20,11 +21,18 @@ using AssetRipper.SourceGenerated.Extensions.Enums.Shader;
 using AssetRipper.SourceGenerated.Extensions.Enums.Shader.GpuProgramType;
 using AssetRipper.SourceGenerated.Extensions.Enums.Shader.SerializedShader;
 using AssetRipper.SourceGenerated.Subclasses.SerializedPass;
+using AssetRipper.SourceGenerated.Subclasses.SerializedPlayerSubProgram;
 using AssetRipper.SourceGenerated.Subclasses.SerializedProgram;
 using AssetRipper.SourceGenerated.Subclasses.SerializedShader;
 using AssetRipper.SourceGenerated.Subclasses.SerializedSubProgram;
 using AssetRipper.SourceGenerated.Subclasses.SerializedSubShader;
 using AssetRipper.SourceGenerated.Subclasses.Utf8String;
+using SubProgramList1 = AssetRipper.Assets.Generics.AssetList<AssetRipper.SourceGenerated.Subclasses.SerializedPlayerSubProgram.SerializedPlayerSubProgram_2021_3_10>;
+using SubProgramListList1 = AssetRipper.Assets.Generics.AssetList<AssetRipper.Assets.Generics.AssetList<AssetRipper.SourceGenerated.Subclasses.SerializedPlayerSubProgram.SerializedPlayerSubProgram_2021_3_10>>;
+using SubProgramList2 = AssetRipper.Assets.Generics.AssetList<AssetRipper.SourceGenerated.Subclasses.SerializedPlayerSubProgram.SerializedPlayerSubProgram_2022_1_13>;
+using SubProgramListList2 = AssetRipper.Assets.Generics.AssetList<AssetRipper.Assets.Generics.AssetList<AssetRipper.SourceGenerated.Subclasses.SerializedPlayerSubProgram.SerializedPlayerSubProgram_2022_1_13>>;
+using SubProgramList3 = AssetRipper.Assets.Generics.AssetList<AssetRipper.SourceGenerated.Subclasses.SerializedPlayerSubProgram.SerializedPlayerSubProgram_2022_2_0_b5>;
+using SubProgramListList3 = AssetRipper.Assets.Generics.AssetList<AssetRipper.Assets.Generics.AssetList<AssetRipper.SourceGenerated.Subclasses.SerializedPlayerSubProgram.SerializedPlayerSubProgram_2022_2_0_b5>>;
 
 namespace AssetRipper.Export.UnityProjects.Shaders
 {
@@ -557,9 +565,91 @@ namespace AssetRipper.Export.UnityProjects.Shaders
 		{
 			List<ShaderSubProgram> matchingPrograms = new();
 			ShaderSubProgram? fallbackProgram = null;
-			for (int i = 0; i < program.SubPrograms.Count; i++)
+
+			IEnumerable<ISerializedSubProgram> subProgramIEnum;
+			if (program.Has_PlayerSubPrograms_AssetList_AssetList_SerializedPlayerSubProgram_2021_3_10())
 			{
-				ISerializedSubProgram subProgram = program.SubPrograms[i];
+				List<ISerializedSubProgram> serializedSubPrograms = new List<ISerializedSubProgram>();
+				// need to collect all subprograms here
+				// most of these are empty for some reason *shrug*
+				SubProgramListList1 subProgs = program.PlayerSubPrograms_AssetList_AssetList_SerializedPlayerSubProgram_2021_3_10;
+				foreach (SubProgramList1 subProgs2 in subProgs)
+				{
+					foreach (ISerializedPlayerSubProgram subProg in subProgs2)
+					{
+						// makes things easier even if this isn't technically how it works
+						serializedSubPrograms.Add(new SerializedSubProgram_2021_2_0_a16()
+						{
+							BlobIndex = subProg.BlobIndex,
+							GpuProgramType = subProg.GpuProgramType,
+							KeywordIndices = subProg.KeywordIndices,
+							ShaderRequirements_Int64 = subProg.ShaderRequirements
+						});
+					}
+				}
+
+				subProgramIEnum = serializedSubPrograms;
+			}
+			else if (program.Has_PlayerSubPrograms_AssetList_AssetList_SerializedPlayerSubProgram_2022_1_13())
+			{
+				List<ISerializedSubProgram> serializedSubPrograms = new List<ISerializedSubProgram>();
+				SubProgramListList2 subProgs = program.PlayerSubPrograms_AssetList_AssetList_SerializedPlayerSubProgram_2022_1_13;
+				foreach (SubProgramList2 subProgs2 in subProgs)
+				{
+					foreach (ISerializedPlayerSubProgram subProg in subProgs2)
+					{
+						serializedSubPrograms.Add(new SerializedSubProgram_2021_2_0_a16()
+						{
+							BlobIndex = subProg.BlobIndex,
+							GpuProgramType = subProg.GpuProgramType,
+							KeywordIndices = subProg.KeywordIndices,
+							ShaderRequirements_Int64 = subProg.ShaderRequirements
+						});
+					}
+				}
+
+				subProgramIEnum = serializedSubPrograms;
+			}
+			else if (program.Has_PlayerSubPrograms_AssetList_AssetList_SerializedPlayerSubProgram_2022_2_0_b5())
+			{
+				List<ISerializedSubProgram> serializedSubPrograms = new List<ISerializedSubProgram>();
+				SubProgramListList3 subProgs = program.PlayerSubPrograms_AssetList_AssetList_SerializedPlayerSubProgram_2022_2_0_b5;
+				foreach (SubProgramList3 subProgs2 in subProgs)
+				{
+					foreach (ISerializedPlayerSubProgram subProg in subProgs2)
+					{
+						serializedSubPrograms.Add(new SerializedSubProgram_2021_2_0_a16()
+						{
+							BlobIndex = subProg.BlobIndex,
+							GpuProgramType = subProg.GpuProgramType,
+							KeywordIndices = subProg.KeywordIndices,
+							ShaderRequirements_Int64 = subProg.ShaderRequirements
+						});
+					}
+				}
+
+				subProgramIEnum = serializedSubPrograms;
+			}
+			else
+			{
+				subProgramIEnum = program.SubPrograms;
+			}
+
+			List<uint> paramBlobIndicesFlat = new List<uint>();
+			if (program.Has_ParameterBlobIndices())
+			{
+				foreach (uint[] paramBlobIndices2 in program.ParameterBlobIndices)
+				{
+					foreach (uint paramBlobIndex in paramBlobIndices2)
+					{
+						paramBlobIndicesFlat.Add(paramBlobIndex);
+					}
+				}
+			}
+
+			int deletThisCounter = 0;
+			foreach (ISerializedSubProgram subProgram in subProgramIEnum)
+			{
 				ShaderGpuProgramType programType = subProgram.GetProgramType(version);
 				GPUPlatform graphicApi = programType.ToGPUPlatform(platform);
 
@@ -594,7 +684,13 @@ namespace AssetRipper.Export.UnityProjects.Shaders
 				if (matched && shader.Has_Platforms_C48())
 				{
 					int platformIndex = shader.Platforms_C48.IndexOf((uint)graphicApi);
-					matchedProgram = blobs[platformIndex].SubPrograms[subProgram.BlobIndex];
+					int paramBlobIndex = -1;
+					if (program.Has_ParameterBlobIndices())
+					{
+						paramBlobIndex = (int)paramBlobIndicesFlat[deletThisCounter];
+					}
+
+					matchedProgram = blobs[platformIndex].ReadBlobAsShaderSubProgram((int)subProgram.BlobIndex, paramBlobIndex);
 				}
 
 				// skip instanced shaders
@@ -696,6 +792,8 @@ namespace AssetRipper.Export.UnityProjects.Shaders
 						fallbackProgram = matchedProgram;
 					}
 				}
+
+				deletThisCounter++;
 			}
 
 			if (matchingPrograms.Count == 0 && fallbackProgram != null)

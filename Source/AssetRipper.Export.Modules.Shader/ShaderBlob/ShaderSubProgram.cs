@@ -84,6 +84,8 @@ namespace AssetRipper.Export.Modules.Shaders.ShaderBlob
 
 		public void Read(AssetReader reader)
 		{
+			byte[] data = (reader.BaseStream as MemoryStream).ToArray();
+			File.WriteAllBytes("shader_dump.dat", data);
 			int version = reader.ReadInt32();
 			if (version != GetExpectedProgramVersion(reader.Version))
 			{
@@ -128,6 +130,27 @@ namespace AssetRipper.Export.Modules.Shaders.ShaderBlob
 			}
 			BindChannels = new ParserBindChannels(channels, sourceMap);
 
+			// todo: figure out what version moved params
+			// for now we can see if we bleed into the next blob
+			if (reader.BaseStream.Position >= reader.BaseStream.Length)
+			{
+				return;
+			}
+			else
+			{
+				bool nextBlobStart = reader.ReadUInt32() == version;
+				reader.BaseStream.Position -= 4;
+				if (nextBlobStart)
+				{
+					return;
+				}
+			}
+
+			ReadParams(reader, false);
+		}
+
+		public void ReadParams(AssetReader reader, bool withHeader)
+		{
 			List<VectorParameter> vectors = new List<VectorParameter>();
 			List<MatrixParameter> matrices = new List<MatrixParameter>();
 			List<TextureParameter> textures = new List<TextureParameter>();
@@ -138,6 +161,15 @@ namespace AssetRipper.Export.Modules.Shaders.ShaderBlob
 			List<SamplerParameter>? samplers = HasSamplerParameters(reader.Version) ? new List<SamplerParameter>() : null;
 			List<BufferBinding> constBindings = new List<BufferBinding>();
 			List<StructParameter> structs = new List<StructParameter>();
+
+			if (withHeader)
+			{
+				int version = reader.ReadInt32();
+				if (version != GetExpectedProgramVersion(reader.Version))
+				{
+					throw new Exception($"Shader program version {version} doesn't match");
+				}
+			}
 
 			int paramGroupCount = reader.ReadInt32();
 			ConstantBuffers = new ConstantBuffer[paramGroupCount - 1];

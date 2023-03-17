@@ -17,6 +17,75 @@ namespace AssetRipper.Export.Modules.Shaders.ShaderBlob
 				uint compressedLength = compressedLengths[i];
 				uint decompressedLength = decompressedLengths[i];
 
+				ReadPlatformBlob(shaderCollection, compressedBlob, offset, compressedLength, decompressedLength, i);
+			}
+		}
+
+		private void ReadPlatformBlob(AssetCollection shaderCollection, byte[] compressedBlob, uint offset, uint compressedLength, uint decompressedLength, int segment)
+		{
+			byte[] decompressedBuffer = new byte[decompressedLength];
+			LZ4Codec.Decode(compressedBlob, (int)offset, (int)compressedLength, decompressedBuffer, 0, (int)decompressedLength);
+
+			MemoryStream blobMem = new MemoryStream(decompressedBuffer);
+			AssetReader blobReader = new AssetReader(blobMem, shaderCollection);
+			if (segment == 0)
+			{
+				Entries = blobReader.ReadAssetArray<ShaderSubProgramEntry>();
+				RawBlobReaders = new AssetReader[Entries.Max(e => e.Segment) + 1];
+				BlobObjectCache = new object[Entries.Length];
+				//SubPrograms = ArrayUtils.CreateAndInitializeArray<ShaderSubProgram>(Entries.Length);
+			}
+			RawBlobReaders[segment] = blobReader;
+			//ReadBlob(blobReader, segment);
+		}
+
+		public ShaderSubProgram ReadBlobAsShaderSubProgram(int blobIndex, int paramBlobIndex = -1)
+		{
+			ShaderSubProgramEntry entry = Entries[blobIndex];
+
+			if (BlobObjectCache[blobIndex] != null)
+			{
+				return BlobObjectCache[blobIndex] as ShaderSubProgram ?? throw new Exception("Object was not a ShaderSubProgram!");
+			}
+			AssetReader reader = RawBlobReaders[entry.Segment];
+			reader.BaseStream.Position = entry.Offset;
+
+			ShaderSubProgram shaderSubProgram = new();
+			BlobObjectCache[blobIndex] = shaderSubProgram;
+			shaderSubProgram.Read(reader);
+
+			if (reader.BaseStream.Position != entry.Offset + entry.Length)
+			{
+				throw new Exception($"Read {reader.BaseStream.Position - entry.Offset} less than expected {entry.Length}");
+			}
+
+			if (paramBlobIndex != -1)
+			{
+				ShaderSubProgramEntry paramEntry = Entries[paramBlobIndex];
+
+				AssetReader paramReader = RawBlobReaders[paramEntry.Segment];
+				paramReader.BaseStream.Position = paramEntry.Offset;
+
+				shaderSubProgram.ReadParams(paramReader, true);
+
+				if (paramReader.BaseStream.Position != paramEntry.Offset + paramEntry.Length)
+				{
+					throw new Exception($"Read {paramReader.BaseStream.Position - paramEntry.Offset} less than expected {paramEntry.Length}");
+				}
+			}
+
+			return shaderSubProgram;
+		}
+
+		/*
+		public void Read(AssetCollection shaderCollection, byte[] compressedBlob, uint[] offsets, uint[] compressedLengths, uint[] decompressedLengths)
+		{
+			for (int i = 0; i < offsets.Length; i++)
+			{
+				uint offset = offsets[i];
+				uint compressedLength = compressedLengths[i];
+				uint decompressedLength = decompressedLengths[i];
+
 				ReadBlob(shaderCollection, compressedBlob, offset, compressedLength, decompressedLength, i);
 			}
 		}
@@ -112,9 +181,12 @@ namespace AssetRipper.Export.Modules.Shaders.ShaderBlob
 				}
 			}
 		}
+		*/
 
 		public ShaderSubProgramEntry[] Entries { get; set; } = Array.Empty<ShaderSubProgramEntry>();
-		public ShaderSubProgram[] SubPrograms { get; set; } = Array.Empty<ShaderSubProgram>();
+		public AssetReader[] RawBlobReaders { get; set; } = Array.Empty<AssetReader>();
+		public object[] BlobObjectCache { get; set; } = Array.Empty<object[]>();
+		//public ShaderSubProgram[] SubPrograms { get; set; } = Array.Empty<ShaderSubProgram>();
 
 		public const string GpuProgramIndexName = "GpuProgramIndex";
 	}

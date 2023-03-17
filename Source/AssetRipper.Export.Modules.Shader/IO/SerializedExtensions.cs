@@ -481,7 +481,8 @@ namespace AssetRipper.Export.Modules.Shaders.IO
 			writer.WriteIndent(5);
 
 			int platformIndex = writer.Shader.Platforms_C48!.IndexOf((uint)graphicApi);//ISerializedSubProgram and Platforms_C48 both only exist on 5.5+
-			writer.Blobs[platformIndex].SubPrograms[_this.BlobIndex].Export(writer, type);
+			// bad!! can't guarantee this will only read program blobs
+			writer.Blobs[platformIndex].ReadBlobAsShaderSubProgram((int)_this.BlobIndex).Export(writer, type);
 
 			writer.Write('\n');
 			writer.WriteIndent(4);
@@ -588,7 +589,7 @@ namespace AssetRipper.Export.Modules.Shaders.IO
 				}
 
 				// we don't know shader type so pass vertex
-				_this.SubPrograms[subIndex].Export(writer, ShaderType.Vertex);
+				_this.ReadBlobAsShaderSubProgram(subIndex).Export(writer, ShaderType.Vertex);
 			}
 			writer.WriteString(header, j, header.Length - j);
 		}

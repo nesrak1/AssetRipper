@@ -40,8 +40,18 @@ namespace AssetRipper.Export.Modules.Shaders.UltraShaderConverter.USIL.Metadders
 				HashSet<NumericShaderParameter> cbParams = new HashSet<NumericShaderParameter>();
 				List<int> cbMasks = new List<int>();
 
-				BufferBinding binding = shaderData.ConstantBufferBindings.First(b => b.Index == cbRegIdx);
-				ConstantBuffer constantBuffer = shaderData.ConstantBuffers.First(b => b.Name == binding.Name);
+				ConstantBuffer constantBuffer;
+				BufferBinding? binding = shaderData.ConstantBufferBindings.FirstOrDefault(b => b.Index == cbRegIdx);
+				if (binding == null)
+				{
+					// New version. Look directly into ConstantBuffers?
+					constantBuffer = shaderData.ConstantBuffers[cbRegIdx];
+				}
+				else
+				{
+					// Old version. Binding is actually used.
+					constantBuffer = shaderData.ConstantBuffers.First(b => b.Name == binding.Name);
+				}
 
 				// Search children fields
 				foreach (NumericShaderParameter param in constantBuffer.AllNumericParams)

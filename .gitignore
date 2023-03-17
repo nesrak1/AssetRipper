@@ -13,3 +13,4 @@ bin
 *.blend1
 launchSettings.json
 AssetRipper.SourceGenerated.xml
+/Source/AssetRipper.Export.Modules.Shader/ShaderBlob/ShaderSubProgramBlob.cs
